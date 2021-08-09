@@ -32,7 +32,6 @@
             position: relative;
             width: 100%;
             background-color: #ededed;
-            height: 10rem;
             bottom: 0;
             left: 0;
             margin: 0;
@@ -94,18 +93,12 @@
     
 </div>
 <script>
-    
-    
-
     let content = document.getElementById('content');
-    content.innerHTML += 'You are visiting: ' + document.referrer;
-    content.innerHTML += '<br>' + 'User agent: ' + navigator.userAgent;
-    
+    content.innerHTML += '<br>' + 'User agent: ' + navigator.userAgent + '<br><br>';
     fetch('/hostinfo.txt')
         .then(response => response.text())
         .then(data => {
-            content.innerHTML += '<br>' +  data;
-    })
-
+            content.innerHTML += '<br>' + data;
+        })
 </script>
 </html>
