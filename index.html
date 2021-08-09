@@ -13,18 +13,58 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <!-- Icons to support Material Design -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        code {
+            border-radius: .5rem;
+            padding: 0.5rem;
+            background: #ededed;
+            display: inline-block;
+            max-width: 50vw;
+            margin-top: 0.5rem;
+        }
+        h1 {
+            border-bottom: solid 1px grey;
+        }
+        .footer {
+            position: relative;
+            width: 100%;
+            background-color: #ededed;
+            height: 10rem;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <div id="root"></div>
     <script type="text/babel"></script>
     <div>
+        <h1>ubuntu/debian first setup</h1>
+        <ol>
+            <li>Update repository listing & Upgrade all existing packages<br><code>sudo apt update && sudo apt upgrade</code></li>
+            <li>apt packages<br><code>sudo apt install git zsh nettools build-essential powerline fonts-powerline font-firacode nvim openssh-server termux</code></li>
+            <li>snap packages<br><code>sudo snap install --classic code zoom-client discord</code></li>
+            <li>zsh setup<br>
+                <code>chsh -s /bin/zsh  # change shell</code><br>
+                <code>git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh  # clone oh-my-zsh configs</code><br>
+                <code>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc # copy the config template into .zshrc</code><br>
+                <code>vim ~/.zshrc  # change ZSH_THEME="af-magic"</code><br>
+                <code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1 # syntax highlighting</code><br>
+                <code>echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"    # source highlighting plugins on start</code><br>
+            </li>
+        </ol>
+    </div>
+    <div>
         <h1>tar</h1>
         <ul>
-            <li><br><code></code></br></li>
-            <li><br><code></code></br></li>
-            <li><br><code></code></br></li>
-            <li><br><code></code></br></li>
-            <li><br><code></code></br></li>
+            <li>Create<br><code>tar zcvf target.tar.gz sourcefile</code></br></li>
+            <li>Unpack<br><code>tar zxvf sourcefile</code></br></li>
+            <li>List<br><code>tar ztvf sourcefile</code></br></li>
         </ul>
     </div>
     <div>
@@ -34,11 +74,11 @@
             <li>
                 Boot from CDROM/ISO Image:<br/>
                 Linux-based:<br>
-                Mac:<br>
                 <code>qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 -net nic -net user -hda name.img -cdrom ~/path/to/iso/image.iso</code><br/>
+                Mac:<br>
                 <code>qemu-system-x86_64 -m 2048 -boot d -accel hvf -smp 3 -net nic -net user -hda name.img -cdrom ~/path/to/iso/image.iso</code><br/>
             </li>
-            <li>Install chosen distro on blank HDD image<code></code></li>
+            <li>Install chosen distro on blank HDD image</li>
             <li>
                 Boot from HDD image<br>
                 <code>qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 -net nic -net user -hda name.img</code><br/>
@@ -49,4 +89,23 @@
     </div>
     
 </body>
+<hr>
+<div class="footer" id="content">
+    
+</div>
+<script>
+    
+    
+
+    let content = document.getElementById('content');
+    content.innerHTML += 'You are visiting: ' + document.referrer;
+    content.innerHTML += '<br>' + 'User agent: ' + navigator.userAgent;
+    
+    fetch('/hostinfo.txt')
+        .then(response => response.text())
+        .then(data => {
+            content.innerHTML += '<br>' +  data;
+    })
+
+</script>
 </html>
