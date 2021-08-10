@@ -46,8 +46,12 @@
         <h1>ubuntu/debian first setup</h1>
         <ol>
             <li>Update repository listing & Upgrade all existing packages<br><code>sudo apt update && sudo apt upgrade</code></li>
-            <li>apt packages<br><code>sudo apt install git zsh nettools build-essential powerline fonts-powerline font-firacode nvim openssh-server termux</code></li>
-            <li>snap packages<br><code>sudo snap install --classic code zoom-client discord</code></li>
+            <li>apt packages<br><code>sudo apt install git zsh net-tools build-essential powerline fonts-powerline fonts-firacode vim openssh-server tmux</code></li>
+            <li>snap packages<br>
+                <code>sudo snap install --classic code</code><br>
+                <code>sudo snap install --classic zoom-client discord</code><br>
+                <code>sudo snap install --classic discord</code><br>
+            </li>
             <li>zsh setup<br>
                 <code>chsh -s /bin/zsh  # change shell</code><br>
                 <code>git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh  # clone oh-my-zsh configs</code><br>
