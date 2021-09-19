@@ -68,6 +68,14 @@
         </ol>
     </div>
     <div>
+        <h1>xrdp server</h1>
+        <ol>
+            <li>Reconfigure the desktop environment<br><code>sudo dpkg-reconfigure $(desktop-environment-name)</code></li>
+            <li>Change default xrdp session<br><code>sudo update-alternatives --config x-session-manager</code></li>
+            <li>Change default xrdp session (budgie) by editing the xrdp config file<br><code>sudoedit /etc/xrdp/startwm.sh</code></li>
+        </ol>
+    </div>
+    <div>
         <h1>tar</h1>
         <ul>
             <li>Create<br><code>tar zcvf target.tar.gz sourcefile</code></br></li>
