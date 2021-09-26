@@ -14,10 +14,11 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+html_title = "Anh's Linux Docs"
 
 # -- Project information -----------------------------------------------------
 
-project = 'Anh\'s Linux'
+project = 'ALD'
 copyright = '2021, Anh'
 author = 'Anh'
 
@@ -31,7 +32,8 @@ release = 'v0.1a'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'myst_parser'
+    'myst_parser',
+    'sphinx_copybutton'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -54,3 +56,7 @@ html_theme = 'furo'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# html_theme_options = {
+#     'logo_only': True,
+# }
