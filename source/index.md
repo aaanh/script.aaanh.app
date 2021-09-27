@@ -11,7 +11,7 @@ ALD is my opinionated copy-paste scripts and commands for referencing when I set
 
 ```txt
 Current build: v1.0.8
-Latest change: Test actions again
+Latest change: Test actions again. Almost there
 ```
 
 ```{warning}
