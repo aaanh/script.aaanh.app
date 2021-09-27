@@ -71,5 +71,5 @@ Ubuntu/Debian First Setup
 6. Set solid black 4K resolution as wallpaper. No bullshit, no patterns.
 
     ```zsh
-    gsettings set org.gnome.desktop.background picture-url "https://linux.hoanganh.tech/img/black-solid-4k.png"
+    gsettings set org.gnome.desktop.background picture-url "https://linux.hoanganh.tech/_static/img/black-solid-4k.png"
     ```
