@@ -25,11 +25,12 @@ qemu
     
 
 4. Boot from HDD image
+
     a. Linux
     ```zsh
     qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 -net nic -net user -hda name.img
     ```
-    b.macOS
+    b. macOS
     ```
     qemu-system-x86_64 -m 2048 -boot d -accel hvf -smp 3 -net nic -net user -hda name.img
     ```
