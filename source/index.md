@@ -35,6 +35,7 @@ user/ubuntu-debian-first-setup
 :hidden:
 :caption: Virtualization
 virt/qemu
+virt/enhanced-session
 ```
 
 ```{toctree}

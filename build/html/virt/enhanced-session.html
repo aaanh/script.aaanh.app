@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Tool Tips" href="../tool-tips.html" /><link rel="prev" title="Hyper-V Enhanced Session" href="../virt/enhanced-session.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="XRDP Server" href="../remote/xrdp-server.html" /><link rel="prev" title="qemu" href="qemu.html" />
 
     <meta name="generator" content="sphinx-4.0.1, furo 2021.09.22"/>
-        <title>XRDP Server - Anh&#39;s Linux Docs</title>
+        <title>Hyper-V Enhanced Session - Anh&#39;s Linux Docs</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=150e365fa939648e89c22f6d7d13c72a1657915a" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -135,7 +135,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -160,13 +160,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../user/ubuntu-debian-first-setup.html">Ubuntu/Debian First Setup</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Virtualization</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../virt/qemu.html">qemu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../virt/enhanced-session.html">Hyper-V Enhanced Session</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="qemu.html">qemu</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Hyper-V Enhanced Session</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Remote Desktop</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">XRDP Server</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../remote/xrdp-server.html">XRDP Server</a></li>
 </ul>
 <p class="caption"><span class="caption-text">General tools</span></p>
 <ul>
@@ -191,31 +191,78 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="xrdp-server">
-<h1>XRDP Server<a class="headerlink" href="#xrdp-server" title="Permalink to this headline">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="hyper-v-enhanced-session">
+<h1>Hyper-V Enhanced Session<a class="headerlink" href="#hyper-v-enhanced-session" title="Permalink to this headline">¶</a></h1>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Administrator privilege</p></li>
+<li><p>CPU that supports level 1 hypervisor virtualization</p></li>
+<li><p>Windows 10 Pro edition (build &gt;= 20H1)</p></li>
+</ul>
+</section>
+<section id="windows-host-configurations">
+<h2>Windows host configurations<a class="headerlink" href="#windows-host-configurations" title="Permalink to this headline">¶</a></h2>
+<p>The following Windows Features must be turned on:</p>
+<ul class="simple">
+<li><p>Hyper-V</p></li>
+<li><p>Windows Hypervisor Platform</p></li>
+<li><p>Virtual Machine Platform</p></li>
+</ul>
+<p>Scripts execution in Powershell must be allowed:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Scope</span> <span class="n">LocalMachine</span>
+</pre></div>
+</div>
+<p>During Ubuntu VM creation:</p>
+<ul class="simple">
+<li><p>Select Generation 2 VM</p></li>
+<li><p>Disable secure boot</p></li>
+<li><p>Name VM as something tolerable, e.g. linux-test, i.e. <code class="docutils literal notranslate"><span class="pre">$vmName</span></code>.</p></li>
+</ul>
+</section>
+<section id="debian-guest-configurations">
+<h2>Debian guest configurations<a class="headerlink" href="#debian-guest-configurations" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This assumes that <a class="reference internal" href="../user/ubuntu-debian-first-setup.html"><span class="doc std std-doc">first setup</span></a> has been done.</p>
+</div>
 <ol>
-<li><p>Reconfigure the desktop environment</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>sudo dpkg-reconfigure <span class="k">$(</span>desktop-environment-name<span class="k">)</span>
+<li><p>Clone git repo containing bash script.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/Hinara/linux-vm-tools ~/linux-vm-tools
 </pre></div>
 </div>
 </li>
-<li><p>Change default xrdp session</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>sudo update-alternatives --config x-session-manager
+<li><p>Make <code class="docutils literal notranslate"><span class="pre">.sh</span></code> executable in user context and execute the script as superuser.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>chmod +x ~/linux-vm-tools/ubuntu/20.04/install.sh <span class="se">\</span>
+sudo ~/linux-vm-tools/ubuntu/20.04/install.sh
 </pre></div>
 </div>
 </li>
-<li><p>Change default xrdp session to budgie by editing the xrdp config file</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>sudoedit /etc/xrdp/startwm.sh
+<li><p>Reboot VM.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo reboot
 </pre></div>
 </div>
 </li>
+<li><p>Re-run the script to finalize.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo ~/linux-vm-tools/ubuntu/20.04/install.sh
+</pre></div>
+</div>
+</li>
+<li><p>Shut down and stop VM completely.</p></li>
+<li><p>Open up Powershell as Administrator and configure newly created VM to use HvSocket</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Set-VM</span> <span class="n">-VMName</span> <span class="nv">$vmName</span> <span class="n">-EnhancedSessionTransportType</span> <span class="n">HvSocket</span>
+</pre></div>
+</div>
+</li>
+<li><p>Boot up VM and will be meet with xrdp log in screen. If not, then screwed up somewhere.</p></li>
 </ol>
+</section>
 </section>
 
         </article>
@@ -223,23 +270,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../tool-tips.html">
+          <a class="next-page" href="../remote/xrdp-server.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Tool Tips</div>
+                <div class="title">XRDP Server</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../virt/enhanced-session.html">
+          <a class="prev-page" href="qemu.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Hyper-V Enhanced Session</div>
+                <div class="title">qemu</div>
                 
               </div>
             </a>
@@ -251,7 +298,7 @@
               and
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../_sources/remote/xrdp-server.md.txt"
+            <a class="muted-link" href="../_sources/virt/enhanced-session.md.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -259,8 +306,29 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Hyper-V Enhanced Session</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#windows-host-configurations">Windows host configurations</a></li>
+<li><a class="reference internal" href="#debian-guest-configurations">Debian guest configurations</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
