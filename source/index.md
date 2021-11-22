@@ -29,6 +29,7 @@ This docs is hosted on a Linux VM.
 :hidden:
 :caption: Userland
 user/ubuntu-debian-first-setup
+user/manjaro-arch-first-setup
 ```
 
 ```{toctree}
