@@ -1,7 +1,9 @@
 Manjaro/Arch First Setup
 =================================
 
-1. Update and choose optimal mirror for pack(age)man(ager)
+## This is a WIP
+
+1. Update and choose optimal mirror for pac(kage)man(ager)
 
     ```zsh
     sudo pacman -Syyu
