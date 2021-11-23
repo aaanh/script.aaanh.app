@@ -10,11 +10,15 @@ Manjaro/Arch First Setup
 2. Install build tools for AUR
 
     ```zsh
-    sudo pacman -Sy base-devel
+    sudo pacman -Sy base-devel git
     ```
 
 3. Install commonly-used packages
 
     From `pacman`:
+
+    ```zsh
     
+    ```
+
     From `AUR`:
