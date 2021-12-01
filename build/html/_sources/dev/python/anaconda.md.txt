@@ -22,5 +22,5 @@ Proceed with the convenience below only if you know what you are doing.
 
 * One-click one-liner
 ```zsh
-curl -o ~/Downloads/Anaconda.sh Anaconda3-2021.11-Linux-x86_64.sh && bash ~/Downloads/Anaconda.sh
+curl -o ~/Downloads/Anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh && bash ~/Downloads/Anaconda.sh
 ```
