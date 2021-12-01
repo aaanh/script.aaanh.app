@@ -1,7 +1,7 @@
 Tool Tips
 ============
 
-### tar
+## tar
 
 * Create
 ```zsh
@@ -16,7 +16,7 @@ tar zxvf sourcefile
 tar ztvf sourcefile
 ```
 
-### curl
+## curl
 
 * Default retrieval
 ```zsh

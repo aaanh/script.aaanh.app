@@ -2,15 +2,14 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Ubuntu/Debian First Setup" href="user/ubuntu-debian-first-setup.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Ubuntu/Debian First Setup" href="user/ubuntu-debian-first-setup.html" />
 
-    <meta name="generator" content="sphinx-4.0.1, furo 2021.09.22"/>
+    <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
         <title>Anh&#39;s Linux Docs</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=150e365fa939648e89c22f6d7d13c72a1657915a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
     
     
 
@@ -155,23 +154,30 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption"><span class="caption-text">Userland</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Userland</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="user/ubuntu-debian-first-setup.html">Ubuntu/Debian First Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user/manjaro-arch-first-setup.html">Manjaro/Arch First Setup</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Virtualization</span></p>
+<p class="caption" role="heading"><span class="caption-text">Virtualization</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="virt/qemu.html">qemu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="virt/enhanced-session.html">Hyper-V Enhanced Session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virt/setup.html">KVM Hypervisor Setup</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Remote Desktop</span></p>
+<p class="caption" role="heading"><span class="caption-text">Remote Desktop</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="remote/xrdp-server.html">XRDP Server</a></li>
 </ul>
-<p class="caption"><span class="caption-text">General tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">General Tools</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tool-tips.html">Tool Tips</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development Setup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dev/python/anaconda.html">Anaconda Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev/python/pip.html">Pip setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev/sphinx.html">Sphinx</a></li>
 </ul>
 
 </div>
@@ -198,21 +204,19 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="anh-s-linux-documentation-ald">
+          <div class="tex2jax_ignore mathjax_ignore section" id="anh-s-linux-documentation-ald">
 <h1>Anh’s Linux Documentation (ALD)<a class="headerlink" href="#anh-s-linux-documentation-ald" title="Permalink to this headline">¶</a></h1>
 <p>Homepage: <a class="reference external" href="https://hoanganh.tech">https://hoanganh.tech</a></p>
 <p>ALD is my opinionated copy-paste scripts and commands for referencing when I set up my work environment in Linux-based distributions (over and over again).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Current</span> <span class="n">build</span><span class="p">:</span> <span class="n">v1</span><span class="o">.</span><span class="mf">1.0</span>
-<span class="n">Latest</span> <span class="n">change</span><span class="p">:</span> <span class="n">Added</span> <span class="n">Enhanced</span> <span class="n">Session</span> <span class="n">Hyper</span><span class="o">-</span><span class="n">V</span> <span class="n">configs</span><span class="p">;</span> <span class="n">fixed</span> <span class="n">wrong</span> <span class="n">lexer</span> <span class="n">name</span><span class="o">.</span>
-</pre></div>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Utilize at your own risks.</p>
 </div>
 <p>This docs is hosted on a Linux VM.</p>
-<section id="system-information-neofetch">
-<h2>System Information (neofetch):<a class="headerlink" href="#system-information-neofetch" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>System Information (neofetch):</p>
+</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OS</span><span class="p">:</span> <span class="n">Ubuntu</span> <span class="mf">21.04</span> <span class="n">x86_64</span>
 <span class="n">Host</span><span class="p">:</span> <span class="n">KVM</span><span class="o">/</span><span class="n">QEMU</span> <span class="p">(</span><span class="n">Standard</span> <span class="n">PC</span> <span class="p">(</span><span class="n">Q35</span> <span class="o">+</span> <span class="n">ICH9</span><span class="p">,</span> <span class="mi">2009</span><span class="p">)</span> <span class="n">pc</span><span class="o">-</span><span class="n">q35</span><span class="o">-</span><span class="mf">4.1</span><span class="p">)</span>
 <span class="n">Kernel</span><span class="p">:</span> <span class="mf">5.11</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">25</span><span class="o">-</span><span class="n">generic</span>
@@ -231,8 +235,9 @@
 </div>
 <div class="toctree-wrapper compound">
 </div>
-</section>
-</section>
+<div class="toctree-wrapper compound">
+</div>
+</div>
 
         </article>
       </div>
@@ -253,11 +258,9 @@
 
         <div class="related-information">
               Copyright &#169; 2021, Anh |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="_sources/index.md.txt"
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="_sources/index.md.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -275,7 +278,7 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/main.js"></script>
+    <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     </body>

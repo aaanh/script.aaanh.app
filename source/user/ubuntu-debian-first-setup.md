@@ -12,7 +12,7 @@ Ubuntu/Debian First Setup
     ```zsh
     sudo apt install git zsh net-tools build-essential powerline \
             fonts-powerline fonts-firacode vim openssh-server \
-            tmux gnome-tweak-tool grub-customizer
+            tmux python3 python-is-python3 python3-pip
     ```
 
 3. snap packages

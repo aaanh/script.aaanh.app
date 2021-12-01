@@ -9,18 +9,15 @@ Homepage: <https://hoanganh.tech>
 
 ALD is my opinionated copy-paste scripts and commands for referencing when I set up my work environment in Linux-based distributions (over and over again).
 
-```
-Current build: v1.1.0
-Latest change: Added Enhanced Session Hyper-V configs; fixed wrong lexer name.
-```
-
 ```{warning}
    Utilize at your own risks.
 ```
 
 This docs is hosted on a Linux VM.
 
-#### System Information \(neofetch\):
+```{note}
+System Information \(neofetch\):
+```
 
 ```{include} ./host-info.md
 ```
@@ -37,6 +34,7 @@ user/manjaro-arch-first-setup
 :caption: Virtualization
 virt/qemu
 virt/enhanced-session
+virt/setup
 ```
 
 ```{toctree}
@@ -47,6 +45,14 @@ remote/xrdp-server
 
 ```{toctree}
 :hidden:
-:caption: General tools
+:caption: General Tools
 tool-tips
+```
+
+```{toctree}
+:hidden:
+:caption: Development Setup
+dev/python/anaconda
+dev/python/pip
+dev/sphinx
 ```
