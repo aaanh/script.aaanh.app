@@ -39,6 +39,12 @@ virt/setup
 
 ```{toctree}
 :hidden:
+:caption: Networking
+networking/wireguard-vpn
+```
+
+```{toctree}
+:hidden:
 :caption: Remote Desktop
 remote/xrdp-server
 ```
