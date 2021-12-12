@@ -2,8 +2,7 @@
 hide-toc: true
 ---
 
-Anh's Linux Documentation \(ALD\)
-===============================================
+# Anh's Linux Documentation \(ALD\)
 
 Homepage: <https://hoanganh.tech>
 
@@ -20,6 +19,7 @@ System Information \(neofetch\):
 ```
 
 ```{include} ./host-info.md
+
 ```
 
 ```{toctree}
@@ -27,6 +27,12 @@ System Information \(neofetch\):
 :caption: Userland
 user/ubuntu-debian-first-setup
 user/manjaro-arch-first-setup
+```
+
+```{toctree}
+:hidden:
+:caption: Mac Ecosystem
+mac/index
 ```
 
 ```{toctree}
@@ -40,6 +46,7 @@ virt/setup
 ```{toctree}
 :hidden:
 :caption: Networking
+networking/firewall
 networking/wireguard-vpn
 ```
 

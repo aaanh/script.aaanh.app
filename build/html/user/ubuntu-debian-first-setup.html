@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Manjaro/Arch First Setup" href="manjaro-arch-first-setup.html" /><link rel="prev" title="Anh’s Linux Documentation (ALD)" href="../index.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Manjaro/Arch First Setup" href="manjaro-arch-first-setup.html" /><link rel="prev" title="Anh’s Linux Documentation (ALD)" href="../index.html" />
 
     <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
         <title>Ubuntu/Debian First Setup - Anh&#39;s Linux Docs</title>
@@ -159,11 +160,20 @@
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Ubuntu/Debian First Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manjaro-arch-first-setup.html">Manjaro/Arch First Setup</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Mac Ecosystem</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mac/index.html">Mac for Development Setup</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Virtualization</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../virt/qemu.html">qemu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../virt/enhanced-session.html">Hyper-V Enhanced Session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../virt/setup.html">KVM Hypervisor Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Networking</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../networking/firewall.html">Firewall</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networking/wireguard-vpn.html">Wireguard VPN</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Remote Desktop</span></p>
 <ul>
@@ -204,7 +214,7 @@
           </label>
         </div>
         <article role="main">
-          <div class="tex2jax_ignore mathjax_ignore section" id="ubuntu-debian-first-setup">
+          <section class="tex2jax_ignore mathjax_ignore" id="ubuntu-debian-first-setup">
 <h1>Ubuntu/Debian First Setup<a class="headerlink" href="#ubuntu-debian-first-setup" title="Permalink to this headline">¶</a></h1>
 <ol>
 <li><p><strong>update</strong> repository listing &amp; <strong>upgrade</strong> all existing packages</p>
@@ -220,30 +230,22 @@
 </div>
 </li>
 <li><p>snap packages</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="o">--</span><span class="n">classic</span> <span class="n">code</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="o">--</span><span class="n">classic</span> <span class="n">zoom</span><span class="o">-</span><span class="n">client</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="o">--</span><span class="n">classic</span> <span class="n">discord</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="o">--</span><span class="n">classic</span> <span class="n">slack</span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This documentation will no longer use snap packages.</p>
 </div>
 </li>
 <li><p>zsh setup</p>
 <p># Change shell</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>chsh -s /bin/zsh 
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>chsh -s /bin/zsh
 </pre></div>
 </div>
 <p># Clone oh-my-zsh configs</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 </pre></div>
 </div>
 <p># Copy the config template into .zshrc</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc 
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 </pre></div>
 </div>
 <p># Change to the good theme</p>
@@ -251,11 +253,11 @@
 </pre></div>
 </div>
 <p># Add syntax highlighting</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.zsh-syntax-highlighting"</span> --depth <span class="m">1</span> 
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.zsh-syntax-highlighting"</span> --depth <span class="m">1</span>
 </pre></div>
 </div>
 <p># Source highlighting plugins on start</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">"source </span><span class="nv">$HOME</span><span class="s2">/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"</span> &gt;&gt; <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.zshrc"</span> 
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">"source </span><span class="nv">$HOME</span><span class="s2">/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"</span> &gt;&gt; <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.zshrc"</span>
 </pre></div>
 </div>
 </li>
@@ -265,12 +267,12 @@
 </div>
 </li>
 <li><p>Set solid black 4K resolution as wallpaper. No bullshit, no patterns.</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>gsettings <span class="nb">set</span> org.gnome.desktop.background picture-uri <span class="s2">"https://linux.hoanganh.tech/_static/img/black-solid-4k.png"</span>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /tmp <span class="o">&amp;&amp;</span> curl -O <span class="s2">"https://linux.hoanganh.tech/_static/img/black-solid-4k.png"</span> <span class="o">&amp;&amp;</span> gsettings <span class="nb">set</span> org.gnome.desktop.background picture-uri <span class="s1">'./black-solid-4k.png'</span>
 </pre></div>
 </div>
 </li>
 </ol>
-</div>
+</section>
 
         </article>
       </div>

@@ -1,32 +1,41 @@
-Tool Tips
-============
+# Tool Tips
 
 ## tar
 
-* Create
+-   Create
+
 ```zsh
 tar zcvf target.tar.gz sourcefile
 ```
-* Unpack
+
+-   Unpack
+
 ```zsh
 tar zxvf sourcefile
 ```
-* List
+
+-   List
+
 ```zsh
 tar ztvf sourcefile
 ```
 
 ## curl
 
-* Default retrieval
+-   Default retrieval
+
 ```zsh
 curl [url]
 ```
-* Specified output
+
+-   Specified output
+
 ```zsh
 curl -o [target] [url]
 ```
-* Same output as source
+
+-   Same output as source
+
 ```zsh
 curl -O [url]
 ```

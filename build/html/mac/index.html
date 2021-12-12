@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Pip setup" href="python/pip.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="qemu" href="../virt/qemu.html" /><link rel="prev" title="Manjaro/Arch First Setup" href="../user/manjaro-arch-first-setup.html" />
 
     <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
-        <title>Sphinx - Anh&#39;s Linux Docs</title>
+        <title>Mac for Development Setup - Anh&#39;s Linux Docs</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -135,7 +135,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -161,8 +161,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../user/manjaro-arch-first-setup.html">Manjaro/Arch First Setup</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Mac Ecosystem</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../mac/index.html">Mac for Development Setup</a></li>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Mac for Development Setup</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Virtualization</span></p>
 <ul>
@@ -184,10 +184,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../tool-tips.html">Tool Tips</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development Setup</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="python/anaconda.html">Anaconda Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python/pip.html">Pip setup</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Sphinx</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/python/anaconda.html">Anaconda Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/python/pip.html">Pip setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/sphinx.html">Sphinx</a></li>
 </ul>
 
 </div>
@@ -208,61 +208,55 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="sphinx">
-<h1>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="mac-for-development-setup">
+<h1>Mac for Development Setup<a class="headerlink" href="#mac-for-development-setup" title="Permalink to this headline">¶</a></h1>
+<p>Bonus: Because Mac is getting too good and Mac shares the Unix core…</p>
+<p>Since Mac uses the <code class="docutils literal notranslate"><span class="pre">zsh</span></code> terminal shell by default, some scripts for Ubuntu can be re-used: from getting oh-my-zsh config to sourcing the highlighting plugin. &lt;/user/ubuntu-debian-first-setup.html&gt;</p>
+<ul>
+<li><p>Install the xcode cli.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you haven’t already, go through the <a class="reference external" href="https://linux.hoanganh.tech/dev/python/anaconda.html">Python and Pip setup</a> first.</p>
+<p>This also install git. If you try to use git first, it will prompt you to install the cli tool.</p>
 </div>
-<section id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">python-sphinx</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">myst_parser</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">furo</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sphinx_copybutton</span></code></p></li>
-</ul>
-</section>
-<section id="install-script">
-<h2>Install script<a class="headerlink" href="#install-script" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>pip install python-sphinx myst_parser furo sphinx_copybutton
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>xcode-select --install
 </pre></div>
 </div>
-</section>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<section id="unix-linux">
-<h3>Unix, Linux<a class="headerlink" href="#unix-linux" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /path/to/sphinx/project
+</li>
+<li><p>Install brew (stolen from <a class="reference external" href="https://brew.sh">https://brew.sh</a>)</p>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>/bin/bash -c <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>To build</p></li>
-</ul>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>make html
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">pip</span></code> for pre-installed <code class="docutils literal notranslate"><span class="pre">python3</span></code></p>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>python3 -m pip ensurepip --install
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>To clean</p></li>
-</ul>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>make clean
+</li>
+<li><p>Install brew packages</p>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>brew install npm nodejs gh
 </pre></div>
 </div>
-</section>
-<section id="win32">
-<h3>Win32<a class="headerlink" href="#win32" title="Permalink to this headline">¶</a></h3>
+</li>
+<li><p>Set up <code class="docutils literal notranslate"><span class="pre">gh</span></code> for GitHub operations</p>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>gh auth login
+</pre></div>
+</div>
+<p>Select Personal &gt; HTTPS</p>
+</li>
+<li><p>Optional stuff:</p>
 <ul class="simple">
-<li><p>Same thing but <code class="docutils literal notranslate"><span class="pre">.\make.bat</span></code></p></li>
+<li><p>Anaconda <a class="reference external" href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a></p></li>
+<li><p>vscode <a class="reference external" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p></li>
+<li><p>Discord <a class="reference external" href="https://discord.com/api/download?platform=osx">https://discord.com/api/download?platform=osx</a></p></li>
 </ul>
-</section>
-</section>
+</li>
+</ul>
 </section>
 
         </article>
@@ -270,15 +264,23 @@
       <footer>
         
         <div class="related-pages">
-          
-          <a class="prev-page" href="python/pip.html">
+          <a class="next-page" href="../virt/qemu.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">qemu</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../user/manjaro-arch-first-setup.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Pip setup</div>
+                <div class="title">Manjaro/Arch First Setup</div>
                 
               </div>
             </a>
@@ -288,7 +290,7 @@
               Copyright &#169; 2021, Anh |
           Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
           <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
-            | <a class="muted-link" href="../_sources/dev/sphinx.md.txt"
+            | <a class="muted-link" href="../_sources/mac/index.md.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -296,33 +298,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Sphinx</a><ul>
-<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
-<li><a class="reference internal" href="#install-script">Install script</a></li>
-<li><a class="reference internal" href="#usage">Usage</a><ul>
-<li><a class="reference internal" href="#unix-linux">Unix, Linux</a></li>
-<li><a class="reference internal" href="#win32">Win32</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
