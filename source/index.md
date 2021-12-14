@@ -54,6 +54,7 @@ networking/wireguard-vpn
 :hidden:
 :caption: Remote Desktop
 remote/xrdp-server
+remote/ansible
 ```
 
 ```{toctree}
