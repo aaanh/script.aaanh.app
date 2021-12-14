@@ -1,5 +1,5 @@
 ---
-hide-toc: true
+hide-toc: false
 ---
 
 # Anh's Linux Documentation \(ALD\)
@@ -23,20 +23,17 @@ System Information \(neofetch\):
 ```
 
 ```{toctree}
-:hidden:
 :caption: Userland
 user/ubuntu-debian-first-setup
 user/manjaro-arch-first-setup
 ```
 
 ```{toctree}
-:hidden:
 :caption: Mac Ecosystem
 mac/index
 ```
 
 ```{toctree}
-:hidden:
 :caption: Virtualization
 virt/qemu
 virt/enhanced-session
@@ -44,27 +41,23 @@ virt/setup
 ```
 
 ```{toctree}
-:hidden:
 :caption: Networking
 networking/firewall
 networking/wireguard-vpn
 ```
 
 ```{toctree}
-:hidden:
 :caption: Remote Desktop
 remote/xrdp-server
 remote/ansible
 ```
 
 ```{toctree}
-:hidden:
 :caption: General Tools
 tool-tips
 ```
 
 ```{toctree}
-:hidden:
 :caption: Development Setup
 dev/python/anaconda
 dev/python/pip
