@@ -1,5 +1,4 @@
-Manjaro/Arch First Setup
-=================================
+# Manjaro/Arch First Setup
 
 ## This is a WIP
 
@@ -20,7 +19,21 @@ Manjaro/Arch First Setup
     From `pacman`:
 
     ```zsh
-    
+
     ```
 
     From `AUR`:
+
+    ```zsh
+    git clone <repository>
+    ```
+
+    ```zsh
+    cd <repository>
+    ```
+
+    Compile, install with dev dependencies, remove or clean up build and dev dependencies.
+
+    ```zsh
+    makepkg -sri
+    ```
