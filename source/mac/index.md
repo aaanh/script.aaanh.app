@@ -23,7 +23,7 @@ Since Mac uses the `zsh` terminal shell by default, some scripts for Ubuntu can 
 -   Install `pip` for pre-installed `python3`
 
     ```zsh
-    python3 -m pip ensurepip --install
+    python3 -m ensurepip --install
     ```
 
 -   Install brew packages
