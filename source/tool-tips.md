@@ -39,3 +39,33 @@ curl -o [target] [url]
 ```zsh
 curl -O [url]
 ```
+
+## which
+
+Sypnosis: Returns the path to executable for the command line program. Not the symlink.
+
+-   Simple usage
+
+```zsh
+which <command line program>
+```
+
+## find
+
+Sypnosis: Recursively returns the filepaths that match the supplied regex.
+
+-   Simple usage
+
+```zsh
+find . -name '*.jpg'
+```
+
+## top
+
+Synopsis: Real-time resource and process monitoring
+
+-   Usage with pipe `|` and `grep`
+
+```zsh
+top | grep -i "a_very_safe_java_program"
+```
