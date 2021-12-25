@@ -67,5 +67,5 @@
 6. Set solid black 4K resolution as wallpaper. No bullshit, no patterns.
 
     ```zsh
-    cd /tmp && curl -O "https://linux.hoanganh.tech/_static/img/black-solid-4k.png" && gsettings set org.gnome.desktop.background picture-uri './black-solid-4k.png'
+    cd /tmp && curl -O "https://unix.hoanganh.tech/_static/img/black-solid-4k.png" && gsettings set org.gnome.desktop.background picture-uri './black-solid-4k.png'
     ```

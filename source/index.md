@@ -2,17 +2,17 @@
 hide-toc: false
 ---
 
-# Anh's Linux Documentation \(ALD\)
+# Anh's Unix Documentation \(AUD\)
 
 Homepage: <https://hoanganh.tech>
 
-ALD is my opinionated copy-paste scripts and commands for referencing when I set up my work environment in Linux-based distributions (over and over again).
+AUD is my opinionated copy-paste scripts and commands for referencing when I set up my work environment in Linux-based distros and Unix-based OS (over and over again).
 
 ```{warning}
    Utilize at your own risks.
 ```
 
-This docs is hosted on a Linux VM.
+This docs is hosted on a Debian Linux VM.
 
 ```{note}
 System Information \(neofetch\):

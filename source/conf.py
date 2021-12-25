@@ -14,16 +14,16 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-html_title = "Anh's Linux Docs"
+html_title = "Anh's Unix Docs"
 
 # -- Project information -----------------------------------------------------
 
-project = 'ALD'
+project = 'AUD'
 copyright = '2021, Anh'
 author = 'Anh'
 
 # The full version, including alpha/beta/rc tags
-release = 'v0.1a'
+release = 'v1.5'
 
 
 # -- General configuration ---------------------------------------------------
