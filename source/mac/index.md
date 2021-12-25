@@ -40,8 +40,16 @@ Since Mac uses the `zsh` terminal shell by default, some scripts for Ubuntu can 
 
     Select Personal > HTTPS
 
--   Optional stuff:
+## For Apple Silicon
 
-    -   Anaconda <https://www.anaconda.com/products/individual>
-    -   vscode <https://code.visualstudio.com/download>
-    -   Discord <https://discord.com/api/download?platform=osx>
+-   Install Rosetta 2
+
+    ```zsh
+    sudo softwareupdate --install-rosetta --agree-to-license
+    ```
+
+## Optional stuff
+
+-   Anaconda <https://www.anaconda.com/products/individual>
+-   vscode <https://code.visualstudio.com/download>
+-   Discord <https://discord.com/api/download?platform=osx>
