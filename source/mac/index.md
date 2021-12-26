@@ -40,6 +40,12 @@ Since Mac uses the `zsh` terminal shell by default, some scripts for Ubuntu can 
 
     Select Personal > HTTPS
 
+-   Disable mouse acceleration
+
+    ```zsh
+    defaults write .GlobalPreferences com.apple.mouse.scaling -1
+    ```
+
 ## For Apple Silicon
 
 -   Install Rosetta 2
