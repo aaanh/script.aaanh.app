@@ -69,3 +69,13 @@ Synopsis: Real-time resource and process monitoring
 ```zsh
 top | grep -i "a_very_safe_java_program"
 ```
+
+## netstat
+
+Sypnosis: net(work) stat(us)
+
+- See which ports are in use
+
+```zsh
+sudo netstat -tunlp
+```
