@@ -70,9 +70,9 @@ Synopsis: Real-time resource and process monitoring
 top | grep -i "a_very_safe_java_program"
 ```
 
-## netcat
+## netstat
 
-Sypnosis: `cat` network info
+Sypnosis: net(work) stat(us)
 
 - See which ports are in use
 
