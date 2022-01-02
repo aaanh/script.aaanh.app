@@ -18,7 +18,7 @@ This applies to the Ubuntu distro with `apt` as the package manager.
 
     - Secure Boot disabled in BIOS
         - This security feature prevents loading self-programmed kernel modules by the kernel due to unsigned binaries.
-    -
+    - That's it, for now.
 
 3. Commands:
     - `# insmod <module.ko>`: install the module.

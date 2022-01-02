@@ -59,6 +59,7 @@ tool-tips
 
 ```{toctree}
 :caption: Development Setup
+dev/linux-kernel
 dev/python/anaconda
 dev/python/pip
 dev/sphinx
