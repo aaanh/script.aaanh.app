@@ -36,7 +36,7 @@ curl -o [target] [url]
 
 -   Same output as source
 
-```zsh
+```shell
 curl -O [url]
 ```
 
@@ -56,7 +56,7 @@ Sypnosis: Recursively returns the filepaths that match the supplied regex.
 
 -   Simple usage
 
-```zsh
+```shell
 find . -name '*.jpg'
 ```
 
@@ -66,7 +66,7 @@ Synopsis: Real-time resource and process monitoring
 
 -   Usage with pipe `|` and `grep`
 
-```zsh
+```shell
 top | grep -i "a_very_safe_java_program"
 ```
 
@@ -74,8 +74,8 @@ top | grep -i "a_very_safe_java_program"
 
 Sypnosis: net(work) stat(us)
 
-- See which ports are in use
+-   See which ports are in use
 
-```zsh
+```console
 sudo netstat -tunlp
 ```
