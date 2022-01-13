@@ -12,15 +12,14 @@ This applies to the Ubuntu distro with `apt` as the package manager.
     -   Add deb-src to sources.list first. Note: Needs superuser privilege.
 
     ```zsh
-    sudo echo "deb-src http://archive.ubuntu.com/ubuntu disco main\
-            deb-src http://archive.ubuntu.com/ubuntu disco-updates main" >> /etc/apt/sources.list
+    echo -e "deb-src http://archive.ubuntu.com/ubuntu impish main\ndeb-src http://archive.ubuntu.com/ubuntu impish-updates main" | sudo tee -a /etc/apt/sources.list > /dev/null
     ```
 
     -   Or add the sources manually
 
     ```zsh
-    deb-src http://archive.ubuntu.com/ubuntu disco main
-    deb-src http://archive.ubuntu.com/ubuntu disco-updates main
+    deb-src http://archive.ubuntu.com/ubuntu impish main
+    deb-src http://archive.ubuntu.com/ubuntu impish-updates main
     ```
 
     ```zsh
