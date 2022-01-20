@@ -29,6 +29,8 @@ jobs:
               run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
             - name: Checkout repo code
               uses: actions/checkout@v2
+            - name: Update
+              run: sudo apt update
             - name: Install Sphinx
               run: sudo apt install python3-sphinx
             - name: Install pip
