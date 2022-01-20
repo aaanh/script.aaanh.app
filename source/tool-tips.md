@@ -1,5 +1,23 @@
 # Tool Tips
 
+# scp (Secure CoPy)
+
+-   Copy from local (source) to remote (destination)
+
+```zsh
+scp /path/to/local_file.asm remote_user@remote_server:/remote/folder/
+```
+
+-   Copy from remote (source) to local (destination). Performed on local shell.
+
+```zsh
+scp remote_user@remote_server:/remote/folder/ /path/to/local_destination
+```
+
+```{note}
+Full path needed if destination is Windows. E.g. `c:\users\local_user\...`
+```
+
 ## tar
 
 -   Create
