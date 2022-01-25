@@ -6,6 +6,8 @@ hide-toc: false
 
 Homepage: <https://hoanganh.tech>
 
+Git repo: <https://github.com/aaanh/linux-docs>
+
 AUD is my opinionated copy-paste scripts and commands for referencing when I set up my work environment in Linux-based distros and Unix-based OS (over and over again).
 
 ```{warning}
@@ -26,6 +28,11 @@ System Information \(neofetch\):
 :caption: Userland
 user/ubuntu-debian-first-setup
 user/manjaro-arch-first-setup
+```
+
+```{toctree}
+:caption: General Tools
+tool-tips
 ```
 
 ```{toctree}
@@ -53,14 +60,13 @@ remote/ansible
 ```
 
 ```{toctree}
-:caption: General Tools
-tool-tips
-```
-
-```{toctree}
 :caption: Development Setup
 dev/linux-kernel
 dev/python/anaconda
 dev/python/pip
 dev/sphinx
+```
+
+```{toctree}
+CONTRIB.md
 ```
