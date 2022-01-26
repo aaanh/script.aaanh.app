@@ -1,6 +1,6 @@
 # Tool Tips
 
-# scp (Secure CoPy)
+## scp (Secure CoPy)
 
 -   Copy from local (source) to remote (destination)
 
