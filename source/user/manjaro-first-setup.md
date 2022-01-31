@@ -1,6 +1,4 @@
-# Manjaro/Arch First Setup
-
-## This is a WIP
+# Manjaro First Setup
 
 1. Update and choose optimal mirror for pac(kage)man(ager)
 
@@ -14,15 +12,11 @@
     sudo pacman -Sy base-devel git
     ```
 
-3. Install commonly-used packages
+3. Install packages from AUR
 
-    From `pacman`:
+    - Browse AUR here <https://aur.archlinux.org/>
 
-    ```zsh
-
-    ```
-
-    From `AUR`:
+    - Clone repository
 
     ```zsh
     git clone <repository>
@@ -32,7 +26,7 @@
     cd <repository>
     ```
 
-    Compile, install with dev dependencies, remove or clean up build and dev dependencies.
+    - Compile, install with dev dependencies, remove or clean up build and dev dependencies.
 
     ```zsh
     makepkg -sri

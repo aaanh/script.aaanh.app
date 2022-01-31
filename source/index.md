@@ -27,7 +27,8 @@ System Information \(neofetch\):
 ```{toctree}
 :caption: Userland
 user/ubuntu-debian-first-setup
-user/manjaro-arch-first-setup
+user/manjaro-first-setup
+user/arch-linux-setup
 ```
 
 ```{toctree}
