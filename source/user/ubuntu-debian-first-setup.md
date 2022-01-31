@@ -82,7 +82,7 @@
 7. Set solid black 4K resolution as wallpaper. No bullshit, no patterns.
 
     ```{note}
-        This script is deprecated as of Ubuntu 21.04+. Using it would just weirdly set a blue background (wtf?) To use the background, download it and set it via the graphical gnome settings.
+    This script is deprecated as of Ubuntu 21.04+. Using it would just weirdly set a blue background (wtf?) To use the background, download it and set it via the graphical gnome settings.
     ```
 
     ```zsh
