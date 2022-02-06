@@ -1,5 +1,7 @@
 # SSH
 
+## Use cases
+
 -   Simple `ssh` connection
 
     ```
@@ -31,3 +33,27 @@
     -   `root` is the user on the remote jump server.
 
     Note: The jump server could be standalone (different domain name/IP address) or could be the same as remote server.
+
+## SSH Keypair
+
+-   Create
+
+```
+ssh-keygen -t rsa -b 4096
+```
+
+or
+
+```
+ssh-keygen -t ecdsa -b 521
+```
+
+-   Copy key to server
+
+```
+ssh-copy-id -i ~/.ssh/key_id <remote_user>@<host>
+```
+
+```{warning}
+Storing ssh keypairs in plain text is a security risk. Consider using a hardened management system to store such keys.
+```

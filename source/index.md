@@ -24,8 +24,16 @@ user/arch-linux-setup
 ```
 
 ```{toctree}
-:caption: General Tools
-tool-tips
+:caption: General Tools and Commands
+general/general-tools
+```
+
+```{toctree}
+:caption: Development Setup
+dev/linux-kernel
+dev/python/anaconda
+dev/python/pip
+dev/sphinx
 ```
 
 ```{toctree}
@@ -47,17 +55,15 @@ networking/wireguard-vpn
 ```
 
 ```{toctree}
-:caption: Remote Desktop
+:caption: Remote Management and Access
 remote/xrdp-server
-remote/ansible
+remote/ssh
 ```
 
 ```{toctree}
-:caption: Development Setup
-dev/linux-kernel
-dev/python/anaconda
-dev/python/pip
-dev/sphinx
+:caption: Configuration Management
+config_mgmt/ansible
+config_mgmt/vagrant
 ```
 
 ```{toctree}

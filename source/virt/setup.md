@@ -1,7 +1,5 @@
-KVM Hypervisor Setup
-=======================
+# KVM Hypervisor Setup
 
-## This is a WIP
 ```{note}
 This doc assumes that your host system CPU is capable of kvm virtualization (type 1 hypervisor).
 ```

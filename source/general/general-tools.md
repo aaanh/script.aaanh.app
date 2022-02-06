@@ -1,4 +1,6 @@
-# Tool Tips
+# General tools
+
+These tools can be run on every OS, given that it is installed.
 
 ## scp (Secure CoPy)
 
