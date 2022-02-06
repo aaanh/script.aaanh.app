@@ -57,3 +57,11 @@ ssh-copy-id -i ~/.ssh/key_id <remote_user>@<host>
 ```{warning}
 Storing ssh keypairs in plain text is a security risk. Consider using a hardened management system to store such keys.
 ```
+
+## FAQs
+
+-   Permission is too open error
+
+```
+chmod -R 600 ~/.ssh
+```
