@@ -6,21 +6,35 @@
     sudo apt update && sudo apt upgrade
     ```
 
-2. install commonly-used packages from apt
+1. install commonly-used packages from `apt`
 
     ```zsh
     sudo apt install git zsh net-tools build-essential powerline \
             fonts-powerline fonts-firacode vim openssh-server \
-            tmux python3 python-is-python3 python3-pip
+            tmux python3 python-is-python3 python3-pip curl
     ```
 
-3. snap packages
+1. additional optional packages from `apt`
+
+    ```zsh
+    sudo apt install gnome-tweaks grub-customizer
+    ```
+
+1. juiced up `vim`
+
+    ```zsh
+    git clone https://github.com/aaanh/vimrc ~/.vim_runtime && cd ~/.vim_runtime && ./install_awesome_vimrc.sh
+    ```
+
+    > Forked from [https://github.com/amix/vimrc](https://github.com/amix/vimrc). Edit personal configs in `~/.vim_runtime/my_configs.vim`.
+
+1. snap packages
 
     ```{warning}
     This documentation will no longer use snap packages.
     ```
 
-4. zsh setup
+1. zsh setup
 
     \# Change shell
 
@@ -58,13 +72,13 @@
     echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
     ```
 
-5. Use local time (optional, for dual boot)
+1. Use local time (optional, for dual boot)
 
     ```zsh
     timedatectl set-local-rtc 1 --adjust-system-clock
     ```
 
-6. Install Github CLI for Linux-based distros
+1. Install Github CLI for Linux-based distros
 
     <https://github.com/cli/cli/blob/trunk/docs/install_linux.md>
 
@@ -79,7 +93,7 @@
 
     - Then, authorization Github CLI using `gh auth login`
 
-7. Set solid black 4K resolution as wallpaper. No bullshit, no patterns.
+1. Set solid black 4K resolution as wallpaper. No bullshit, no patterns.
 
     ```{note}
     This script is deprecated as of Ubuntu 21.04+. Using it would just weirdly set a blue background (wtf?) To use the background, download it and set it via the graphical gnome settings.
