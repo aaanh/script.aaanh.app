@@ -17,7 +17,7 @@
 1. additional optional packages from `apt`
 
     ```zsh
-    sudo apt install gnome-tweaks grub-customizer
+    sudo apt install gnome-tweaks grub-customizer nodejs npm
     ```
 
 1. juiced up `vim`
@@ -77,6 +77,14 @@
     ```zsh
     timedatectl set-local-rtc 1 --adjust-system-clock
     ```
+
+1. additional applications you might need
+
+    - Visual Studio Code: https://code.visualstudio.com/download
+    - Discord: https://discord.com/download
+    - Anaconda: https://www.anaconda.com/products/individual
+    - Zoom: https://zoom.us/download
+    - Slack (snap or rpm): https://slack.com/downloads/linux
 
 1. Install Github CLI for Linux-based distros
 
