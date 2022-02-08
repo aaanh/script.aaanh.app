@@ -1,5 +1,19 @@
 # Ubuntu/Debian First Setup
 
+## Downloadable script file
+
+Download it here: https://unix.hoanganh.tech/_static/debian-setup.sh
+
+Or open up a Terminal, and use this command:
+
+```bash
+wget https://unix.hoanganh.tech/_static/debian-setup.sh | bash
+```
+
+Explanation: Use `wget` to download the `debian-setup.sh` script file and pipe it into `bash`.
+
+## Manual copy-paste
+
 1. **update** repository listing & **upgrade** all existing packages
 
     ```shell
