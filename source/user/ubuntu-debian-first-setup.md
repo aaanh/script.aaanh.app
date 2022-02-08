@@ -12,6 +12,15 @@ wget https://unix.hoanganh.tech/_static/debian-setup.sh | bash
 
 Explanation: Use `wget` to download the `debian-setup.sh` script file and pipe it into `bash`.
 
+<details>
+<summary>What this script does</summary>
+<ul>
+<li>Use apt to update and upgrade</li>
+<li>Install commonly-used packages: git zsh net-tools build-essential powerline fonts-powerline fonts-firacode vim openssh-server tmux python3 python-is-python3 python3-pip curl</li>
+<li>Setup and configure zsh, oh-my-zsh, zsh highlighting, zsh theme</li>
+</ul>
+</details>
+
 ## Manual copy-paste
 
 1. **update** repository listing & **upgrade** all existing packages
