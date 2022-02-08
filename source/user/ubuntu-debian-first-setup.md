@@ -7,10 +7,10 @@ Download it here: https://unix.hoanganh.tech/_static/debian-setup.sh
 Or open up a Terminal, and use this command:
 
 ```bash
-wget https://unix.hoanganh.tech/_static/debian-setup.sh | bash
+wget https://unix.hoanganh.tech/_static/debian-setup.sh && bash ./debian-setup.sh && rm ./debian-setup.sh
 ```
 
-Explanation: Use `wget` to download the `debian-setup.sh` script file and pipe it into `bash`.
+Explanation: Use `wget` to download the `debian-setup.sh` script file and execute with `bash`.
 
 <details>
 <summary>What this script does</summary>
