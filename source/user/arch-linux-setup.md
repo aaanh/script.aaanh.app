@@ -171,6 +171,12 @@ mount /dev/sda3 /mnt
 pacstrap /mnt base linux linux-firmware sudo vim
 ```
 
+> If PGP signature is not trusted, keyring needs to be updated.
+
+```
+pacman -Sy archlinux-keyring
+```
+
 ## System Configurations
 
 -   fstab
@@ -203,7 +209,7 @@ sed -i 's/#en_US ISO-8859-1/en_US ISO-8859-1/' /etc/locale.gen
 Or manually:
 
 ```
-vim /etc/
+vim /etc/locale.conf
 ```
 
 -   Locale (cont.)
@@ -222,6 +228,15 @@ echo "your-pc-name-of-choice" > /etc/hostname
 
 ```sh
 echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\tyour_pc_name" > /etc/hosts
+```
+
+Should look something like this
+
+```
+# /etc/hosts
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   your-pc-name
 ```
 
 -   Set root password
@@ -283,7 +298,7 @@ systemctl enable NetworkManager
 ```sh
 pacman -S xorg plasma plasma-wayland-session kde-applications networkmanager
 systemctl enable sddm.service
-systemctl enable NetworkManager
+systemctl enable NetworkManager # THIS SHIT IS CASE-SENSITIVE
 ```
 
 ## Create a user account
