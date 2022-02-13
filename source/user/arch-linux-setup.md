@@ -44,33 +44,33 @@ After a bit of initializations, you should now be staring at the live boot TTY c
 
 ## Networking
 
--   Check the interfaces
+### Check the interfaces
 
-    ```sh
-    ip link
-    ```
+```sh
+ip link
+```
 
 ### Wireless (Taken straight from [Arch Linux Wiki](https://wiki.archlinux.org/title/lwd#iwctl))
 
-    ```sh
-    iwctl
-    ```
+```sh
+iwctl
+```
 
-    ```sh
-    device list
-    ```
+```sh
+device list
+```
 
-    ```sh
-    station device scan
-    ```
+```sh
+station device scan
+```
 
-    ```sh
-    station device get-networks
-    ```
+```sh
+station device get-networks
+```
 
-    ```sh
-    station device connect SSID
-    ```
+```sh
+station device connect SSID
+```
 
 ### Wired
 
@@ -221,7 +221,7 @@ echo "your-pc-name-of-choice" > /etc/hostname
 ```
 
 ```sh
-echo -e "127.0.0.1\tlocalhost\n::1\tlocalhost\n127.0.1.1\t`your-pc-name`"
+echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\tyour_pc_name" > /etc/hosts
 ```
 
 -   Set root password
@@ -272,7 +272,7 @@ Not all DE's are covered here. Only the 2 most used: gnome and kde. For other DE
 
 -   GNOME
 
-```
+```sh
 pacman -S gnome gnome-extra networkmanager
 systemctl enable gdm
 systemctl enable NetworkManager
