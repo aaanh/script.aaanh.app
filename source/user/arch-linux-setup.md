@@ -98,10 +98,10 @@ ip route show
 ip route add PREFIX via address dev interface
 ```
 
-## Update `pacman`
+## Update `pacman` repository listing
 
 ```sh
-pacman -Syyu
+pacman -Syy
 ```
 
 ## Create new partition table
@@ -209,7 +209,7 @@ sed -i 's/#en_US ISO-8859-1/en_US ISO-8859-1/' /etc/locale.gen
 Or manually:
 
 ```
-vim /etc/locale.conf
+vim /etc/locale.gen
 ```
 
 -   Locale (cont.)
@@ -272,7 +272,7 @@ pacman -S xorg-server xorg-apps
 
 ```sh
 # NVIDIA
-pacman -S nvidia utils
+pacman -S nvidia-utils
 
 # AMD
 pacman -S xf86-video-ati
@@ -290,7 +290,7 @@ Not all DE's are covered here. Only the 2 most used: gnome and kde. For other DE
 ```sh
 pacman -S gnome gnome-extra networkmanager
 systemctl enable gdm
-systemctl enable NetworkManager
+systemctl enable NetworkManager # THIS SHIT IS CASE-SENSITIVE
 ```
 
 -   KDE
@@ -322,3 +322,7 @@ reboot
 ```
 
 After the reboot, it should boot straight into the Arch installation on your system (assuming you have only 1 disk, 1 OS installed, lol).
+
+## Userland
+
+Refer to: <https://linux.hoanganh.tech/user/manjaro-first-setup.md>
