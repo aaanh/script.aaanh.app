@@ -325,4 +325,4 @@ After the reboot, it should boot straight into the Arch installation on your sys
 
 ## Userland
 
-Refer to: <https://linux.hoanganh.tech/user/manjaro-first-setup.md>
+Refer to: <https://linux.hoanganh.tech/user/manjaro-first-setup.html>
