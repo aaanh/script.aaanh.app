@@ -49,6 +49,12 @@ virt/setup
 ```
 
 ```{toctree}
+:caption: Container Technologies
+virt/docker/docker-setup.md
+virt/docker/docker-quickstart.md
+```
+
+```{toctree}
 :caption: Networking
 networking/firewall
 networking/wireguard-vpn
