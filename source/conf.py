@@ -59,7 +59,7 @@ html_static_path = ['_static']
 
 html_theme_options = {
     "dark_css_variables": {
-        "color-brand-primary": "#00C77B"
+        "color-brand-primary": "#00C77B",
         "color-brand-content": "#7c3dbf"
     }
 }
