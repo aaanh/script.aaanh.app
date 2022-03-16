@@ -50,6 +50,12 @@ After a bit of initializations, you should now be staring at the live boot TTY c
 ip link
 ```
 
+If interface, `wlan0` for example, is shown as DOWN, do:
+
+```sh
+sudo ip link set wlan0 up
+```
+
 ### Wireless (Taken straight from [Arch Linux Wiki](https://wiki.archlinux.org/title/lwd#iwctl))
 
 ```sh
