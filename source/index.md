@@ -22,6 +22,7 @@ This docs is hosted on a Debian Linux VM.
 user/ubuntu-debian-first-setup
 user/manjaro-first-setup
 user/arch-linux-setup
+user/dotfiles
 ```
 
 ```{toctree}
