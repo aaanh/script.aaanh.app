@@ -7,10 +7,10 @@ Download it here: https://unix.hoanganh.tech/_static/debian-setup.sh
 Or open up a Terminal, and use this command:
 
 ```bash
-wget https://unix.hoanganh.tech/_static/debian-setup.sh && bash ./debian-setup.sh && rm ./debian-setup.sh
+wget --user-agent="chrome" https://unix.hoanganh.tech/_static/debian-setup.sh && bash ./debian-setup.sh && rm ./debian-setup.sh
 ```
 
-Explanation: Use `wget` to download the `debian-setup.sh` script file and execute with `bash`.
+Explanation: Use `wget` to download the `debian-setup.sh` script file and execute with `bash`. The `--user-agent` flag is necessary because I somehow configured Cloudflare to block these types of request. Still figuring stuff out.
 
 <details>
 <summary>What this script does</summary>
