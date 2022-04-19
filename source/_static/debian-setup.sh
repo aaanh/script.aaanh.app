@@ -14,7 +14,7 @@ echo -e "Setting script to run non-interactively."
 export DEBIAN_FRONTEND=noninteractive
 
 echo -e "Running: apt update and upgrade"
-sudo update && upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 echo -e "Running: Install commonly-used packages from apt."
 sudo apt install git zsh net-tools build-essential powerline \
