@@ -1,4 +1,4 @@
-# Python Development Environment
+# Python
 
 ```{toctree}
 anaconda
