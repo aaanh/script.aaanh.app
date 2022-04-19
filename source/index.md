@@ -10,7 +10,7 @@ hide-toc: true
 
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs)
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI?style=for-the-badge&label=Developement) ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI/prod?label=Production&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI?style=for-the-badge&label=Development) ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI/prod?label=Production&style=for-the-badge)
 
 The Convenience Store contains fairly opinionated scripts and commands in copy-paste form to be referenced when setting up newly installed Linux-based distributions or even macOS too.
 
