@@ -30,9 +30,7 @@ tools/common
 ```{toctree}
 :caption: Development Environment
 :maxdepth: 2
-dev/python/anaconda
-dev/python/pip
-dev/sphinx
+dev/python/index
 dev/linux-kernel
 ```
 
@@ -77,4 +75,9 @@ config-mgmt/vagrant
 :caption: Container Technologies
 container/docker/index
 container/kubernetes/index
+```
+
+```{toctree}
+:caption: About this Project
+about/index
 ```
