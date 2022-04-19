@@ -3,9 +3,17 @@
 ## Wireguard VPN
 
 ```{note}
-Research, implementation, and testing in progress
+WIP
 ```
 
-### Introduction
+## Tailscale
 
-Wireguard VPN is an open-source VPN protocol.
+```{note}
+WIP
+```
+
+## OpenVPN
+
+```{note}
+WIP
+```

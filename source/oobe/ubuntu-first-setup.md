@@ -4,7 +4,7 @@
 
 Download it here: https://unix.hoanganh.tech/_static/debian-setup.sh
 
-Or open up a Terminal, and use this command:
+Or open up a Terminal, and use this command (**this will auto-run the script**):
 
 ```bash
 wget --user-agent="chrome" https://unix.hoanganh.tech/_static/debian-setup.sh && bash ./debian-setup.sh && rm ./debian-setup.sh
