@@ -1,9 +1,11 @@
-# Wireguard VPN
+# VPN
+
+## Wireguard VPN
 
 ```{note}
 Research, implementation, and testing in progress
 ```
 
-## Introduction
+### Introduction
 
 Wireguard VPN is an open-source VPN protocol.
