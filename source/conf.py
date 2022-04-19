@@ -14,7 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-html_title = "Anh's Unix Docs"
+html_title = "Unix Convenience Store"
 
 # -- Project information -----------------------------------------------------
 
