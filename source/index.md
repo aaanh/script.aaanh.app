@@ -4,7 +4,11 @@ hide-toc: true
 
 # aaanh's \*nix Convenience Store
 
-![GitHub Repo stars](https://img.shields.io/github/stars/aaanh/linux-docs?label=Star%20it%20on%20GitHub&style=social) ![GitHub forks](https://img.shields.io/github/forks/aaanh/linux-docs?style=social)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aaanh/linux-docs)
+
+![GitHub forks](https://img.shields.io/github/forks/aaanh/linux-docs?style=social) [![GitHub license](https://img.shields.io/github/license/aaanh/linux-docs?style=social)](https://github.com/aaanh/linux-docs/blob/master/LICENSE)
+
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs)
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI?style=for-the-badge&label=Developement) ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI/prod?label=Production&style=for-the-badge)
 
