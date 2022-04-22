@@ -27,7 +27,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
-sed -i 's/robbyrussell/jonathan/g' ~/.zshrc
+sed -i 's/robbyrussell/af-magic/g' ~/.zshrc
 
 echo -e "Setup script completed successfully."
 exit 0
