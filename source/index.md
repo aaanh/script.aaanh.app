@@ -1,88 +1,87 @@
 ---
-hide-toc: false
+hide-toc: true
 ---
 
-# Anh's Unix Documentation \(AUD\)
+# aaanh's \*nix Convenience Store
 
-Homepage: <https://hoanganh.tech>
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aaanh/linux-docs)
 
-Git repo: <https://github.com/aaanh/linux-docs>
+![GitHub forks](https://img.shields.io/github/forks/aaanh/linux-docs?style=social) [![GitHub license](https://img.shields.io/github/license/aaanh/linux-docs?style=social)](https://github.com/aaanh/linux-docs/blob/master/LICENSE)
 
-AUD is my opinionated copy-paste scripts and commands for referencing when I set up my work environment in Linux-based distros and Unix-based OS (over and over again).
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs)
 
-This docs is hosted on a Debian Linux VM.
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI?style=for-the-badge&label=Development) ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI/prod?label=Production&style=for-the-badge)
+
+The Convenience Store contains fairly opinionated scripts and commands in copy-paste form to be referenced when setting up newly installed Linux-based distributions or even macOS too.
 
 ```{warning}
-   Utilize at your own risks.
+    Make sure you understand what you are doing when attempting to run these scripts and commands.
+    Always inspect EVERY script BEFORE EXECUTION.
 ```
 
 ```{toctree}
-:caption: Userland
+:caption: Out Of Box Experience
 :maxdepth: 1
-user/ubuntu-debian-first-setup
-user/manjaro-first-setup
-user/arch-linux-setup
+oobe/arch-linux-setup
+oobe/manjaro-first-setup
+oobe/ubuntu-first-setup
 ```
 
 ```{toctree}
-:caption: General Tools and Commands
-:maxdepth: 1
-general/general-tools
+tools/common
 ```
 
 ```{toctree}
-:caption: Development Setup
-:maxdepth: 1
+:caption: Development Environment
+:maxdepth: 2
+dev/python/index
 dev/linux-kernel
-dev/python/anaconda
-dev/python/pip
-dev/sphinx
 ```
 
 ```{toctree}
-:caption: Mac Ecosystem
+:caption: Dotfiles
 :maxdepth: 1
-mac/index
-```
-
-```{toctree}
-:caption: Virtualization
-:maxdepth: 1
-virt/qemu
-virt/enhanced-session
-virt/setup
-```
-
-```{toctree}
-:caption: Container Technologies
-:maxdepth: 1
-virt/docker/docker-setup.md
-virt/docker/docker-quickstart.md
+dotfiles/zshrc
+dotfiles/vimrc
+dotfiles/gdbinit
 ```
 
 ```{toctree}
 :caption: Networking
 :maxdepth: 1
 networking/firewall
-networking/wireguard-vpn
+networking/vpn
 ```
 
 ```{toctree}
-:caption: Remote Management and Access
+:caption: Remote Desktop and Management
 :maxdepth: 1
-remote/xrdp-server
 remote/ssh
+remote/xrdp
+```
+
+```{toctree}
+:caption: Virtualization
+:maxdepth: 1
+virtualization/enhanced-session
+virtualization/qemu
+virtualization/kvm-setup
 ```
 
 ```{toctree}
 :caption: Configuration Management
 :maxdepth: 1
-config_mgmt/ansible
-config_mgmt/vagrant
+config-mgmt/ansible
+config-mgmt/vagrant
 ```
 
 ```{toctree}
-:caption: Contribution
-:maxdepth: 1
-CONTRIB.md
+:caption: Container Technologies
+container/docker/index
+container/kubernetes/index
+```
+
+```{toctree}
+:caption: About this Project
+about/index
 ```

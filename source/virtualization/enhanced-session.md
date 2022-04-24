@@ -1,15 +1,18 @@
 # Hyper-V Enhanced Session
+
 ## Prerequisites
 
-- Administrator privilege
-- CPU that supports level 1 hypervisor virtualization
-- Windows 10 Pro edition (build >= 20H1)
+-   Administrator privilege
+-   CPU that supports level 1 hypervisor virtualization
+-   Windows 10 Pro edition (build >= 20H1)
+
 ## Windows host configurations
 
 The following Windows Features must be turned on:
-- Hyper-V
-- Windows Hypervisor Platform
-- Virtual Machine Platform
+
+-   Hyper-V
+-   Windows Hypervisor Platform
+-   Virtual Machine Platform
 
 Scripts execution in Powershell must be allowed:
 
@@ -18,14 +21,15 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
 ```
 
 During Ubuntu VM creation:
-- Select Generation 2 VM
-- Disable secure boot
-- Name VM as something tolerable, e.g. linux-test, i.e. `$vmName`.
+
+-   Select Generation 2 VM
+-   Disable secure boot
+-   Name VM as something tolerable, e.g. linux-test, i.e. `$vmName`.
 
 ## Debian guest configurations
 
 ```{note}
-This assumes that [first setup](/user/ubuntu-debian-first-setup) has been done.
+This assumes that [first setup](/oobe/ubuntu-first-setup) has been done.
 ```
 
 1. Clone git repo containing bash script.

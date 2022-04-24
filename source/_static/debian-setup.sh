@@ -14,7 +14,7 @@ echo -e "Setting script to run non-interactively."
 export DEBIAN_FRONTEND=noninteractive
 
 echo -e "Running: apt update and upgrade"
-sudo update && upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 echo -e "Running: Install commonly-used packages from apt."
 sudo apt install git zsh net-tools build-essential powerline \
@@ -27,7 +27,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
-sed -i 's/robbyrussell/jonathan/g' ~/.zshrc
+sed -i 's/robbyrussell/amuse/g' ~/.zshrc
 
 echo -e "Setup script completed successfully."
 exit 0

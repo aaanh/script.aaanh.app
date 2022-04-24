@@ -1,4 +1,4 @@
-# Linux Kernel Development Environment
+# Linux Kernel
 
 ```{note}
 This applies to the Ubuntu distro with `apt` as the package manager.

@@ -1,4 +1,4 @@
-# General tools
+# Common Tools and Commands
 
 These tools can be run on every OS, given that it is installed.
 
