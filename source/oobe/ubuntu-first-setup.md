@@ -2,15 +2,18 @@
 
 ## Downloadable script file
 
-Download it here: https://unix.hoanganh.tech/_static/debian-setup.sh
+Download it here: <https://linux.hoanganh.tech/_static/debian-setup.sh>
 
 Or open up a Terminal, and use this command (**this will auto-run the script**):
 
 ```bash
-wget --user-agent="chrome" https://unix.hoanganh.tech/_static/debian-setup.sh && bash ./debian-setup.sh && rm ./debian-setup.sh
+wget --user-agent="chrome" https://linux.hoanganh.tech/_static/debian-setup.sh && bash ./debian-setup.sh && rm ./debian-setup.sh
 ```
 
-Explanation: Use `wget` to download the `debian-setup.sh` script file and execute with `bash`. The `--user-agent` flag is necessary because I somehow configured Cloudflare to block these types of request. Still figuring stuff out.
+<details>
+<summary>Script explanation:</summary>
+Use `wget` to download the `debian-setup.sh` script file and execute with `bash`. The `--user-agent` flag is necessary because I somehow configured Cloudflare to block these types of request. Still figuring stuff out.
+</details>
 
 <details>
 <summary>What this script does</summary>
@@ -23,13 +26,13 @@ Explanation: Use `wget` to download the `debian-setup.sh` script file and execut
 
 ## Manual copy-paste
 
-1. **update** repository listing & **upgrade** all existing packages
+1.  **update** repository listing & **upgrade** all existing packages
 
     ```shell
     sudo apt update && sudo apt upgrade
     ```
 
-1. install commonly-used packages from `apt`
+1.  install commonly-used packages from `apt`
 
     ```zsh
     sudo apt install git zsh net-tools build-essential powerline \
@@ -37,13 +40,13 @@ Explanation: Use `wget` to download the `debian-setup.sh` script file and execut
             tmux python3 python-is-python3 python3-pip curl
     ```
 
-1. additional optional packages from `apt`
+1.  additional optional packages from `apt`
 
     ```zsh
     sudo apt install gnome-tweaks grub-customizer nodejs npm
     ```
 
-1. juiced up `vim`
+1.  juiced up `vim`
 
     ```zsh
     git clone https://github.com/aaanh/vimrc ~/.vim_runtime && cd ~/.vim_runtime && ./install_awesome_vimrc.sh
@@ -51,69 +54,78 @@ Explanation: Use `wget` to download the `debian-setup.sh` script file and execut
 
     > Forked from [https://github.com/amix/vimrc](https://github.com/amix/vimrc). Edit personal configs in `~/.vim_runtime/my_configs.vim`.
 
-1. snap packages
+1.  snap packages
 
     ```{warning}
     This documentation will no longer use snap packages.
     ```
 
-1. zsh setup
+1.  zsh setup
 
-    \# Change shell
+    Convenience script:
 
-    ```zsh
-    chsh -s /bin/zsh
+    ```sh
+    (curl https://linux.hoanganh.tech/_static/zsh-setup.sh | sudo -E bash -)
     ```
 
-    \# Clone oh-my-zsh configs
+    <details>
+    <summary>Step by step</summary>
 
-    ```zsh
-    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-    ```
+        \# Change shell
 
-    \# Copy the config template into .zshrc
+        ```zsh
+        chsh -s /bin/zsh
+        ```
 
-    ```zsh
-    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-    ```
+        \# Clone oh-my-zsh configs
 
-    \# Change to the good theme
+        ```zsh
+        git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+        ```
 
-    ```zsh
-    vim ~/.zshrc # change ZSH_THEME="af-magic"
-    ```
+        \# Copy the config template into .zshrc
 
-    \# Add syntax highlighting
+        ```zsh
+        cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+        ```
 
-    ```zsh
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
-    ```
+        \# Change to the good theme
 
-    \# Source highlighting plugins on start
+        ```zsh
+        vim ~/.zshrc # change ZSH_THEME="af-magic"
+        ```
 
-    ```zsh
-    echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
-    ```
+        \# Add syntax highlighting
 
-1. Use local time (optional, for dual boot)
+        ```zsh
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
+        ```
+
+        \# Source highlighting plugins on start
+
+        ```zsh
+        echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
+        ```
+
+    <details>
+
+1.  Use local time (optional, for dual boot)
 
     ```zsh
     timedatectl set-local-rtc 1 --adjust-system-clock
     ```
 
-1. additional applications you might need
+1.  Additional applications you might need
 
-    - Visual Studio Code: https://code.visualstudio.com/download
-    - Discord: https://discord.com/download
-    - Anaconda: https://www.anaconda.com/products/individual
-    - Zoom: https://zoom.us/download
-    - Slack (snap or rpm): https://slack.com/downloads/linux
+    -   Visual Studio Code: https://code.visualstudio.com/download
+    -   Discord: https://discord.com/download
+    -   Anaconda: https://www.anaconda.com/products/individual
+    -   Zoom: https://zoom.us/download
+    -   Slack (snap or rpm): https://slack.com/downloads/linux
 
-1. Install Github CLI for Linux-based distros
+1.  Install Github CLI for Linux-based distros
 
     <https://github.com/cli/cli/blob/trunk/docs/install_linux.md>
-
-    Extracted installation command for Debian for convenience:
 
     ```zsh
     curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
@@ -122,20 +134,10 @@ Explanation: Use `wget` to download the `debian-setup.sh` script file and execut
     sudo apt install gh
     ```
 
-    - Then, authorization Github CLI using `gh auth login`
+    -   Then, authorization Github CLI using `gh auth login`
 
-1. Set solid black 4K resolution as wallpaper. No bullshit, no patterns.
-
-    ```{note}
-    This script is deprecated as of Ubuntu 21.04+. Using it would just weirdly set a blue background (wtf?) To use the background, download it and set it via the graphical gnome settings.
-    ```
+1.  Solid black 4K resolution as wallpaper. No bullshit, no patterns.
 
     ```zsh
-    cd /tmp && curl -O "https://unix.hoanganh.tech/_static/img/black-solid-4k.png" && gsettings set org.gnome.desktop.background picture-uri './black-solid-4k.png'
-    ```
-
-    **Script for Ubuntu 21.10**
-
-    ```zsh
-    curl -O "https://unix.hoanganh.tech/_static/img/black-solid-4k.png"
+    wget --user-agent="chrome" "https://linux.hoanganh.tech/_static/img/black-solid-4k.png" -O ~/
     ```
