@@ -14,8 +14,10 @@ This repository CI is set up using GitHub Actions:
 -   Trigger build and deployment when pushed to `prod` branch.
 -   Deploy to a Debian server hosted on Linode.
 
+> I am also currently testing container-based deployments. This is being done on Google Cloud Run privately. The site is exposed on <https://aaanh.app>
+
 ## Local Development
-  
+
 ### Native
 
 - Requires `python>=3.8` and `pip`.
