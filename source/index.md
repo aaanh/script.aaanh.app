@@ -44,6 +44,7 @@ dev/linux-kernel
 dotfiles/zshrc
 dotfiles/vimrc
 dotfiles/gdbinit
+dotfiles/alacritty
 ```
 
 ```{toctree}

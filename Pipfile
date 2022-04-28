@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+myst-parser = "*"
+sphinx-copybutton = "*"
+sphinx-inline-tabs = "*"
+sphinx-tabs = "*"
+furo = "*"
+sphinx_design = "*"
+Pygments = "~=2.11"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

@@ -1,0 +1,3 @@
+services:
+    staticFrontEnd:
+        image: linux-docs:latest
