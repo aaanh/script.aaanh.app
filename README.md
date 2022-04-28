@@ -20,28 +20,34 @@ This repository CI is set up using GitHub Actions:
 
 ### Native
 
-- Requires `python>=3.8` and `pip`.
-- Install dependencies: `pip install -r requirements.txt`.
-- Navigate to `./build/html` and view `index.html` with your favorite browser.
-- **OR** serve the `./build/html` folder with a simple http server.
+-   Requires `python>=3.8` and `pip`.
+-   Install dependencies: `pip install -r requirements.txt`.
+-   Navigate to `./build/html` and view `index.html` with your favorite browser.
+-   **OR** serve the `./build/html` folder with a simple http server.
 
 ### Docker Container
 
-- `docker build . -t linux-docs:dev`
-- `docker run -dp 3000:80 linux-docs --name linux-docs-test`
-- Navigate to `localhost:3000` on local browser.
+#### Non-multistage
+
+-   `docker build . -t linux-docs:dev`
+-   `docker run -dp 3000:80 linux-docs --name linux-docs-test`
+-   Navigate to `localhost:3000` on local browser.
+
+#### Multistage
+
+-   `docker build -t linux-docs:multistage -f Docker-multistage .`
+-   `docker run -dp 8080:80 linux-docs:multistage --name linux-docs-multistage`
+-   Navigate to `localhost:8080` on local browser.
 
 ## Contributions
 
-
 > Please use common sense and follow [Github Community Guidelines](https://docs.github.com/en/site-policy/github-terms/github-community-guidelines).
 
-
-- Fork the repository
-- Do your thing
-- Commit with meaningful description
-- Push to your fork repository
-- Create pull request
+-   Fork the repository
+-   Do your thing
+-   Commit with meaningful description
+-   Push to your fork repository
+-   Create pull request
 
 ## Updates
 
