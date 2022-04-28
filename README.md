@@ -27,9 +27,9 @@ This repository CI is set up using GitHub Actions:
 
 ### Docker Container
 
-- `docker build . -t linux-docs:dev`.
-- `docker run -dp 80:8000 linux-docs`.
-- Navigate to `localhost:8000` on local browser.
+- `docker build . -t linux-docs:dev`
+- `docker run -dp 3000:80 linux-docs --name linux-docs-test`
+- Navigate to `localhost:3000` on local browser.
 
 ## Contributions
 
