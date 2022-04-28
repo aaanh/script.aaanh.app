@@ -27,6 +27,8 @@ This repository CI is set up using GitHub Actions:
 
 ### Docker Container
 
+> Public Registry: <https://hub.docker.com>
+
 #### Non-multistage
 
 -   `docker build . -t linux-docs:dev`
