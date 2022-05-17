@@ -21,7 +21,7 @@ html_title = "Unix Convenience Store"
 # -- Project information -----------------------------------------------------
 
 project = 'AUD'
-copyright = '2021, Anh'
+copyright = '2022, Anh under GPLv3'
 author = 'Anh'
 language = "en"
 
