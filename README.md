@@ -1,4 +1,6 @@
-> This project is currently being disabled. All pipelines disabled. Will redploy and restart some time later. Sorry for the inconveniences.
+> This project is currently being disabled. All pipelines disabled. Will redeploy and restart some time later. Sorry for the inconveniences.
+>
+> In the meantime, you can still follow the instructions below and view the content yourself.
 
 # \<HOSTNAME HERE\>
 
