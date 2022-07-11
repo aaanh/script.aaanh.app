@@ -1,4 +1,6 @@
-# unix.hoanganh.tech
+> This project is currently being disabled. All pipelines disabled. Will redploy and restart some time later. Sorry for the inconveniences.
+
+# \<HOSTNAME HERE\>
 
 <p><a class="reference external" href="https://github.com/aaanh/linux-docs/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/aaanh/linux-docs?style=social" /></a>  <a class="reference external" href="https://twitter.com/intent/tweet?text=Wow:&amp;url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&amp;url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs" /></a></p>
 <p><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI?style=for-the-badge&amp;label=Development" /> <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI/prod?label=Production&amp;style=for-the-badge" /></p>
