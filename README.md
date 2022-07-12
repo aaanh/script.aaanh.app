@@ -1,6 +1,6 @@
 > This project is currently being disabled. All pipelines disabled. Will redeploy and restart some time later. Sorry for the inconveniences.
 >
-> In the meantime, you can still follow the instructions below and view the content yourself.
+> In the meantime, you can still check out the old commits and follow the instructions below and view the content yourself.
 
 # \<HOSTNAME HERE\>
 
@@ -49,13 +49,15 @@ This repository CI is set up using GitHub Actions:
 
 > Please use common sense and follow [Github Community Guidelines](https://docs.github.com/en/site-policy/github-terms/github-community-guidelines).
 
--   Fork the repository
--   Do your thing
--   Commit with meaningful description
--   Push to your fork repository
--   Create pull request
-
 ## Updates
+
+### 2022/07/11
+
+Code freeze. Pipeline freeze. Overhaul commnenced.
+
+### 2022/04/late
+
+Refactoring completed.
 
 ### 2022/04/18
 

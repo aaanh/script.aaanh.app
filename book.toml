@@ -1,0 +1,12 @@
+[book]
+authors = ["Anh Hoang Nguyen"]
+language = "en"
+multilingual = false
+src = "src"
+title = "script-convenience-store"
+
+[output.html]
+preferred-dark-theme = "ayu"
+curly-quotes = true
+mathjax-support = false
+copy-fonts = true
