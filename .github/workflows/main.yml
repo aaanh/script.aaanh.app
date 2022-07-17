@@ -29,7 +29,7 @@ jobs:
             - name: Rustup
               run: |
                 curl https://sh.rustup.rs -sSf | sh -s -- -y
-                export $HOME/.cargo/bin
+                export PATH=$HOME/.cargo/bin:$PATH
                 source "$HOME/.cargo/env"
             - name: Install mdbook
               run: |
