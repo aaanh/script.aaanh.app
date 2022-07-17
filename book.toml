@@ -10,3 +10,4 @@ preferred-dark-theme = "ayu"
 curly-quotes = true
 mathjax-support = false
 copy-fonts = true
+no-section-label = true

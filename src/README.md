@@ -6,6 +6,15 @@ Linux packages or Windows programs or script-based installations, remember what 
 
 That is why I started this convenience store. To add some nitrous 🚀 to \[y\]our DX.
 
+# Security Acknowledgement
+
+While I have high confidence in the platform and networking security of the host for this book, it does not guarantee any type of attack occurring by any means that will harm your system and expose your information.
+
+An example of an attack scenario may be: man-in-the-middle attack while using `curl` to download and execute the script provided. The attacker might redirect your client to a unaffiliated and malicious copy of this website that download and execute instead a contaminated script.
+
+⚠️ It is crucial that you inspect the script first via the provided link to the static resource.
+⚠️⚠️ While I try my best to vet and securely configure the backend, some attacks happen at your layer, so my disclaimer here is that I will not be held accountable for injuries or damages caused by running the scripts haphardly.
+
 # Contributing
 
 The documentation is not only for me, it's also for the community! 
