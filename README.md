@@ -1,68 +1,30 @@
-> This project is currently being disabled. All pipelines disabled. Will redeploy and restart some time later. Sorry for the inconveniences.
->
-> In the meantime, you can still check out the old commits and follow the instructions below and view the content yourself.
+> v2.0 is under active development.
+> v1.0 is available at [branch v1.0](https://github.com/aaanh/linux-docs/tree/v1.0)
 
-# \<HOSTNAME HERE\>
+# Script Convenience Store
 
-<p><a class="reference external" href="https://github.com/aaanh/linux-docs/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/aaanh/linux-docs?style=social" /></a>  <a class="reference external" href="https://twitter.com/intent/tweet?text=Wow:&amp;url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&amp;url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs" /></a></p>
-<p><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI?style=for-the-badge&amp;label=Development" /> <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI/prod?label=Production&amp;style=for-the-badge" /></p>
+![](https://img.shields.io/github/license/aaanh/linux-docs?color=%23fef00&style=flat-square)
 
-Rationale for this project: I got tired of Googling every time I do out-the-box setup an Ubuntu installation or VM.
+A curated "book" of frequently used scripts across major platforms and command line interfaces.
 
-The project is not intended for multi-hosts and orchestration scenarios, but for end-user semi-manual setups. However, in the future I do want to utilize orchestration tools for these tasks.
+Currently supported platforms:
+- Linux
+- macOS
+- Windows
 
-## Deployment
+Note: CLI's that support cross-platform will be under their own topic.
 
-This repository CI is set up using GitHub Actions:
+## Development
 
--   Trigger build and deployment when pushed to `prod` branch.
--   Deploy to a Debian server hosted on Linode.
+1. Install rust: https://rustup.rs/
+2. Install mdbook
 
-> I am also currently testing container-based deployments. This is being done on Google Cloud Run privately. The site is exposed on <https://aaanh.app>
+  ```
+  cargo install mdbook
+  ```
 
-## Local Development
+3. Start local development server
 
-### Native
-
--   Requires `python>=3.8` and `pip`.
--   Install dependencies: `pip install -r requirements.txt`.
--   Navigate to `./build/html` and view `index.html` with your favorite browser.
--   **OR** serve the `./build/html` folder with a simple http server.
-
-### Docker Container
-
-> Public Registry: <https://hub.docker.com>
-
-#### Non-multistage
-
--   `docker build . -t linux-docs:dev`
--   `docker run -dp 3000:80 linux-docs --name linux-docs-test`
--   Navigate to `localhost:3000` on local browser.
-
-#### Multistage
-
--   `docker build -t linux-docs:multistage -f Docker-multistage .`
--   `docker run -dp 8080:80 linux-docs:multistage --name linux-docs-multistage`
--   Navigate to `localhost:8080` on local browser.
-
-## Contributions
-
-> Please use common sense and follow [Github Community Guidelines](https://docs.github.com/en/site-policy/github-terms/github-community-guidelines).
-
-## Updates
-
-### 2022/07/11
-
-Code freeze. Pipeline freeze. Overhaul commnenced.
-
-### 2022/04/late
-
-Refactoring completed.
-
-### 2022/04/18
-
-Refactoring of topics and entries has commenced.
-
-### 2022/03/22
-
-Web server has been migrated from Apache2 to Nginx.
+  ```
+  mdbook serve --open
+  ```

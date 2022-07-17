@@ -2,9 +2,14 @@
 
 [Introduction](README.md)
 
-# OS and User Environment
+# Linux
 
-- [Ubuntu](ubuntu/README.md)
-- [Arch Linux](arch/README.md)
-- [Windows](windows/README.md)
-  - [Convenience Scripts](windows/scripts.md)
+- [Ubuntu](linux/ubuntu/README.md)
+- [Arch Linux](linux/arch/README.md)
+# macOS
+
+# Windows
+
+- [Convenience Scripts](windows/scripts.md)
+
+# CLI Tools
