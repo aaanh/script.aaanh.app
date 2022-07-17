@@ -37,6 +37,9 @@ jobs:
               run: make html
             # - name: Rsync to server
             #   run: rsync -avz ./build/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/build/
+            - name: Copy .nojekyll to build folder
+              run: |
+                cp .nojekyll build/html
             - name: Deploy to Github Production branch
               uses: JamesIves/github-pages-deploy-action@v4
               with:
