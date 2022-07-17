@@ -2,6 +2,9 @@
 
 name: master-ci
 
+permissions:
+    contents: write
+
 # Controls when the workflow will run
 on:
     # Triggers the workflow on push or pull request events but only for the master branch
@@ -37,3 +40,11 @@ jobs:
             - name: Build static artifacts
               run: |
                 mdbook build -d build/
+            - name: Generate .nojekyll
+              run: |
+                touch build/html/.nojekyll
+            - name: Deploy to Github Production branch
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                folder: build/html
+                branch: upstream-release
