@@ -2,7 +2,7 @@
 >
 > In the meantime, you can still follow the instructions below and view the content yourself.
 
-# \<HOSTNAME HERE\>
+# [aaanh.github.io/linux-docs](https://aaanh.github.io/linux-docs)
 
 <p><a class="reference external" href="https://github.com/aaanh/linux-docs/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/aaanh/linux-docs?style=social" /></a>  <a class="reference external" href="https://twitter.com/intent/tweet?text=Wow:&amp;url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&amp;url=https%3A%2F%2Fgithub.com%2Faaanh%2Flinux-docs" /></a></p>
 <p><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI?style=for-the-badge&amp;label=Development" /> <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/aaanh/linux-docs/CI/prod?label=Production&amp;style=for-the-badge" /></p>
