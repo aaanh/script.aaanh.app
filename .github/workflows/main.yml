@@ -39,12 +39,12 @@ jobs:
                 cargo install mdbook
             - name: Build static artifacts
               run: |
-                mdbook build -d build/
+                mdbook build
             - name: Generate .nojekyll
               run: |
-                touch build/html/.nojekyll
+                touch book/.nojekyll
             - name: Deploy to Github Production branch
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                folder: build/html
+                folder: book
                 branch: upstream-release
