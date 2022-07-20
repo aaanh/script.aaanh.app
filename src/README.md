@@ -13,7 +13,8 @@ While I have high confidence in the platform and networking security of the host
 An example of an attack scenario may be: man-in-the-middle attack while using `curl` to download and execute the script provided. The attacker might redirect your client to a unaffiliated and malicious copy of this website that download and execute instead a contaminated script.
 
 ⚠️ It is crucial that you inspect the script first via the provided link to the static resource.
-⚠️⚠️ While I try my best to vet and securely configure the backend, some attacks happen at your layer, so my disclaimer here is that I will not be held accountable for injuries or damages caused by running the scripts haphardly.
+
+⚠️⚠️ While I try my best to vet and securely configure the backend, some attacks may happen at your layer, so my disclaimer here is that I will not be held accountable for injuries or damages caused by running the scripts haphazardly.
 
 # Contributing
 
