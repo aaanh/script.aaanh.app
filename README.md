@@ -4,6 +4,7 @@
 # Script Convenience Store
 
 ![](https://img.shields.io/github/license/aaanh/linux-docs?color=%23fef00&style=flat-square)
+![](https://img.shields.io/github/workflow/status/aaanh/script-convenience-store/master-ci?style=flat&label=master-release)
 
 A curated "book" of frequently used scripts across major platforms and command line interfaces.
 
