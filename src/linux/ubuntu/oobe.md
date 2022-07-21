@@ -2,11 +2,22 @@
 
 ## Convenience Script
 
-Static file: </static/scripts/ubuntu-oobe.sh>
+Static file: [/static/scripts/ubuntu-oobe.sh](/static/scripts/ubuntu-oobe.sh)
 
 ```bash
-curl https://convenience-store.aaanh.com/static/scripts/ubuntu-oobe.sh | bash
+curl -fSsl https://convenience-store.aaanh.com/static/scripts/ubuntu-oobe.sh | bash
 ```
+
+If `curl` is not installed, install it with `sudo apt install curl`.
+
+<details>
+    <summary>What this script does?</summary>
+    <ul>
+        <li>Use apt to update and upgrade</li>
+        <li>Install packages: git, zsh, net-tools, build-essential, powerline, fonts-powerline, fonts-firacode, vim, openssh-server, tmux, python3, python-is-python3 python3-pip.</li>
+        <li>Set up and configure zsh, oh-my-zsh, zsh-highlighting, zsh theme.</li>
+    </ul>
+</details>
 
 ## Manual
 
@@ -54,7 +65,7 @@ curl https://convenience-store.aaanh.com/static/scripts/ubuntu-oobe.sh | bash
    4.  Zoom: <https://zoom.us/download>
 
    5.  Slack (snap or rpm): <https://slack.com/downloads/linux>
-9.  Solid back 4K resolution wallpaper 👌
+9.  Solid black 4K resolution wallpaper 👌
     ```sh
     wget --user-agent="chrome" "https://convenience-store.aaanh.com/static/images/black-solid-4k.png" -O ~/
     ```
