@@ -20,7 +20,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "Running: Install commonly-used packages from apt."
 read -t 3
-sudo apt install git zsh net-tools build-essential powerline \
+sudo apt install -y git zsh net-tools build-essential powerline \
     fonts-powerline fonts-firacode vim openssh-server \
     tmux python3 python-is-python3 python3-pip curl
 
