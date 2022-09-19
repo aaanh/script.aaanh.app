@@ -5,7 +5,7 @@
 Static file: [/static/scripts/ubuntu-oobe.sh](/static/scripts/ubuntu-oobe.sh)
 
 ```bash
-(curl -fSsl https://scripts.aaanh.com/static/scripts/ubuntu-oobe.sh && bash ubuntu-oobe.sh && rm ubuntu-oobe.sh)
+(curl -fSsl https://scripts.aaanh.com/static/scripts/ubuntu-oobe.sh >> ubuntu-oobe.sh && bash ubuntu-oobe.sh && rm ubuntu-oobe.sh)
 ```
 
 If `curl` is not installed, install it with `sudo apt install curl`.
