@@ -5,7 +5,7 @@
 Static file: [/static/scripts/ubuntu-oobe.sh](/static/scripts/ubuntu-oobe.sh)
 
 ```bash
-curl -fSsl https://scripts.aaanh.com/static/scripts/ubuntu-oobe.sh | bash
+(curl -fSsl https://scripts.aaanh.com/static/scripts/ubuntu-oobe.sh >> ubuntu-oobe.sh && bash ubuntu-oobe.sh && rm ubuntu-oobe.sh)
 ```
 
 If `curl` is not installed, install it with `sudo apt install curl`.
@@ -67,5 +67,5 @@ If `curl` is not installed, install it with `sudo apt install curl`.
    5.  Slack (snap or rpm): <https://slack.com/downloads/linux>
 9.  Solid black 4K resolution wallpaper 👌
     ```sh
-    wget --user-agent="chrome" "https://convenience-store.aaanh.com/static/images/black-solid-4k.png" -O ~/
+    wget --user-agent="chrome" "https://scripts.aaanh.com/static/images/black-solid-4k.png" -O ~/
     ```
