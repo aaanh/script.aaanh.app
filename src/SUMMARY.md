@@ -6,6 +6,8 @@
 
 - [Ubuntu]()
   - [OOBE](linux/ubuntu/oobe.md)
+- [RHEL/Fedora/CentOS]()
+  - [OOBE](linux/fedora/oobe.md)
 - [Arch Linux]()
   - [Minimal OOBE](linux/arch/minimal-oobe.md)
   - [Manjaro OOBE](linux/arch/manjaro-oobe.md)
