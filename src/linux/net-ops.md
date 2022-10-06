@@ -1,5 +1,38 @@
 # Network Operations
 
+## SSH
+
+- Simple `ssh` connection
+
+  ```sh
+  ssh username@hostname
+  ```
+
+- Tunneling
+
+  ```sh
+  ssh username@server_1 -N -f -L local_port:server_2:remote_port
+  ```
+
+- Relay with port-forwarding
+
+  Synopsis:
+
+  ```sh
+  ssh -L port_a:localhost:port_b username@server_1 sshpass -p password_for_server_2 ssh -L port_b:localhost:port_c -N username@server_2
+  ```
+
+  Example:
+
+  ```sh
+  ssh -L 3333:localhost:4444 foo@server-1.example.com sshpass -p s0mePa$$w0rd ssh -L 4444:localhost:3389 -N email@example.com@server-2.example.com
+  ```
+  > Note: This scenario was tested with a 3 machines. The physical Windows machine with ssh (client), a Debian server (`server_1`) on Linode VPS, and a Windows RDP host (`server_2`). `server_1` and `server_2` have VPN tunneling with Tailscale.
+  >
+  > In order for this to work, `server_2` must have OpenSSH Server service enabled and **running**. `server_1` must have `sshpass` installed, the in and out ports whitelisted with `ufw`.
+  >
+  > This is just a makeshift method in desperate times. Looking for better ways in the future.
+
 ## Firewall
 
 ### ufw
