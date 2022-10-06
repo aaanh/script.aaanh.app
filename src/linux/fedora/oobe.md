@@ -4,7 +4,7 @@
 
 > Another one: These commands are exclusively tested out on Fedora, but probably are transferable to RHEL and CentOS as well.
 
-Static file: [/static/scripts/ubuntu-oobe.sh](/static/scripts/fedora-oobe.sh)
+Static file: [/static/scripts/fedora-oobe.sh](/static/scripts/fedora-oobe.sh)
 
 ```bash
 (curl -fSsl https://scripts.aaanh.com/static/scripts/fedora-oobe.sh >> fedora-oobe.sh && bash fedora-oobe.sh && rm fedora-oobe.sh)
