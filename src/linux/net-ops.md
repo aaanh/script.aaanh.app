@@ -118,3 +118,30 @@ nslookup <FQDN | IP>
   ```
   ip address
   ```
+
+## Virtual Private Network (VPN)
+
+### Tailscale
+
+[Tailscale](https://tailscale.com) is a VPN service that uses [WireGuard](https://www.wireguard.com/) protocol. If you are looking for a fully OSS alternative to Tailscale, you can check out [Headscale](https://github.com/juanfont/headscale) instead.
+
+- Create Tailscale account: https://login.tailscale.com/start (I personally use Github SSO provider)
+- Installation
+
+  This script is provided on Tailscale official web documentation.
+
+  ```sh
+  curl -fsSL https://tailscale.com/install.sh | sh
+  ```
+
+- Start the service
+
+  ```sh
+  sudo tailscale up
+  ```
+
+- Follow the instructions and complete the setup.
+- Some use cases I have experimented with:
+  - Simply connect with VPN'd devices.
+  - [Set up exit nodes](https://tailscale.com/kb/1103/exit-nodes/) to bypass geo-locking.
+  - [Set up a relay node](/linux/net-ops.html#ssh) to access systems connected to the VPN service.
