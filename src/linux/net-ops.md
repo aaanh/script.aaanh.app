@@ -125,6 +125,8 @@ nslookup <FQDN | IP>
 
 [Tailscale](https://tailscale.com) is a VPN service that uses [WireGuard](https://www.wireguard.com/) protocol. If you are looking for a fully OSS alternative to Tailscale, you can check out [Headscale](https://github.com/juanfont/headscale) instead.
 
+Tailscale can be virtually installed and used across all popular platforms. Maybe except for z/OS?
+
 - Create Tailscale account: https://login.tailscale.com/start (I personally use Github SSO provider)
 - Installation
 
