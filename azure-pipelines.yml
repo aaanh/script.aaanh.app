@@ -1,0 +1,18 @@
+trigger:
+- master
+
+resources:
+- repo: self
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      name: Default
+      demands: agent.name -equals AAANH-5530-1
+    steps:
+      - script: |
+          docker build . -t aaanh/script-convenience-store:latest
