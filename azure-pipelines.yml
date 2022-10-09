@@ -15,4 +15,4 @@ stages:
       demands: agent.name -equals AAANH-5530-1
     steps:
       - script: |
-          docker build . -t aaanh/script-convenience-store:latest
+          cargo install mdbook
