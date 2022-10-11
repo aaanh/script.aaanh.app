@@ -2,7 +2,7 @@ parameters:
 - name: dockerImageTag
   default: latest
 - name: dockerContainerName
-  default: '${{ variables.dockerImageName }}'
+  default: ${{ variables.dockerImageName }}
 - name: containerHostPort
   default: '3002'
 - name: containerClientPort
