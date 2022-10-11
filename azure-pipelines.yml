@@ -1,16 +1,12 @@
 parameters: 
 - name: dockerImageTag
   default: latest
-- name: dockerContainerName
-  default: ${{ variables.dockerImageName }}
 - name: containerHostPort
   default: '3002'
 - name: containerClientPort
   default: '3000'
-
-variables:
 - name: dockerImageName
-  value: aaanh/script-convenience-store
+  default: aaanh/script-convenience-store
 
 
 trigger:
@@ -30,8 +26,8 @@ stages:
       demands: agent.name -equals aaanh-server
     steps:
       - script: |
-          docker build . -t ${{ variables.dockerImageName }}:${{ parameters.dockerImageTag }}
+          docker build . -t ${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}
         displayName: Docker build image
       - script: |
-          docker run -dp ${{ parameters.containerHostPort }}:${{ parameters.containerClientPort }} ${{ variables.dockerImageName }}:${{ parameters.dockerImageTag }}
+          docker run -dp ${{ parameters.containerHostPort }}:${{ parameters.containerClientPort }} ${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}
         displayName: Docker run container
