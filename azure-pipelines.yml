@@ -1,3 +1,18 @@
+parameters: 
+- name: dockerImageTag
+  default: latest
+- name: dockerContainerName
+  default: '${{ variables.dockerImageName }}'
+- name: containerHostPort
+  default: '3002'
+- name: containerClientPort
+  default: '3000'
+
+variables:
+- name: dockerImageName
+  value: aaanh/script-convenience-store
+
+
 trigger:
 - master
 
@@ -12,7 +27,11 @@ stages:
     displayName: Build
     pool:
       name: Default
-      demands: agent.name -equals AAANH-5530-1
+      demands: agent.name -equals aaanh-server
     steps:
       - script: |
-          cargo install mdbook
+          docker build . -t ${{ variables.dockerImageName }}:${{ parameters.dockerImageTag }}
+        displayName: Docker build image
+      - script: |
+          docker run -dp ${{ parameters.containerHostPort }}:${{ parameters.containerClientPort }} ${{ variables.dockerImageName }}:${{ parameters.dockerImageTag }}
+        displayName: Docker run container
