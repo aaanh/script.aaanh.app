@@ -1,0 +1,33 @@
+parameters: 
+- name: dockerImageTag
+  default: latest
+- name: containerHostPort
+  default: '3002'
+- name: containerClientPort
+  default: '3000'
+- name: dockerImageName
+  default: aaanh/script-convenience-store
+
+
+trigger:
+- master
+
+resources:
+- repo: self
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      name: Default
+      demands: agent.name -equals aaanh-server
+    steps:
+      - script: |
+          docker build . -t ${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}
+        displayName: Docker build image
+      - script: |
+          docker run -dp ${{ parameters.containerHostPort }}:${{ parameters.containerClientPort }} ${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}
+        displayName: Docker run container
