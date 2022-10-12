@@ -20,4 +20,4 @@ An example of an attack scenario may be: man-in-the-middle attack while using `c
 
 The documentation is not only for me, it's also for the community! 
 
-If you know or believe there is a better way to do things, like a faster and more secure script, fork the repository <https://github.com/aaanh/convenience-store>, make changes, and open a [pull request](https://github.com/aaanh/convenience-store/pulls).
+If you know or believe there is a better way to do things, like a faster and more secure script, fork the repository <https://github.com/aaanh/script-convenience-store>, make changes, and open a [pull request](https://github.com/aaanh/script-convenience-store/pulls).
