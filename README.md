@@ -1,7 +1,7 @@
-> v2.0 is under active development.
-> v1.0 is available at [branch v1.0](https://github.com/aaanh/linux-docs/tree/v1.0)
-
 # Script Convenience Store
+
+> v2.0 is under active development, production ready
+> v1.0 is available at [branch v1.0](https://github.com/aaanh/linux-docs/tree/v1.0)
 
 ![](https://img.shields.io/github/license/aaanh/linux-docs?color=%23fef00&style=flat-square)
 ![](https://img.shields.io/github/workflow/status/aaanh/script-convenience-store/master-ci?style=flat&label=master-release)
