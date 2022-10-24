@@ -7,7 +7,7 @@
 - [Ubuntu]()
   - [OOBE](linux/ubuntu/oobe.md)
   - [Virtualization]()
-    - [KVM](linux/ubuntu/type-1-vm.md)
+    - [KVM](linux/ubuntu/virt/type-1-vm.md)
 - [RHEL/Fedora/CentOS]()
   - [OOBE](linux/fedora/oobe.md)
 - [Arch Linux]()

@@ -127,7 +127,7 @@ nslookup <FQDN | IP>
 
 Tailscale can be virtually installed and used across all popular platforms. Maybe except for z/OS?
 
-- Create Tailscale account: https://login.tailscale.com/start (I personally use Github SSO provider)
+- Create Tailscale account: <https://login.tailscale.com/start> (I personally use Github SSO provider)
 - Installation
 
   This script is provided on Tailscale official web documentation.
