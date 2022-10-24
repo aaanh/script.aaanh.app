@@ -6,6 +6,8 @@
 
 - [Ubuntu]()
   - [OOBE](linux/ubuntu/oobe.md)
+  - [Virtualization]()
+    - [KVM](linux/ubuntu/type-1-vm.md)
 - [RHEL/Fedora/CentOS]()
   - [OOBE](linux/fedora/oobe.md)
 - [Arch Linux]()
@@ -15,6 +17,7 @@
   - [System Operations](linux/sys-ops.md)
   - [File Operations](linux/file-ops.md)
   - [Network Operations](linux/net-ops.md)
+
 
 # macOS
 
