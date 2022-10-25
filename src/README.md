@@ -6,6 +6,8 @@ Linux packages or Windows programs or script-based installations, remember what 
 
 That is why I started this convenience store. To add some nitrous 🚀 to \[y\]our DX.
 
+![](static/images/nao-tomori.jpg)
+
 # Security Acknowledgement
 
 While I have high confidence in the platform and networking security of the host for this book, it does not guarantee any type of attack occurring by any means that will harm your system and expose your information.
@@ -21,3 +23,12 @@ An example of an attack scenario may be: man-in-the-middle attack while using `c
 The documentation is not only for me, it's also for the community! 
 
 If you know or believe there is a better way to do things, like a faster and more secure script, fork the repository <https://github.com/aaanh/script-convenience-store>, make changes, and open a [pull request](https://github.com/aaanh/script-convenience-store/pulls).
+
+# About the Author
+
+> Anh ([@aaanh](https://github.com/aaanh)) - DevOps, Full-stack Web, Cloud stuff. 
+> 
+> Homepage: <https://hoanganh.dev> | <https://aaanh.ca> | <https://aaanh.com>
+> 
+> CNAMEs: <https://aaanh.app> | <https://scripts.aaanh.com> | <https://scripts.aaanh.ca>
+> 
