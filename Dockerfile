@@ -1,6 +1,6 @@
-FROM ubuntu:22.04
+FROM ubuntu:22.04 AS builder
 
-WORKDIR /app
+WORKDIR /source
 
 RUN export DEBIAN_FRONTEND=non-interactive
 RUN apt update && apt upgrade -y
@@ -14,7 +14,9 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 COPY . .
 
 RUN cargo install mdbook
+RUN mdbook build
 
-EXPOSE 3000
+FROM nginx AS server
 
-CMD ["mdbook", "serve", "-p", "3000", "--hostname", "0.0.0.0"]
+COPY --from=builder /source/book/** /usr/share/nginx/html
+EXPOSE 80
