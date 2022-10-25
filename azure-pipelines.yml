@@ -29,5 +29,5 @@ stages:
           docker build . -t ${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}
         displayName: Docker build image
       - script: |
-          docker run -dp ${{ parameters.containerHostPort }}:${{ parameters.containerClientPort }} ${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}
-        displayName: Docker run container
+          docker push ${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}
+        displayName: Docker push to hub
