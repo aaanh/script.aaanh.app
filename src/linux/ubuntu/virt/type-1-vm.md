@@ -9,22 +9,57 @@ Refer to Red Hat's [article](https://www.redhat.com/en/topics/virtualization/wha
 ## Prerequisites
 
 ```sh
-sudo apt install -y bridge-utils libvirt-clients libvirt-daemon qemu qemu-kvm
+sudo apt install -y qemu qemu-kvm libvirt-daemon bridge-utils virt-manager libvirt-clients
 ```
 
 ## Start a VM
 
-- Synopsis
+1. Create empty image
 
-  ```sh
-  sudo virt-install --name some_name --os-variant distro_name_version --vcpus Int --ram MB<Int> --location distro_download_url --network bridge=some_bridge,model=some_model --graphics none --extra-args='console=ttyS0,115200n8 serial'
-  ```
+    Synopsis:
 
-- Example
+    ```
+    qemu-img create -f <format> <vm-disk-name>.img <size><unit>
+    ```
 
-  ```sh
-  sudo virt-install --name ubuntu-guest --os-variant ubuntu20.04 --vcpus 2 --ram 2048 --location http://ftp.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/ --network bridge=virbr0,model=virtio --graphics none --extra-args='console=ttyS0,115200n8 serial'
-  ```
+    Example:
+
+    ```
+    qemu-img create -f qcow2 some-vm.img 60G
+    ```
+
+2. Boot from CDROM/ISO image
+
+    Synopsis:
+
+    ```
+    qemu-system-x86_64 -m <mem_size> -boot d -enable-kvm -smp 3 \
+                         -net nic -net user -hda <vm-disk-name>.img -cdrom /path/to/downloaded/iso.iso
+    ```
+
+    Example:
+
+    ```
+    qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 \
+                         -net nic -net user -hda some-vm.img -cdrom ubuntu-22.04-amd64.iso
+    ```
+
+3. Go through the installation process of the respected distro onto the created VM image.
+4. Shut down the VM.
+5. Boot from the image with the installed OS
+
+    Synopsis:
+
+    ```
+    qemu-system-x86_64 -m <mem_size> -boot d -enable-kvm -smp 3 \
+                        -net nic -net user -hda <vm-disk-name>.img
+    ```
+
+    Example:
+
+    ```
+    qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 -net nic -net user -hda some-vm.img
+    ```
 
 ## Management
 
@@ -48,7 +83,7 @@ wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/
 
 Infrastructure-as-Code implementation of VM, container, network stackc management also by HashiCorp.
 
-- Installation
+-   Installation
 
 ```sh
 wget -O- https://apt.releases.hashicorp.com/gpg | \
@@ -60,5 +95,4 @@ wget -O- https://apt.releases.hashicorp.com/gpg | \
     sudo tee /etc/apt/sources.list.d/hashicorp.list && sudo apt update && sudo apt install terraform
 ```
 
-- Libvirt provider
-  <https://github.com/dmacvicar/terraform-provider-libvirt>
+-   Libvirt provider <https://github.com/dmacvicar/terraform-provider-libvirt>
