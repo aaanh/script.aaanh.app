@@ -10,12 +10,12 @@ on:
     # Triggers the workflow on push or pull request events but only for the master branch
     push:
         branches:
-          - master
+            - master
         paths-ignore:
-          - 'azure-pipelines.yml'
+            - "azure-pipelines.yml"
     pull_request:
-      paths-ignore:
-        - 'azure-pipelines.yml'
+        paths-ignore:
+            - "azure-pipelines.yml"
 
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
@@ -31,32 +31,32 @@ jobs:
         steps:
             - name: Checkout repo code
               uses: actions/checkout@v2
-            - name: apt and upgrade
-              run: |
-                export DEBIAN_FRONTEND=non-interactive
-                sudo apt update && sudo apt upgrade -y
+            # - name: apt and upgrade
+            #   run: |
+            #     export DEBIAN_FRONTEND=non-interactive
+            #     sudo apt update && sudo apt upgrade -y
             - name: Rustup
               run: |
-                curl https://sh.rustup.rs -sSf | sh -s -- -y
-                export PATH=$HOME/.cargo/bin:$PATH
-                source "$HOME/.cargo/env"
+                  curl https://sh.rustup.rs -sSf | sh -s -- -y
+                  export PATH=$HOME/.cargo/bin:$PATH
+                  source "$HOME/.cargo/env"
             - name: Install mdbook
               run: |
-                cargo install mdbook
+                  cargo install mdbook
             - name: Build static artifacts
               run: |
-                mdbook build
+                  mdbook build
             - name: Generate .nojekyll
               run: |
-                touch book/.nojekyll
+                  touch book/.nojekyll
             - name: Delete Production Branch
               uses: dawidd6/action-delete-branch@v3
               with:
-                branches: upstream-release
-                github_token: ${{ secrets.REPO_TOKEN }}
+                  branches: upstream-release
+                  github_token: ${{ secrets.REPO_TOKEN }}
             - name: Deploy to Github Production branch
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                folder: book
-                branch: upstream-release
-                clean: true
+                  folder: book
+                  branch: upstream-release
+                  clean: true
