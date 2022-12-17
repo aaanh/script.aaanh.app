@@ -63,5 +63,5 @@ If `curl` is not installed, install it with `sudo apt install curl`.
    1.  Slack (snap or rpm): <https://slack.com/downloads/linux>
 1.  Solid black 4K resolution wallpaper 👌
     ```sh
-    curl --user-agent="chrome" "https://scripts.aaanh.com/static/images/black-solid-4k.png"
+    curl -o ~/Pictures/black-solid-4k.png "https://scripts.aaanh.com/static/images/black-solid-4k.png"
     ```
