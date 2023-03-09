@@ -2,7 +2,7 @@
 
 [Introduction](README.md)
 
-# Linux
+# Linux 🐧
 
 -   [Ubuntu]()
     -   [OOBE](linux/ubuntu/oobe.md)
@@ -19,7 +19,7 @@
     -   [File Operations](linux/file-ops.md)
     -   [Network Operations](linux/net-ops.md)
 
-# macOS
+# macOS 🍎
 
 -   [OOBE](macos/oobe.md)
 -   [Operations]()
@@ -27,7 +27,7 @@
     -   [File Operations](macos/file-ops.md)
     -   [Network Operations](macos/net-ops.md)
 
-# Windows
+# Windows 🪟
 
 -   [Convenience Scripts](windows/scripts.md)
 -   [Operations]()
@@ -35,12 +35,12 @@
     -   [File Operations](windows/file-ops.md)
     -   [Network Operations](windows/net-ops.md)
 
-# Container and Orchestration
+# Container and Orchestration 🚢
 
--   [Docker]()
+-   [Docker 🐋]()
     -   [Installation](container/docker/install.md)
     -   [Operations](container/docker/operations.md)
--   [Kubernetes]()
+-   [Kubernetes ☸️]()
     -   [Installation](container/k8s/install.md)
     -   [Make Life Easier](container/k8s/helpers.md)
     -   [Operations](container/k8s/operations.md)
