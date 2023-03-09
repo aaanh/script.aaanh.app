@@ -20,15 +20,18 @@ An example of an attack scenario may be: man-in-the-middle attack while using `c
 
 # Contributing
 
-The documentation is not only for me, it's also for the community! 
+The documentation is not only for me, it's also for the community!
 
 If you know or believe there is a better way to do things, like a faster and more secure script, fork the repository <https://github.com/aaanh/script-convenience-store>, make changes, and open a [pull request](https://github.com/aaanh/script-convenience-store/pulls).
 
+# CI/CD
+
+The Rust book is compiled with Github Actions, committed to a production branch, and deployed (with that branch) on Vercel as a static HTML site.
+
 # About the Author
 
-> Anh ([@aaanh](https://github.com/aaanh)) - DevOps, Full-stack Web, Cloud stuff. 
-> 
+> Anh ([@aaanh](https://github.com/aaanh)) - DevOps, Full-stack Web, Cloud stuff.
+>
 > Homepage: <https://hoanganh.dev> | <https://aaanh.ca> | <https://aaanh.com>
-> 
+>
 > CNAMEs: <https://aaanh.app> | <https://scripts.aaanh.com> | <https://scripts.aaanh.ca>
-> 
