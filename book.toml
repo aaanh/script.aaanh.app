@@ -6,7 +6,7 @@ src = "src"
 title = "script-convenience-store"
 
 [output.html]
-preferred-dark-theme = "ayu"
+preferred-dark-theme = "navy"
 curly-quotes = true
 mathjax-support = false
 copy-fonts = true

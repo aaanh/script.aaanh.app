@@ -37,10 +37,12 @@
 
 # Container and Orchestration 🚢
 
--   [Docker 🐋]()
+-   [Docker 🐋](container/docker/index.md)
     -   [Installation](container/docker/install.md)
     -   [Operations](container/docker/operations.md)
--   [Kubernetes ☸️]()
+    -   [Dockerfile](container/docker/Dockerfile.md)
+    -   [Portainer](container/docker/portainer.md)
+-   [Kubernetes ☸️](container/k8s/index.md)
     -   [Installation](container/k8s/install.md)
     -   [Make Life Easier](container/k8s/helpers.md)
     -   [Operations](container/k8s/operations.md)
