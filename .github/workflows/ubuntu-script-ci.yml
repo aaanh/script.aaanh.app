@@ -21,8 +21,8 @@ jobs:
         run: |
           ls -la
       - name: Run Ubuntu OOBE script
-        run: ./src/static/scripts/ubuntu-oobe.sh
+        run: chmod +x ./src/static/scripts/ubuntu-oobe.sh && ./src/static/scripts/ubuntu-oobe.sh
         continue-on-error: true
       - name: Run Ubuntu Dev Pack script
-        run: ./src/static/scripts/ubuntu-dev-pack.sh
+        run: chmod +x ./src/static/scripts/ubuntu-dev-pack.sh && ./src/static/scripts/ubuntu-dev-pack.sh
         continue-on-error: true
