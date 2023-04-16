@@ -4,10 +4,24 @@
 
 > Another one: These commands are exclusively tested out on Fedora, but probably are transferable to RHEL and CentOS as well.
 
+## Convenience script
+
+### Out of the box experience
+
 Static file: [/static/scripts/fedora-oobe.sh](/static/scripts/fedora-oobe.sh)
 
 ```bash
 (curl -fSsl https://scripts.aaanh.com/static/scripts/fedora-oobe.sh >> fedora-oobe.sh && bash fedora-oobe.sh && rm fedora-oobe.sh)
+```
+
+### Development tools
+
+It is recommended to run the OOBE script first to get the dependencies.
+
+Static file: [/static/scripts/fedora-dev-tools.sh](/static/scripts/fedora-dev-tools.sh)
+
+```bash
+(curl -fSsl https://scripts.aaanh.com/static/scripts/fedora-dev-tools.sh >> fedora-dev-tools.sh && bash fedora-dev-tools.sh && rm fedora-dev-tools.sh)
 ```
 
 ## Update
@@ -21,7 +35,7 @@ sudo dnf update
 ### For general user
 
 ```bash
-sudo dnf -y install zsh wget curl vim
+sudo dnf -y install zsh wget curl neovim
 ```
 
 ### For developers

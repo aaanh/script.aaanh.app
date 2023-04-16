@@ -12,17 +12,23 @@ read -t 5
 echo -e "YOU WILL BE PROMPTED FOR SUPERUSER PASSWORD."
 read -p "Press ENTER to continue..."
 
-echo -e "Setting script to run non-interactively."
-read -t 3
-export DEBIAN_FRONTEND=noninteractive
-
 echo -e "Running: dnf update"
 read -t 3
 sudo dnf -y update
 
 echo -e "Running: Install commonly-used packages from dnf."
 read -t 3
-sudo dnf install -y zsh wget curl vim
+sudo dnf install -y zsh wget curl
+
+echo -e "Running: Install neovim from yum"
+read -t 3
+sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+sudo yum install -y neovim python3-neovim
+echo 'export alias vim=nvim' >> ~/.zshrc
+
+echo -e "Powering up nvim using NvChad"
+read -t 3
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 echo -e "Running: Changing default shell to zsh and additional configurations."
 read -t 3
