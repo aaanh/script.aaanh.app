@@ -1,0 +1,25 @@
+name: Ubuntu Convenience Script CI
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "azure-pipelines.yml"
+  pull_request:
+    paths-ignore:
+      - "azure-pipelines.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+      - name: Run Ubuntu OOBE script
+        uses: ./src/static/scripts/ubuntu-oobe.sh
+        continue-on-error: true
+      - name: Run Ubuntu Dev Pack script
+        uses: ./src/static/scripts/ubuntu-dev-pack.sh
+        continue-on-error: true
