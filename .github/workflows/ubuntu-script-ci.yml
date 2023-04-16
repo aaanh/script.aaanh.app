@@ -21,8 +21,8 @@ jobs:
         run: |
           ls -la
       - name: Run Ubuntu OOBE script
-        uses: ./src/static/scripts/ubuntu-oobe.sh
+        run: ./src/static/scripts/ubuntu-oobe.sh
         continue-on-error: true
       - name: Run Ubuntu Dev Pack script
-        uses: ./src/static/scripts/ubuntu-dev-pack.sh
+        run: ./src/static/scripts/ubuntu-dev-pack.sh
         continue-on-error: true
