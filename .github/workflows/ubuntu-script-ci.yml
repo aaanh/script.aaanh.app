@@ -12,11 +12,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Directory structure
+        run: |
+          ls -la
       - name: Run Ubuntu OOBE script
         uses: ./src/static/scripts/ubuntu-oobe.sh
         continue-on-error: true

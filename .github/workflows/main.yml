@@ -16,6 +16,7 @@ on:
   pull_request:
     paths-ignore:
       - "azure-pipelines.yml"
+      - ".github/workflows/ubuntu-script-ci.yml"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
