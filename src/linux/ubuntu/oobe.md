@@ -19,6 +19,12 @@ If `curl` is not installed, install it with `sudo apt install curl`.
     </ul>
 </details>
 
+## Dev Tools
+
+```bash
+(curl -fSsl https://scripts.aaanh.com/static/scripts/ubuntu-dev-tools.sh >> ubuntu-dev-tools.sh && bash ubuntu-dev-tools.sh && rm ubuntu-dev-tools.sh)
+```
+
 ## Manual
 
 1. Update and upgrade apt
