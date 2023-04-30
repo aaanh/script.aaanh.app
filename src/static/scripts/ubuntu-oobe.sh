@@ -24,16 +24,6 @@ sudo apt install -y git zsh net-tools build-essential powerline \
     fonts-powerline fonts-firacode vim openssh-server \
     tmux python3 python-is-python3 python3-pip curl
 
-echo -e "Uninstall Firefox snap, set up environment and install regular apt package."
-sudo snap remove firefox
-sudo add-apt-repository ppa:mozillateam/ppa
-echo 'Package: *                        
-Pin: release o=LP-PPA-mozillateam
-Pin-Priority: 1001
-' | sudo tee /etc/apt/preferences.d/mozilla-firefox
-echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
-sudo apt install -y firefox
-
 echo -e "Running: Changing default shell to zsh and additional configurations."
 read -t 3
 chsh -s /bin/zsh
