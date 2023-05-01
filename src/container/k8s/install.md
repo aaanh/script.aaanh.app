@@ -8,3 +8,7 @@
     - Docker Desktop (for a **right-click deploy** simplicity)
 
 ## Self-hosted cluster
+
+### Step-by-step
+
+- Install a container runtime

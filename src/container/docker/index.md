@@ -1,4 +1,4 @@
-# Docker
+# Docker 🐋
 
 - [What the f### is a container?](https://www.docker.com/resources/what-container/)
 - Read about [Docker](https://docs.docker.com/get-started/overview)
