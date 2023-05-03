@@ -38,3 +38,29 @@ Static file: [/static/scripts/macbook-oobe.sh](/static/scripts/macbook-oobe.sh)
    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
    echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
    ```
+
+### Install VS Code
+
+1. Download via `curl`
+
+   ```sh
+   curl -L "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal" -o ~/Downloads/vscode.zip
+   ```
+
+2. Extract
+
+   ```sh
+   unzip ~/Downloads/vscode.zip
+   ```
+
+3. Install to Applications folder
+
+   ```sh
+   mv "~/Downloads/Visual\ Studio\ Code.app" /Applications/
+   ```
+
+4. Add it to path
+
+   ```sh
+   echo export PATH="'$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin'" >> ~/.zshrc
+   ```

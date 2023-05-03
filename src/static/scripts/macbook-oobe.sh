@@ -27,3 +27,11 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 sed -i 's/robbyrussell/apple/g' ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
+
+echo -e "Running: Install Visual Studio Code"
+read -t 3
+curl -L "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal" -o ~/Downloads/vscode.zip
+unzip ~/Downloads/vscode.zip
+mv "~/Downloads/Visual\ Studio\ Code.app" /Applications/
+echo export PATH="'$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin'" >> ~/.zshrc
+rm ~/Downloads/vscode.zip
