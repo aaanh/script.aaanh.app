@@ -5,7 +5,7 @@
 Static file: [/static/scripts/macbook-oobe.sh](/static/scripts/macbook-oobe.sh)
 
 ```bash
-(curl -fSsl https://scripts.aaanh.com/static/scripts/macbook-oobe.sh >> macbok-oobe.sh && chmod 700 macbook-oobe.sh && bash macbook-oobe.sh && rm macbook-oobe.sh)
+(curl -fSsl https://scripts.aaanh.com/static/scripts/macbook-oobe.sh >> macbook-oobe.sh && chmod 700 macbook-oobe.sh && bash macbook-oobe.sh && rm macbook-oobe.sh)
 ```
 
 ## Manual

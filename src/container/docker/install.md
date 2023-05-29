@@ -2,9 +2,9 @@
 
 ## Linux
 
-    ```sh
-    curl -fsSL https://get.docker.com -o get.docker.sh && chmod +x get.docker.sh && sh ./get.docker.sh && rm ./get.docker.sh
-    ```
+  ```sh
+  curl -fsSL https://get.docker.com -o get.docker.sh && chmod +x get.docker.sh && sh ./get.docker.sh && rm ./get.docker.sh
+  ```
 
 ## macOS
 
