@@ -1,5 +1,7 @@
 # Convenience Scripts for Windows
 
+> ℹ️ Active development of an OOBE PWSH script project over at [https://github.com/aaanh/autowin](https://github.com/aaanh/autowin). This project does most of the below and more.
+
 ## Shut down a remote PC
 
 ```powershell
@@ -19,7 +21,12 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 Required for: Windows Subsytems for Linux, Hyper-V, Docker
 
 ```powershell
-dism TBA
+$win_features = "HypervisorPlatform", "VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux", "Microsoft-Hyper-V-All", "Microsoft-Hyper-V", "Microsoft-Hyper-V-Tools-All", "Microsoft-Hyper-V-Management-Powershell", "Microsoft-Hyper-V-Hypervisor", "Microsoft-Hyper-V-Services", "Microsoft-Hyper-V-Management-Clients"
+
+ForEach ($0 in $win_features) {
+  Write-Host "Now installing $0..."
+  dism /online /enable-feature /featurename:$0 /All /NoRestart
+}
 ```
 
 ## Disable 256-character path limit ⚠️
