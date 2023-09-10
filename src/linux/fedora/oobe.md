@@ -11,7 +11,7 @@
 Static file: [/static/scripts/fedora-oobe.sh](/static/scripts/fedora-oobe.sh)
 
 ```bash
-(curl -fSsl https://scripts.aaanh.com/static/scripts/fedora-oobe.sh >> fedora-oobe.sh && bash fedora-oobe.sh && rm fedora-oobe.sh)
+(curl -fSsl https://script.aaanh.app/static/scripts/fedora-oobe.sh >> fedora-oobe.sh && bash fedora-oobe.sh && rm fedora-oobe.sh)
 ```
 
 ### Development tools
@@ -21,7 +21,7 @@ It is recommended to run the OOBE script first to get the dependencies.
 Static file: [/static/scripts/fedora-dev-tools.sh](/static/scripts/fedora-dev-tools.sh)
 
 ```bash
-(curl -fSsl https://scripts.aaanh.com/static/scripts/fedora-dev-tools.sh >> fedora-dev-tools.sh && bash fedora-dev-tools.sh && rm fedora-dev-tools.sh)
+(curl -fSsl https://script.aaanh.app/static/scripts/fedora-dev-tools.sh >> fedora-dev-tools.sh && bash fedora-dev-tools.sh && rm fedora-dev-tools.sh)
 ```
 
 ## Update

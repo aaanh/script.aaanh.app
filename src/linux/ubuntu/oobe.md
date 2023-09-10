@@ -5,7 +5,7 @@
 Static file: [/static/scripts/ubuntu-oobe.sh](/static/scripts/ubuntu-oobe.sh)
 
 ```bash
-(curl -fSsl https://scripts.aaanh.com/static/scripts/ubuntu-oobe.sh >> ubuntu-oobe.sh && chmod 700 ubuntu-oobe.sh && bash ubuntu-oobe.sh && rm ubuntu-oobe.sh)
+(curl -fSsl https://script.aaanh.app/static/scripts/ubuntu-oobe.sh >> ubuntu-oobe.sh && chmod 700 ubuntu-oobe.sh && bash ubuntu-oobe.sh && rm ubuntu-oobe.sh)
 ```
 
 If `curl` is not installed, install it with `sudo apt install curl`.
@@ -22,7 +22,7 @@ If `curl` is not installed, install it with `sudo apt install curl`.
 ## Dev Tools
 
 ```bash
-(curl -fSsl https://scripts.aaanh.com/static/scripts/ubuntu-dev-tools.sh >> ubuntu-dev-tools.sh && bash ubuntu-dev-tools.sh && rm ubuntu-dev-tools.sh)
+(curl -fSsl https://script.aaanh.app/static/scripts/ubuntu-dev-tools.sh >> ubuntu-dev-tools.sh && bash ubuntu-dev-tools.sh && rm ubuntu-dev-tools.sh)
 ```
 
 ## Manual
@@ -69,5 +69,5 @@ If `curl` is not installed, install it with `sudo apt install curl`.
    1.  Slack (snap or rpm): <https://slack.com/downloads/linux>
 1.  Solid black 4K resolution wallpaper 👌
     ```sh
-    curl -o ~/Pictures/black-solid-4k.png "https://scripts.aaanh.com/static/images/black-solid-4k.png"
+    curl -o ~/Pictures/black-solid-4k.png "https://script.aaanh.app/static/images/black-solid-4k.png"
     ```

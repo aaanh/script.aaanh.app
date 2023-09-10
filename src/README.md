@@ -30,8 +30,8 @@ The Rust book is compiled with Github Actions, committed to a production branch,
 
 # About the Author
 
-> Anh ([@aaanh](https://github.com/aaanh)) - DevOps, Full-stack Web, Cloud stuff.
+> Anh ([@aaanh](https://github.com/aaanh)).
 >
-> Homepage: <https://hoanganh.dev> | <https://aaanh.ca> | <https://aaanh.com>
+> Homepage: <https://aaanh.com>
 >
-> CNAMEs: <https://aaanh.app> | <https://scripts.aaanh.com> | <https://scripts.aaanh.ca>
+> CNAME: Only <https://script.aaanh.app> as of September 2023
