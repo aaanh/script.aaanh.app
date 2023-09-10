@@ -1,5 +1,7 @@
 # Script Convenience Store
 
+The site is consolidated to <https://script.aaanh.app> only, as of September 2023.
+
 > v2.0 is under active development, production ready
 > 
 > v1.0 is available at [branch v1.0](https://github.com/aaanh/linux-docs/tree/v1.0)
