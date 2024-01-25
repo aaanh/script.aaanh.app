@@ -2,8 +2,8 @@
 
 echo -e "Opinionated Development Tools Install and Setup Script."
 echo -e "WARNING: WILL INSTALL PROPRIETARY SOFTWARE."
-echo -e "Anh Hoang Nguyen (c) 2023. GPLv3."
-echo -e "iam@hoanganh.dev"
+echo -e "Anh Hoang Nguyen (c) 2024. GPLv3."
+echo -e "AnhNguyen@aaanh.com"
 echo -e "----------------------------"
 
 echo -e "YOU WILL BE PROMPTED FOR SUPERUSER PASSWORD."

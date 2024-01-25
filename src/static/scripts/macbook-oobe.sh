@@ -1,6 +1,6 @@
 echo -e "Automated OOBE script for macOS Monterey and up."
-echo -e "Anh Hoang Nguyen (c) 2023. GPLv3."
-echo -e "anhnguyen@aaanh.com"
+echo -e "Anh Hoang Nguyen (c) 2024. GPLv3."
+echo -e "AnhNguyen@aaanh.com"
 echo -e "----------------------------"
 
 echo -e "YOU MIGHT BE PROMPTED FOR SUPERUSER PASSWORD."

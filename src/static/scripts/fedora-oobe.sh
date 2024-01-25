@@ -2,8 +2,8 @@
 
 echo -e "*******************************************************************"
 echo -e "* Rudimentary automated setup script for Fedora/RHEL/CentOS Linux.*"
-echo -e "* Anh Hoang Nguyen (c) 2022. GPLv3.                               *"
-echo -e "* iam@hoanganh.dev                                                *"
+echo -e "* Anh Hoang Nguyen (c) 2024. GPLv3.                               *"
+echo -e "* AnhNguyen@aaanh.com                                             *"
 echo -e "*******************************************************************"
 
 echo -e "Now loading script..."

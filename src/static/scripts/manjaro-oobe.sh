@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
 echo -e "Rudimentary automated setup script for Arch-based Linux distros."
-echo -e "Anh Hoang Nguyen (c) 2022. GPLv3."
-echo -e "iam@hoanganh.dev"
+echo -e "Anh Hoang Nguyen (c) 2024. GPLv3."
+echo -e "AnhNguyen@aaanh.com"
 echo -e "----------------------------"
 
 echo -e "YOU WILL BE PROMPTED FOR SUPERUSER PASSWORD."

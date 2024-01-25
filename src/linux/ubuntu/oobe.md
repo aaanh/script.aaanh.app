@@ -5,7 +5,7 @@
 Static file: [/static/scripts/ubuntu-oobe.sh](/static/scripts/ubuntu-oobe.sh)
 
 ```bash
-(curl -fSsl https://script.aaanh.app/static/scripts/ubuntu-oobe.sh >> ubuntu-oobe.sh && chmod 700 ubuntu-oobe.sh && bash ubuntu-oobe.sh && rm ubuntu-oobe.sh)
+curl -fSsL https://script.aaanh.app/static/scripts/ubuntu-oobe.sh -o ubuntu-oobe.sh && bash ubuntu-oobe.sh
 ```
 
 If `curl` is not installed, install it with `sudo apt install curl`.
@@ -14,7 +14,7 @@ If `curl` is not installed, install it with `sudo apt install curl`.
     <summary>What this script does?</summary>
     <ul>
         <li>Use apt to update and upgrade</li>
-        <li>Install packages: git, zsh, net-tools, build-essential, powerline, fonts-powerline, fonts-firacode, vim, openssh-server, tmux, python3, python-is-python3 python3-pip.</li>
+        <li>Install packages: git, zsh, net-tools, build-essential, powerline, fonts-powerline, vim, openssh-server, tmux, python3, python-is-python3 python3-pip.</li>
         <li>Set up and configure zsh, oh-my-zsh, zsh-highlighting, zsh theme.</li>
     </ul>
 </details>
@@ -34,7 +34,7 @@ If `curl` is not installed, install it with `sudo apt install curl`.
 1. Install commonly-used packages
     ```sh
     sudo apt install git zsh net-tools build-essential powerline \
-      fonts-powerline fonts-firacode vim openssh-server \
+      fonts-powerline vim openssh-server \
       tmux python3 python-is-python3 python3-pip curl
     ```
 1. Additional optional desktop packages

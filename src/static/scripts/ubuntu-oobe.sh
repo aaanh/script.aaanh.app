@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
 echo -e "Rudimentary automated setup script for Debian-based Linux distros."
-echo -e "Anh Hoang Nguyen (c) 2022. GPLv3."
-echo -e "iam@hoanganh.dev"
+echo -e "Anh Hoang Nguyen (c) 2024. GPLv3."
+echo -e "AnhNguyen@aaanh.com"
 echo -e "----------------------------"
 
 echo -e "YOU WILL BE PROMPTED FOR SUPERUSER PASSWORD."
@@ -21,7 +21,7 @@ sudo apt update && sudo apt upgrade -y
 echo -e "Running: Install commonly-used packages from apt."
 read -t 3
 sudo apt install -y git zsh net-tools build-essential powerline \
-    fonts-powerline fonts-firacode vim openssh-server \
+    fonts-powerline vim openssh-server \
     tmux python3 python-is-python3 python3-pip curl
 
 echo -e "Running: Changing default shell to zsh and additional configurations."
