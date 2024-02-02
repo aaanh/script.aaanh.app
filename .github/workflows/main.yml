@@ -2,8 +2,7 @@
 
 name: master-ci
 
-permissions:
-  contents: write
+permissions: write-all
 
 # Controls when the workflow will run
 on:
@@ -54,7 +53,7 @@ jobs:
         uses: dawidd6/action-delete-branch@v3
         with:
           branches: upstream-release
-          github_token: ${{ secrets.REPO_TOKEN }}
+          github_token: ${{ GITHUB_TOKEN }}
       - name: Deploy to Github Production branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
