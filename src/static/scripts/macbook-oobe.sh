@@ -7,7 +7,7 @@ echo -e "YOU MIGHT BE PROMPTED FOR SUPERUSER PASSWORD."
 read -p "Press ENTER to continue..."
 
 defaults write com.apple.dock persistent-apps -array
-defaults write com.apple.dock autohide-time-modifier -float 1.5
+defaults write com.apple.dock autohide-time-modifier -float 0.5
 defaults write com.apple.dock autohide -int 1
 killall Dock
 
