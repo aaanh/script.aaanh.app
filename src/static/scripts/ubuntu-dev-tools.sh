@@ -17,7 +17,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo -e "Running: apt update and upgrade"
 read -t 3
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y && \
 
 echo -e "Running: Install Visual Studio Code"
 read -t 3
@@ -28,28 +28,28 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packag
 rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
-sudo apt install code
+sudo apt install code && \
 
 echo -e "Installing: Github CLI (gh)."
 read -t 3
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
-sudo apt install gh
+sudo apt install gh && \
 
 echo -e "Installing: nvm, nodejs, npm, yarn"
 read -t 3
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.zshrc
+source ~/.zshrc && \
 
 nvm install 20
 nvm use 20
-npm i -g yarn
+npm i -g yarn && \
 
 echo -e "Installing: Rust via rustup"
 read -t 3
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-source "$HOME/.cargo/env"
+source "$HOME/.cargo/env" && \
 
 echo -e "Installing: Golang"
 read -t 3
