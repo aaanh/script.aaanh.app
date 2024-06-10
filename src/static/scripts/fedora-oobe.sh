@@ -2,12 +2,12 @@
 
 echo -e "*******************************************************************"
 echo -e "* Rudimentary automated setup script for Fedora/RHEL/CentOS Linux.*"
-echo -e "* Anh Hoang Nguyen (c) 2024. GPLv3.                               *"
+echo -e "* Anh Hoang Nguyen (c) 2024. MIT.                                 *"
 echo -e "* AnhNguyen@aaanh.com                                             *"
 echo -e "*******************************************************************"
 
 echo -e "Now loading script..."
-read -t 5
+read -t 3
 
 echo -e "YOU WILL BE PROMPTED FOR SUPERUSER PASSWORD."
 read -p "Press ENTER to continue..."
@@ -18,19 +18,9 @@ sudo dnf -y update
 
 echo -e "Running: Install commonly-used packages from dnf."
 read -t 3
-sudo dnf install -y zsh wget curl
+sudo dnf install -y zsh wget curl git neovim tmux
 
-echo -e "Running: Install neovim from yum"
-read -t 3
-sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
-sudo yum install -y neovim python3-neovim
-echo 'export alias vim=nvim' >> ~/.zshrc
-
-echo -e "Powering up nvim using NvChad"
-read -t 3
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-
-echo -e "Running: Changing default shell to zsh and additional configurations."
+echo -e "Running: Changing default shell to zsh, install oh-my-zsh and additional configurations."
 read -t 3
 
 sudo usermod -s /usr/bin/zsh "$(whoami)"

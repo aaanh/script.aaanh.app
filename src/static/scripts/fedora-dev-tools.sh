@@ -27,18 +27,11 @@ sudo dnf install -y go
 
 echo -e "Installing: nvm, nodejs, npm, yarn"
 read -t 3
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-echo -e 'export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-' >> ~/.zshrc
-echo -e 'export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-' >> ~/.bashrc
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.zshrc
-nvm install v19
-nvm use v19
+nvm install 20
+nvm use 20
+npm i -g yarn
 
 echo -e "Installing: Visual Studio Code by Microsoft (tm)"
 echo -e "Script provided by Microsoft. See https://code.visualstudio.com/docs/setup/linux"

@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
 echo -e "Opinionated Development Tools Install and Setup Script."
-echo -e "WARNING: WILL INSTALL PROPRIETARY SOFTWARE."
-echo -e "Anh Hoang Nguyen (c) 2024. GPLv3."
+echo -e "WARNING: WILL INSTALL PROPRIETARY SOURCE-AVAILABLE SOFTWARE."
+echo -e "Anh Hoang Nguyen (c) 2024. MIT."
 echo -e "AnhNguyen@aaanh.com"
 echo -e "----------------------------"
 
@@ -12,7 +12,7 @@ read -p "Press ENTER to continue..."
 
 
 echo -e "Setting script to run non-interactively."
-read -t 3
+read -t 2
 export DEBIAN_FRONTEND=noninteractive
 
 echo -e "Running: apt update and upgrade"
@@ -39,19 +39,12 @@ sudo apt install gh
 
 echo -e "Installing: nvm, nodejs, npm, yarn"
 read -t 3
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-echo -e 'export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-' >> ~/.zshrc
-echo -e 'export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-' >> ~/.bashrc
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.zshrc
 
-nvm install v19
-nvm use v19
+nvm install 20
+nvm use 20
+npm i -g yarn
 
 echo -e "Installing: Rust via rustup"
 read -t 3
