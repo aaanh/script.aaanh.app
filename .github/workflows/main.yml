@@ -11,11 +11,11 @@ on:
     branches:
       - master
     paths-ignore:
-      - "azure-pipelines.yml"
+      - 'azure-pipelines.yml'
   pull_request:
     paths-ignore:
-      - "azure-pipelines.yml"
-      - ".github/workflows/ubuntu-script-ci.yml"
+      - 'azure-pipelines.yml'
+      - '.github/workflows/ubuntu-script-ci.yml'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,15 +31,6 @@ jobs:
     steps:
       - name: Checkout repo code
         uses: actions/checkout@v2
-      # - name: apt and upgrade
-      #   run: |
-      #     export DEBIAN_FRONTEND=non-interactive
-      #     sudo apt update && sudo apt upgrade -y
-      - name: Rustup
-        run: |
-          curl https://sh.rustup.rs -sSf | sh -s -- -y
-          export PATH=$HOME/.cargo/bin:$PATH
-          source "$HOME/.cargo/env"
       - name: Install mdbook
         run: |
           cargo install mdbook
