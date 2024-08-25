@@ -3,7 +3,7 @@
 ## Convenience Script
 
 ```sh
-curl -fSsl https://script.aaanh.app/static/scripts/manjaro-oobe.sh | bash
+sudo pacman -Sy curl && curl -O https://script.aaanh.app/static/scripts/manjaro-oobe.sh | bash ./manjaro-oobe.sh
 ```
 
 ## Manual

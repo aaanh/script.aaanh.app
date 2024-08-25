@@ -11,7 +11,7 @@
 Static file: [/static/scripts/fedora-oobe.sh](/static/scripts/fedora-oobe.sh)
 
 ```bash
-curl https://script.aaanh.app/static/scripts/fedora-oobe.sh | bash
+sudo dnf install -y curl && curl -O https://script.aaanh.app/static/scripts/fedora-oobe.sh | bash ./fedora-oobe.sh
 ```
 
 ### Development tools

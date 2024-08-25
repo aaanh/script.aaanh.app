@@ -5,7 +5,7 @@
 Static file: [/static/scripts/ubuntu-oobe.sh](/static/scripts/ubuntu-oobe.sh)
 
 ```bash
-sudo apt install -y curl && curl https://script.aaanh.app/static/scripts/ubuntu-oobe.sh | bash
+sudo apt install -y curl && curl -O https://script.aaanh.app/static/scripts/ubuntu-oobe.sh && bash ./ubuntu-oobe.sh
 ```
 
 If `curl` is not installed, install it with `sudo apt install curl`.
