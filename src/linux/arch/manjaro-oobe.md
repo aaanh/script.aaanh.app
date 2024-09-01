@@ -3,7 +3,7 @@
 ## Convenience Script
 
 ```sh
-sudo pacman -Sy curl && curl -O https://script.aaanh.app/static/scripts/manjaro-oobe.sh | bash ./manjaro-oobe.sh
+sudo pacman -Sy curl && curl -O https://script.aaanh.app/static/scripts/manjaro-oobe.sh && bash ./manjaro-oobe.sh
 ```
 
 ## Manual
