@@ -58,22 +58,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo -e "Running: Installing gh CLI"
 read -t 3
 
-sudo dnf install dnf5-plugins
+sudo dnf install -y dnf5-plugins
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install gh --repo gh-cli
-
-# ---------------------------------
-
-echo -e "Running: Installing Docker Engine only"
-read -t 3
-
-sudo dnf -y install dnf-plugins-core
-sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl enable --now docker
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
+sudo dnf install -y gh --repo gh-cli
 
 # ---------------------------------
 
@@ -88,18 +75,35 @@ echo -e "Running: Installing Visual Studio Code"
 read -t 3
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.ascecho -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+dnf check-update
+sudo dnf install -y code # or code-insiders
 
 # ---------------------------------
 
 echo -e "Running: Installing Powerline font Fantasque Sans Mono"
 read -t 3
 
-curl -O http://localhost:3000/static/fonts/FantasqueSansMono.zip
+curl -O https://script.aaanh.app/static/fonts/FantasqueSansMono.zip
 mkdir ./fantasque-mono
 unzip FantasqueSansMono.zip -d ./fantasque-mono
 
 curl -O https://gist.githubusercontent.com/aaanh/2477c68314a144ee76de6858a57bed36/raw/fcd6a2dbbdc034f5f22c99c8085a1d6e575d293d/install-fonts-fedora.sh
 sudo bash ./install-fonts-fedora.sh ./fantasque-mono /usr/share/fonts/custom ttf
+
+# ---------------------------------
+
+echo -e "Running: Installing Docker Engine only"
+read -t 3
+
+sudo dnf -y install dnf-plugins-core
+sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl enable --now docker
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+echo -e "You need to log out and log back in for the Docker group changes to take effect."
 
 # ---------------------------------
 
