@@ -10,9 +10,26 @@
 
 Static file: [/static/scripts/fedora-oobe.sh](/static/scripts/fedora-oobe.sh)
 
+> ⚠️ This OOBE is now highly opinionated since I am daily driving it.
+> Please refer to the list of tasks that will be executed when running this script.
+
 ```bash
 sudo dnf install -y curl && curl -O https://script.aaanh.app/static/scripts/fedora-oobe.sh && bash ./fedora-oobe.sh
 ```
+
+#### Actions performed
+
+1. Run `dnf update`
+2. Install `zsh, wget, git, neovim, tmux`
+3. Change default shell to `zsh` and install `oh-my-zsh`
+4. Install node version manager (nvm)
+5. Install Golang using 3rd party script
+6. Install Rust using official rustup toolchain
+7. Install Github CLI `gh`
+8. Install Docker Engine
+9. Install Homebrew package manager
+10. Install Visual Studio Code
+11. Install a Powerline font called Fantasque Sans Mono
 
 ### Development tools
 
