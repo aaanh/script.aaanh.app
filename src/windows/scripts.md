@@ -2,6 +2,27 @@
 
 > ℹ️ Active development of an OOBE PWSH script project over at [https://github.com/aaanh/autowin](https://github.com/aaanh/autowin). This project does most of the below and more.
 
+## Install oh-my-posh
+
+```powershell
+winget install JanDeDobbeleer.OhMyPosh -s winget 
+```
+
+## Fish-like autosuggestion for powershell
+
+- Install
+
+```powershell
+Install-Module PSReadLine -RequiredVersion 2.1.0
+```
+
+- Init
+
+```powershell
+Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+```
+
 ## Shut down a remote PC
 
 ```powershell
