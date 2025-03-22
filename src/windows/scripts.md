@@ -2,6 +2,13 @@
 
 > ℹ️ Active development of an OOBE PWSH script project over at [https://github.com/aaanh/autowin](https://github.com/aaanh/autowin). This project does most of the below and more.
 
+## Classic right-click menu Windows 11
+
+```powershell
+New-Item -Path "HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" -Value "" -Force
+Get-Process explorer | Stop-Process
+```
+
 ## Install oh-my-posh
 
 ```powershell

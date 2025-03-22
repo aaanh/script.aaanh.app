@@ -1,5 +1,23 @@
 # The Convenience Store
 
+# Quick links
+
+## Script files
+
+- [macOS OOBE](static/scripts/macbook-oobe.sh)
+- [Ubuntu OOBE](static/scripts/ubuntu-oobe.sh)
+- [Ubuntu Dev Tools](static/scripts/ubuntu-dev-tools.sh)
+- [Manjaro OOBE](static/scripts/manjaro-oobe.sh)
+- [Fedora OOBE](static/scripts/fedora-oobe.sh)
+- [Fedora Dev Tools](static/scripts/fedora-dev-tools.sh)
+
+## Nerd/Powerline Fonts
+
+- [FantasqueSansMono.zip](static/fonts/FantasqueSansMono.zip)
+- [FiraCode.zip](static/fonts/FiraCode.zip)
+
+# Introduction
+
 Ever get tired of constantly Googling every time you have to install or set up something? I do.
 
 Linux packages or Windows programs or script-based installations, remember what to do is a pain in the ass and an overall crappy DX, as you are constantly ripped out of your flow to get the tools necessary to work. And let's say you have just bought a brand spanking new computer or setting up a new VM, the momentous urge of diving right into creating _things_ as fast as possible is fleeting every second you spend gathering the dev requirements and dependencies.
@@ -36,18 +54,3 @@ The Rust book is compiled with Github Actions, committed to a production branch,
 >
 > CNAME: Only <https://script.aaanh.app> as of September 2023
 
-# Quick links
-
-## Script files
-
-- [macOS OOBE](static/scripts/macbook-oobe.sh)
-- [Ubuntu OOBE](static/scripts/ubuntu-oobe.sh)
-- [Ubuntu Dev Tools](static/scripts/ubuntu-dev-tools.sh)
-- [Manjaro OOBE](static/scripts/manjaro-oobe.sh)
-- [Fedora OOBE](static/scripts/fedora-oobe.sh)
-- [Fedora Dev Tools](static/scripts/fedora-dev-tools.sh)
-
-## Nerd/Powerline Fonts
-
-- [FantasqueSansMono.zip](static/fonts/FantasqueSansMono.zip)
-- [FiraCode.zip](static/fonts/FiraCode.zip)
