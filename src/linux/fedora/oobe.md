@@ -13,8 +13,8 @@ Static file: [/static/scripts/fedora-oobe.sh](/static/scripts/fedora-oobe.sh)
 > ⚠️ This OOBE is now highly opinionated since I am daily driving it.
 > Please refer to the list of tasks that will be executed when running this script.
 
-```bash
-sudo dnf install -y curl && curl -O https://script.aaanh.app/static/scripts/fedora-oobe.sh && bash ./fedora-oobe.sh
+```sh
+sudo dnf install -y curl zsh && cd $(mktemp -d) && curl -O https://script.aaanh.app/static/scripts/fedora-oobe.sh && zsh -i ./fedora-oobe.sh
 ```
 
 #### Actions performed

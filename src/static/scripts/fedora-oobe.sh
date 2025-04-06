@@ -1,13 +1,13 @@
-#!/usr/bin/bash
+#!/usr/bin/zsh
 
 echo -e "*******************************************************************"
 echo -e "* Rudimentary automated setup script for Fedora/RHEL/CentOS Linux.*"
-echo -e "* Anh Hoang Nguyen (c) 2024. MIT.                                 *"
+echo -e "* Anh Hoang Nguyen (c) 2025. MIT License                          *"
 echo -e "* AnhNguyen@aaanh.com                                             *"
 echo -e "*******************************************************************"
 
 echo -e "Now loading script..."
-read -t 3
+read -t 2
 
 echo -e "YOU WILL BE PROMPTED FOR SUPERUSER PASSWORD."
 read -p "Press ENTER to continue..."
@@ -15,19 +15,19 @@ read -p "Press ENTER to continue..."
 # ---------------------------------
 
 echo -e "Running: dnf update"
-read -t 3
+read -t 2
 sudo dnf -y update
 
 # ---------------------------------
 
 echo -e "Running: Install commonly-used packages from dnf."
-read -t 3
-sudo dnf install -y zsh wget git neovim tmux
+read -t 2
+sudo dnf install -y wget git neovim tmux
 
 # ---------------------------------
 
 echo -e "Running: Changing default shell to zsh, install oh-my-zsh and additional configurations."
-read -t 3
+read -t 2
 
 sudo usermod -s /usr/bin/zsh "$(whoami)"
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -39,7 +39,7 @@ sed -i 's/robbyrussell/flazz/g' ~/.zshrc
 # ---------------------------------
 
 echo -e "Running: Installing nvm, golang, rust"
-read -t 3
+read -t 2
 
 echo -e "Node Version Manager (nvm)"
 read -t 2
@@ -56,7 +56,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # ---------------------------------
 
 echo -e "Running: Installing gh CLI"
-read -t 3
+read -t 2
 
 sudo dnf install -y dnf5-plugins
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
@@ -65,23 +65,14 @@ sudo dnf install -y gh --repo gh-cli
 # ---------------------------------
 
 echo -e "Running: Installing homebrew package manager"
-read -t 3
+read -t 2
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # ---------------------------------
 
-echo -e "Running: Installing Visual Studio Code"
-read -t 3
-
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.ascecho -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
-dnf check-update
-sudo dnf install -y code # or code-insiders
-
-# ---------------------------------
-
 echo -e "Running: Installing Powerline font Fantasque Sans Mono"
-read -t 3
+read -t 2
 
 curl -O https://script.aaanh.app/static/fonts/FantasqueSansMono.zip
 mkdir ./fantasque-mono
@@ -93,7 +84,7 @@ sudo bash ./install-fonts-fedora.sh ./fantasque-mono /usr/share/fonts/custom ttf
 # ---------------------------------
 
 echo -e "Running: Installing Docker Engine only"
-read -t 3
+read -t 2
 
 sudo dnf -y install dnf-plugins-core
 sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
