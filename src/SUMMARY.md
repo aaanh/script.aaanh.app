@@ -47,7 +47,8 @@
   - [Make Life Easier](container/k8s/helpers.md)
   - [Operations](container/k8s/operations.md)
 
-# Miscellaneous CLIs 🖥️
+# Miscellaneous 🖥️
 
-- [ffmpeg](misc-cli/ffmpeg.md)
-- [ytb-dl](misc-cli/ytb-dl.md)
+- [Microsoft SQL Server + Studio on macOS ARM64](misc/mssql-macos-arm64.md)
+- [ffmpeg](misc/ffmpeg.md)
+- [ytb-dl](misc/ytb-dl.md)

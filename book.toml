@@ -5,9 +5,12 @@ multilingual = false
 src = "src"
 title = "script-convenience-store"
 
+[preprocessor.pagetoc]
 [output.html]
 preferred-dark-theme = "navy"
 curly-quotes = true
 mathjax-support = false
 copy-fonts = true
 no-section-label = true
+additional-css = ["theme/pagetoc.css"]
+additional-js = ["theme/pagetoc.js"]
