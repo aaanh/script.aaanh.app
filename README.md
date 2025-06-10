@@ -6,7 +6,7 @@ The site is consolidated to <https://script.aaanh.app> only, as of September 202
 > 
 > v1.0 is available at [branch v1.0](https://github.com/aaanh/linux-docs/tree/v1.0)
 
-![](https://img.shields.io/github/license/aaanh/linux-docs?color=%23fef00&style=flat-square)
+![](https://img.shields.io/github/license/aaanh/script.aaanh.app?color=%23fef00&style=flat-square)
 
 A curated "book" of frequently used scripts across major platforms and command line interfaces.
 
