@@ -14,7 +14,7 @@ Static file: [/static/scripts/fedora-oobe.sh](/static/scripts/fedora-oobe.sh)
 > Please refer to the list of tasks that will be executed when running this script.
 
 ```sh
-sudo dnf install -y curl zsh && cd $(mktemp -d) && curl -O https://script.aaanh.app/static/scripts/fedora-oobe.sh && zsh -i ./fedora-oobe.sh
+sudo dnf install -y curl && curl -fSsL https://script.aaanh.app/static/scripts/fedora-oobe.sh | bash
 ```
 
 #### Actions performed
