@@ -31,16 +31,6 @@ sudo dnf install -y curl && curl -fSsL https://script.aaanh.app/static/scripts/f
 10. Install Visual Studio Code
 11. Install a Powerline font called Fantasque Sans Mono
 
-### Development tools
-
-It is recommended to run the OOBE script first to get the dependencies.
-
-Static file: [/static/scripts/fedora-dev-tools.sh](/static/scripts/fedora-dev-tools.sh)
-
-```bash
-curl https://script.aaanh.app/static/scripts/fedora-dev-tools.sh | bash
-```
-
 ## Update
 
 ```bash
