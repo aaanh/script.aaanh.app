@@ -71,5 +71,5 @@ sudo apt install -y curl && curl https://script.aaanh.app/static/scripts/ubuntu-
 
 1. Solid black 4K resolution wallpaper 👌
    ```sh
-   curl -o ~/Pictures/black-solid-4k.png "https://script.aaanh.app/static/images/black-solid-4k.png"
+   curl -o ~/Pictures/black.png "https://script.aaanh.app/static/images/black.png"
    ```

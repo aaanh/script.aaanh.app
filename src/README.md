@@ -2,19 +2,40 @@
 
 # Quick links
 
-## Script files
+## OOBE Scripts
 
-- [macOS OOBE](static/scripts/macbook-oobe.sh)
-- [Ubuntu OOBE](static/scripts/ubuntu-oobe.sh)
-- [Ubuntu Dev Tools](static/scripts/ubuntu-dev-tools.sh)
-- [Manjaro OOBE](static/scripts/manjaro-oobe.sh)
-- [Fedora OOBE](static/scripts/fedora-oobe.sh)
-- [Fedora Dev Tools](static/scripts/fedora-dev-tools.sh)
+- Ubuntu
+
+```sh
+sudo apt install -y curl && curl -fSsL https://script.aaanh.app/static/scripts/ubuntu-oobe.sh | bash
+```
+
+- Fedora
+
+```sh
+sudo dnf install -y curl && curl -fSsL https://script.aaanh.app/static/scripts/fedora-oobe.sh | bash
+```
+
+- macOS
+
+```sh
+(curl -fSsl https://script.aaanh.app/static/scripts/macbook-oobe.sh >> macbook-oobe.sh && chmod 700 macbook-oobe.sh && bash macbook-oobe.sh && rm macbook-oobe.sh)
+```
+
+- Windows
+
+```ps1
+iex (iwr 'https://script.aaanh.app/static/scripts/oobe.ps1' -UseBasicParsing)
+```
 
 ## Nerd/Powerline Fonts
 
 - [FantasqueSansMono.zip](static/fonts/FantasqueSansMono.zip)
 - [FiraCode.zip](static/fonts/FiraCode.zip)
+
+## Black background image 4K
+
+https://script.aaanh.app/static/images/black.png
 
 # Introduction
 

@@ -29,6 +29,7 @@
 
 # Windows 🪟
 
+- [OOBE](windows/oobe.md)
 - [Convenience Scripts](windows/scripts.md)
 - [Operations]()
   - [System Operations](windows/sys-ops.md)
