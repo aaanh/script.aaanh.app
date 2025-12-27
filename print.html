@@ -1,0 +1,2156 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>script-convenience-store</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="shortcut icon" href="favicon-e11ce8c4.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-d49476d0.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-f1487e3b.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">script-convenience-store</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="the-convenience-store"><a class="header" href="#the-convenience-store">The Convenience Store</a></h1>
+<h1 id="quick-links"><a class="header" href="#quick-links">Quick links</a></h1>
+<h2 id="oobe-scripts"><a class="header" href="#oobe-scripts">OOBE Scripts</a></h2>
+<ul>
+<li>Ubuntu</li>
+</ul>
+<pre><code class="language-sh">sudo apt install -y curl &amp;&amp; curl -fSsL https://script.aaanh.app/static/scripts/ubuntu-oobe.sh | bash
+</code></pre>
+<ul>
+<li>Fedora</li>
+</ul>
+<pre><code class="language-sh">sudo dnf install -y curl &amp;&amp; curl -fSsL https://script.aaanh.app/static/scripts/fedora-oobe.sh | bash
+</code></pre>
+<ul>
+<li>macOS</li>
+</ul>
+<pre><code class="language-sh">(curl -fSsl https://script.aaanh.app/static/scripts/macbook-oobe.sh &gt;&gt; macbook-oobe.sh &amp;&amp; chmod 700 macbook-oobe.sh &amp;&amp; bash macbook-oobe.sh &amp;&amp; rm macbook-oobe.sh)
+</code></pre>
+<ul>
+<li>Windows</li>
+</ul>
+<pre><code class="language-ps1">iex (iwr 'https://script.aaanh.app/static/scripts/oobe.ps1' -UseBasicParsing)
+</code></pre>
+<h2 id="nerdpowerline-fonts"><a class="header" href="#nerdpowerline-fonts">Nerd/Powerline Fonts</a></h2>
+<ul>
+<li><a href="static/fonts/FantasqueSansMono.zip">FantasqueSansMono.zip</a></li>
+<li><a href="static/fonts/FiraCode.zip">FiraCode.zip</a></li>
+</ul>
+<h2 id="black-background-image-4k"><a class="header" href="#black-background-image-4k">Black background image 4K</a></h2>
+<p>https://script.aaanh.app/static/images/black.png</p>
+<h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Ever get tired of constantly Googling every time you have to install or set up something? I do.</p>
+<p>Linux packages or Windows programs or script-based installations, remember what to do is a pain in the ass and an overall crappy DX, as you are constantly ripped out of your flow to get the tools necessary to work. And let’s say you have just bought a brand spanking new computer or setting up a new VM, the momentous urge of diving right into creating <em>things</em> as fast as possible is fleeting every second you spend gathering the dev requirements and dependencies.</p>
+<p>That is why I started this convenience store. To add some nitrous 🚀 to [y]our DX.</p>
+<p><img src="static/images/nao-tomori.jpg" alt=""></p>
+<h1 id="security-acknowledgement"><a class="header" href="#security-acknowledgement">Security Acknowledgement</a></h1>
+<p>While I have high confidence in the platform and networking security of the host for this book, it does not guarantee any type of attack occurring by any means that will harm your system and expose your information.</p>
+<p>An example of an attack scenario may be: man-in-the-middle attack while using <code>curl</code> to download and execute the script provided. The attacker might redirect your client to a unaffiliated and malicious copy of this website that download and execute instead a contaminated script.</p>
+<p>⚠️ It is crucial that you inspect the script first via the provided link to the static resource.</p>
+<p>⚠️⚠️ While I try my best to vet and securely configure the backend, some attacks may happen at your layer, so my disclaimer here is that I will not be held accountable for injuries or damages caused by running the scripts haphazardly.</p>
+<h1 id="contributing"><a class="header" href="#contributing">Contributing</a></h1>
+<p>The documentation is not only for me, it’s also for the community!</p>
+<p>If you know or believe there is a better way to do things, like a faster and more secure script, fork the repository <a href="https://github.com/aaanh/script-convenience-store">https://github.com/aaanh/script-convenience-store</a>, make changes, and open a <a href="https://github.com/aaanh/script-convenience-store/pulls">pull request</a>.</p>
+<h1 id="cicd"><a class="header" href="#cicd">CI/CD</a></h1>
+<p>The Rust book is compiled with Github Actions, committed to a production branch, and deployed (with that branch) on Vercel as a static HTML site.</p>
+<h1 id="about-the-author"><a class="header" href="#about-the-author">About the Author</a></h1>
+<blockquote>
+<p>Anh (<a href="https://github.com/aaanh">@aaanh</a>).</p>
+<p>Homepage: <a href="https://aaanh.com">https://aaanh.com</a></p>
+<p>CNAME: Only <a href="https://script.aaanh.app">https://script.aaanh.app</a> as of September 2023</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ubuntu-out-of-the-box-experience"><a class="header" href="#ubuntu-out-of-the-box-experience">Ubuntu Out-of-the-Box Experience</a></h1>
+<h2 id="convenience-script"><a class="header" href="#convenience-script">Convenience Script</a></h2>
+<p>Static file: <a href="/static/scripts/ubuntu-oobe.sh">/static/scripts/ubuntu-oobe.sh</a></p>
+<pre><code class="language-bash">sudo apt install -y curl &amp;&amp; curl -fSsL https://script.aaanh.app/static/scripts/ubuntu-oobe.sh | bash
+</code></pre>
+<p>If <code>curl</code> is not installed, install it with <code>sudo apt install curl</code>.</p>
+<p><strong>Note:</strong> This script should not be run as root. It will use <code>sudo</code> when needed and will prompt for your password.</p>
+<details>
+    <summary>What this script does?</summary>
+    
+<ul>
+        
+<li>Updates and upgrades system packages via apt</li>
+
+        
+<li>Installs essential packages: git, zsh, net-tools, build-essential, openssh-server, tmux, curl, wget, unzip, ca-certificates</li>
+
+        
+<li>Sets up and configures zsh with oh-my-zsh, zsh-syntax-highlighting, and flazz theme</li>
+
+        
+<li>Installs development tools: NVM (Node Version Manager), Go, and Rust</li>
+
+        
+<li>Installs GitHub CLI (gh)</li>
+
+        
+<li>Installs Homebrew (Linuxbrew)</li>
+
+        
+<li>Installs Docker Engine and adds user to docker group</li>
+
+        
+<li>Downloads and installs Fantasque Sans Mono fonts</li>
+
+    </ul>
+
+    
+<p><strong>Important:</strong> After running the script, you should log out and back in for all changes to take effect (especially zsh shell and docker group membership).</p>
+
+</details>
+<h2 id="dev-tools"><a class="header" href="#dev-tools">Dev Tools</a></h2>
+<pre><code class="language-bash">sudo apt install -y curl &amp;&amp; curl -fSsL https://script.aaanh.app/static/scripts/ubuntu-dev-tools.sh | bash
+</code></pre>
+<h2 id="manual"><a class="header" href="#manual">Manual</a></h2>
+<ol>
+<li>
+<p>Update and upgrade apt</p>
+<pre><code class="language-sh">sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre>
+</li>
+<li>
+<p>Install commonly-used packages</p>
+<pre><code class="language-sh">sudo apt install -y git zsh net-tools build-essential openssh-server \
+  tmux curl wget unzip ca-certificates
+</code></pre>
+</li>
+<li>
+<p>Additional optional desktop packages</p>
+<pre><code class="language-sh">sudo apt install gnome-tweaks grub-customizer nodejs npm
+</code></pre>
+</li>
+<li>
+<p>Install and power up <code>vim</code></p>
+<pre><code class="language-sh">git clone https://github.com/aaanh/vimrc ~/.vim_runtime &amp;&amp; cd ~/.vim_runtime &amp;&amp; ./install_awesome_vimrc.sh
+</code></pre>
+</li>
+<li>
+<p>Use local time (optional, for dual boot with Windows)</p>
+<pre><code class="language-sh">timedatectl set-local-rtc 1 --adjust-system-clock
+</code></pre>
+</li>
+<li>
+<p>Setup zsh with oh-my-zsh and plugins</p>
+<pre><code class="language-sh">chsh -s $(which zsh)
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-syntax-highlighting --depth 1
+echo "source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" &gt;&gt; ~/.zshrc
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="flazz"/' ~/.zshrc
+</code></pre>
+</li>
+<li>
+<p>Install NVM, Go, and Rust</p>
+<pre><code class="language-sh"># NVM
+export NVM_DIR="$HOME/.nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# Go
+curl -L https://git.io/vQhTU | bash
+
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+</code></pre>
+</li>
+<li>
+<p>GitHub CLI</p>
+<pre><code class="language-sh">sudo mkdir -p -m 755 /etc/apt/keyrings
+wget -nv -O- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg &gt; /dev/null
+sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list &gt; /dev/null
+sudo apt update
+sudo apt install -y gh
+</code></pre>
+<p>After installation, login with <code>gh auth login</code></p>
+</li>
+<li>
+<p>Homebrew (Linuxbrew)</p>
+<pre><code class="language-sh">NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' &gt;&gt; ~/.zshrc
+</code></pre>
+</li>
+<li>
+<p>Docker Engine</p>
+<pre><code class="language-sh">sudo apt-get update
+sudo apt-get install -y ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release &amp;&amp; echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo usermod -aG docker $USER
+</code></pre>
+<p><strong>Note:</strong> Log out and back in for docker group changes to take effect.</p>
+</li>
+<li>
+<p>Fantasque Sans Mono fonts</p>
+<pre><code class="language-sh">TMP_DIR="$HOME/.tmp-font-install"
+FONT_ZIP_URL="https://script.aaanh.app/static/fonts/FantasqueSansMono.zip"
+mkdir -p "$TMP_DIR"
+cd "$TMP_DIR"
+curl -O "$FONT_ZIP_URL"
+unzip -q FantasqueSansMono.zip -d fantasque-mono
+sudo mkdir -p /usr/share/fonts/custom
+find fantasque-mono -type f -name "*.ttf" -exec sudo cp {} /usr/share/fonts/custom \;
+sudo fc-cache -fv
+rm -rf "$TMP_DIR"
+</code></pre>
+</li>
+<li>
+<p>Additional user applications</p>
+<ol>
+<li>
+<p>Visual Studio Code: <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p>
+</li>
+<li>
+<p>Discord: <a href="https://discord.com/download">https://discord.com/download</a></p>
+</li>
+<li>
+<p>Anaconda: <a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a></p>
+</li>
+<li>
+<p>Zoom: <a href="https://zoom.us/download">https://zoom.us/download</a></p>
+</li>
+<li>
+<p>Slack (snap or rpm): <a href="https://slack.com/downloads/linux">https://slack.com/downloads/linux</a></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Solid black 4K resolution wallpaper 👌</p>
+<pre><code class="language-sh">curl -o ~/Pictures/black.png "https://script.aaanh.app/static/images/black.png"
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="kernel-based-virtual-machine"><a class="header" href="#kernel-based-virtual-machine">Kernel-based Virtual Machine</a></h1>
+<blockquote>
+<p>Partially adapted from <a href="https://ubuntu.com/blog/kvm-hypervisor">https://ubuntu.com/blog/kvm-hypervisor</a>, <a href="https://developer.hashicorp.com">https://developer.hashicorp.com</a>. And with references to Red Hat article(s).</p>
+</blockquote>
+<h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
+<p>Refer to Red Hat’s <a href="https://www.redhat.com/en/topics/virtualization/what-is-KVM">article</a>.</p>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<pre><code class="language-sh">sudo apt install -y qemu qemu-kvm libvirt-daemon bridge-utils virt-manager libvirt-clients
+</code></pre>
+<h2 id="start-a-vm"><a class="header" href="#start-a-vm">Start a VM</a></h2>
+<ol>
+<li>
+<p>Create empty image</p>
+<p>Synopsis:</p>
+<pre><code>qemu-img create -f &lt;format&gt; &lt;vm-disk-name&gt;.img &lt;size&gt;&lt;unit&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code>qemu-img create -f qcow2 some-vm.img 60G
+</code></pre>
+</li>
+<li>
+<p>Boot from CDROM/ISO image</p>
+<p>Synopsis:</p>
+<pre><code>qemu-system-x86_64 -m &lt;mem_size&gt; -boot d -enable-kvm -smp 3 \
+                     -net nic -net user -hda &lt;vm-disk-name&gt;.img -cdrom /path/to/downloaded/iso.iso
+</code></pre>
+<p>Example:</p>
+<pre><code>qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 \
+                     -net nic -net user -hda some-vm.img -cdrom ubuntu-22.04-amd64.iso
+</code></pre>
+</li>
+<li>
+<p>Go through the installation process of the respected distro onto the created VM image.</p>
+</li>
+<li>
+<p>Shut down the VM.</p>
+</li>
+<li>
+<p>Boot from the image with the installed OS</p>
+<p>Synopsis:</p>
+<pre><code>qemu-system-x86_64 -m &lt;mem_size&gt; -boot d -enable-kvm -smp 3 \
+                    -net nic -net user -hda &lt;vm-disk-name&gt;.img
+</code></pre>
+<p>Example:</p>
+<pre><code>qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 -net nic -net user -hda some-vm.img
+</code></pre>
+</li>
+</ol>
+<h2 id="management"><a class="header" href="#management">Management</a></h2>
+<h3 id="virtual-machine-manager"><a class="header" href="#virtual-machine-manager">Virtual Machine Manager</a></h3>
+<pre><code>sudo apt install virt-manager
+</code></pre>
+<p>GUI for easier management.</p>
+<h3 id="vagrant"><a class="header" href="#vagrant">Vagrant</a></h3>
+<p>Infrastructure-as-Code implementation of VM and container management by HashiCorp.</p>
+<pre><code class="language-sh">wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg &amp;&amp; echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list &amp;&amp; sudo apt update &amp;&amp; sudo apt install vagrant
+</code></pre>
+<h3 id="terraform"><a class="header" href="#terraform">Terraform</a></h3>
+<p>Infrastructure-as-Code implementation of VM, container, network stackc management also by HashiCorp.</p>
+<ul>
+<li>Installation</li>
+</ul>
+<pre><code class="language-sh">wget -O- https://apt.releases.hashicorp.com/gpg | \
+    gpg --dearmor | \
+    sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg &amp;&amp; gpg --no-default-keyring \
+    --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+    --fingerprint &amp;&amp; echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+    https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+    sudo tee /etc/apt/sources.list.d/hashicorp.list &amp;&amp; sudo apt update &amp;&amp; sudo apt install terraform
+</code></pre>
+<ul>
+<li>Libvirt provider <a href="https://github.com/dmacvicar/terraform-provider-libvirt">https://github.com/dmacvicar/terraform-provider-libvirt</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="rhelfedoracentos-out-of-the-box-experience"><a class="header" href="#rhelfedoracentos-out-of-the-box-experience">RHEL/Fedora/CentOS Out-of-the-Box Experience</a></h1>
+<blockquote>
+<p>Note: Cool thing about Fedora is that most dev-centric packages are already installed :)</p>
+</blockquote>
+<blockquote>
+<p>Another one: These commands are exclusively tested out on Fedora, but probably are transferable to RHEL and CentOS as well.</p>
+</blockquote>
+<h2 id="convenience-script-1"><a class="header" href="#convenience-script-1">Convenience script</a></h2>
+<h3 id="out-of-the-box-experience"><a class="header" href="#out-of-the-box-experience">Out of the box experience</a></h3>
+<p>Static file: <a href="/static/scripts/fedora-oobe.sh">/static/scripts/fedora-oobe.sh</a></p>
+<blockquote>
+<p>⚠️ This OOBE is now highly opinionated since I am daily driving it.
+Please refer to the list of tasks that will be executed when running this script.</p>
+</blockquote>
+<pre><code class="language-sh">sudo dnf install -y curl &amp;&amp; curl -fSsL https://script.aaanh.app/static/scripts/fedora-oobe.sh | bash
+</code></pre>
+<h4 id="actions-performed"><a class="header" href="#actions-performed">Actions performed</a></h4>
+<ol>
+<li>Run <code>dnf update</code></li>
+<li>Install <code>zsh, wget, git, neovim, tmux</code></li>
+<li>Change default shell to <code>zsh</code> and install <code>oh-my-zsh</code></li>
+<li>Install node version manager (nvm)</li>
+<li>Install Golang using 3rd party script</li>
+<li>Install Rust using official rustup toolchain</li>
+<li>Install Github CLI <code>gh</code></li>
+<li>Install Docker Engine</li>
+<li>Install Homebrew package manager</li>
+<li>Install Visual Studio Code</li>
+<li>Install a Powerline font called Fantasque Sans Mono</li>
+</ol>
+<h2 id="update"><a class="header" href="#update">Update</a></h2>
+<pre><code class="language-bash">sudo dnf update
+</code></pre>
+<h2 id="install-common-applications"><a class="header" href="#install-common-applications">Install common applications</a></h2>
+<h3 id="for-general-user"><a class="header" href="#for-general-user">For general user</a></h3>
+<pre><code class="language-bash">sudo dnf -y install zsh wget curl neovim
+</code></pre>
+<h3 id="for-developers"><a class="header" href="#for-developers">For developers</a></h3>
+<pre><code class="language-bash">sudo dnf -y install nodejs gcc-c++
+</code></pre>
+<h4 id="github-cli"><a class="header" href="#github-cli">Github CLI</a></h4>
+<pre><code class="language-bash">sudo dnf install 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh
+gh auth login
+</code></pre>
+<h4 id="docker"><a class="header" href="#docker">Docker</a></h4>
+<pre><code class="language-bash">sudo dnf -y install dnf-plugins-core
+</code></pre>
+<pre><code class="language-bash">sudo dnf install 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh
+</code></pre>
+<h2 id="set-up-zsh"><a class="header" href="#set-up-zsh">Set up <code>zsh</code></a></h2>
+<blockquote>
+<p>Change default shell using <code>usermod</code> instead because <code>chsh</code> is not installed by default</p>
+</blockquote>
+<pre><code class="language-bash">sudo usermod -s /usr/bin/zsh "$(whoami)"
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
+echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" &gt;&gt; "$HOME/.zshrc"
+sed -i 's/robbyrussell/flazz/g' ~/.zshrc
+</code></pre>
+<h2 id="set-up-vim"><a class="header" href="#set-up-vim">Set up <code>vim</code></a></h2>
+<pre><code class="language-sh">git clone https://github.com/aaanh/vimrc ~/.vim_runtime &amp;&amp; cd ~/.vim_runtime &amp;&amp; ./install_awesome_vimrc.sh
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ansible"><a class="header" href="#ansible">Ansible</a></h1>
+<p>TBA</p>
+<pre><code class="language-typescript">// this is an example typescript snippet to demo syntax highlighting
+import { type Uri } from "uri";
+
+type ExampleParams = {
+	paramOne: string | undefined;
+	paramTwo: number | 69;
+	paramThree: Uri | "https://example.com";
+};
+
+function toString(obj: any): string {
+	throw new Error("Function not implemented.");
+}
+
+const Example = (params: ExampleParams[]): string =&gt; {
+	let concat = params.paramOne + toString(params.paramTwo) + toString(params.paramThree);
+	return concat;
+};
+
+export default Example;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="arch-linux-bare-installation"><a class="header" href="#arch-linux-bare-installation">Arch Linux Bare Installation</a></h1>
+<p><strong>Notes</strong></p>
+<blockquote>
+<p>This is an abridged version based on <a href="https://wiki.archlinux.org/title/installation_guide">https://wiki.archlinux.org/title/installation_guide</a> and <a href="https://linuxiac.com/arch-linux-install/">https://linuxiac.com/arch-linux-install/</a>. The purpose is to create a dumbed down guide that blasts past whatever precautions and warnings on the wiki. I. AM. SPEED. (Though is not gonna be as fast as this guy <a href="https://www.youtube.com/watch?v=8utpbbdj0LQ">https://www.youtube.com/watch?v=8utpbbdj0LQ</a>)</p>
+</blockquote>
+<p><strong>Warning</strong></p>
+<blockquote>
+<p>Make sure you have backed up all data before proceeding. This includes: your USB devices and your system disks.</p>
+<p><strong>Disclaimer:</strong> Proceed with the setup steps with extreme cautions. You must know what you are doing. I am not held responsible for your negligence.</p>
+</blockquote>
+<h2 id="download-iso-image"><a class="header" href="#download-iso-image">Download <code>.iso</code> image</a></h2>
+<p><a href="https://archlinux.org/download/">https://archlinux.org/download/</a></p>
+<p>Example download script (using University of Waterloo repository mirror)</p>
+<pre><code class="language-sh">cd ~/Downloads &amp;&amp; curl -O http://mirror.csclub.uwaterloo.ca/archlinux/iso/2022.02.01/archlinux-2022.02.01-x86_64.iso
+</code></pre>
+<h2 id="create-the-usb-installation-medium-with-dd"><a class="header" href="#create-the-usb-installation-medium-with-dd">Create the USB installation medium with <code>dd</code></a></h2>
+<pre><code class="language-sh">dd if=/path/to/archlinux.iso of=/dev/somedisk bs=4M conv=fsync oflag=direct status=progress
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-sh">dd if=~/Downloads/archlinux-2022.02.01-x86_64.iso of=/dev/sdb bs=4M conv=fsync oflag=direct status=progress
+</code></pre>
+<blockquote>
+<p>Note: Use <code>lsblk</code> to list the disks mounted on your system. A USB device should typically be in the form of <code>sdx</code>.</p>
+</blockquote>
+<h2 id="restart-and-boot-into-the-usb"><a class="header" href="#restart-and-boot-into-the-usb">Restart and Boot into the USB</a></h2>
+<ul>
+<li>Lenovo: <kbd>Enter</kbd> → <kbd>F12</kbd></li>
+<li>Dell: <kbd>F12</kbd></li>
+<li>ASUS motherboard: <kbd>Delete</kbd> or <kbd>F2</kbd></li>
+</ul>
+<p>After a bit of initializations, you should now be staring at the live boot TTY command line as root, denoted by <code>#</code>.</p>
+<h2 id="networking"><a class="header" href="#networking">Networking</a></h2>
+<h3 id="check-the-interfaces"><a class="header" href="#check-the-interfaces">Check the interfaces</a></h3>
+<pre><code class="language-sh">ip link
+</code></pre>
+<p>If interface, <code>wlan0</code> for example, is shown as DOWN, do:</p>
+<pre><code class="language-sh">sudo ip link set wlan0 up
+</code></pre>
+<h3 id="wireless-from-arch-linux-wiki"><a class="header" href="#wireless-from-arch-linux-wiki">Wireless (from <a href="https://wiki.archlinux.org/title/lwd#iwctl">Arch Linux Wiki</a>)</a></h3>
+<pre><code class="language-sh">iwctl
+</code></pre>
+<pre><code class="language-sh">device list
+</code></pre>
+<pre><code class="language-sh">station device scan
+</code></pre>
+<pre><code class="language-sh">station device get-networks
+</code></pre>
+<pre><code class="language-sh">station device connect SSID
+</code></pre>
+<h3 id="wired"><a class="header" href="#wired">Wired</a></h3>
+<p>Should run without much configurations. Typically, installation occurs in a DHCP environment.</p>
+<p>For static IP configurations</p>
+<ul>
+<li>
+<p>IP assignment</p>
+<pre><code class="language-sh">ip address show
+</code></pre>
+<pre><code class="language-sh">ip address add address/prefix_len broadcast + dev interfaces
+</code></pre>
+</li>
+<li>
+<p>Routing table</p>
+<pre><code class="language-sh">ip route show
+</code></pre>
+<pre><code>ip route add PREFIX via address dev interface
+</code></pre>
+</li>
+</ul>
+<h2 id="update-pacman-repository-listing"><a class="header" href="#update-pacman-repository-listing">Update <code>pacman</code> repository listing</a></h2>
+<pre><code>```sh
+pacman -Syy
+```
+</code></pre>
+<h2 id="create-new-partition-table"><a class="header" href="#create-new-partition-table">Create new partition table</a></h2>
+<blockquote>
+<p>Make sure you have backed up all data before proceeding. These steps assume that you are using a whole disk as installation target.</p>
+</blockquote>
+<ul>
+<li>
+<p>List available disks</p>
+<pre><code class="language-sh">fdisk -l
+</code></pre>
+</li>
+<li>
+<p>Create partition table</p>
+<pre><code class="language-sh">cfdisk /dev/sdx
+</code></pre>
+</li>
+<li>
+<p>If prompted for label type, select <code>gpt</code>.</p>
+</li>
+<li>
+<p>Delete all partitions.</p>
+</li>
+</ul>
+<p>Partition table should be:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Partition</th><th>Type</th><th>Size</th><th>Format</th></tr>
+</thead>
+<tbody>
+<tr><td>/dev/sda1</td><td>EFI System Partition</td><td>512M</td><td>FAT32</td></tr>
+<tr><td>/dev/sda2</td><td>Linux Swap</td><td>4G</td><td></td></tr>
+<tr><td>/dev/sda3</td><td>Linux Partition</td><td><kbd>Enter</kbd></td><td>EXT4</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Write changes to disk.</li>
+</ul>
+<h2 id="formatting-the-partitions"><a class="header" href="#formatting-the-partitions">Formatting the partitions</a></h2>
+<ul>
+<li>
+<p>EFI System:</p>
+<pre><code>mkfs.fat -F32 /dev/sda1
+</code></pre>
+</li>
+<li>
+<p>Linux Swap:</p>
+<pre><code class="language-sh">mkswap /dev/sda2
+swapon /dev/sda2
+</code></pre>
+</li>
+<li>
+<p>Linux Partition <code>/</code>:</p>
+<pre><code class="language-sh">mkfs.ext4 /dev/sda3
+</code></pre>
+</li>
+</ul>
+<h2 id="install-arch-linux"><a class="header" href="#install-arch-linux">Install Arch Linux</a></h2>
+<ul>
+<li>
+<p>Mount root partition on system disk to live boot environment</p>
+<pre><code class="language-sh">mount /dev/sda3 /mnt
+</code></pre>
+</li>
+<li>
+<p><code>pacstrap</code>-ing</p>
+<pre><code>pacstrap /mnt base linux linux-firmware sudo vim
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>If PGP signature is not trusted, keyring needs to be updated.</p>
+</blockquote>
+<pre><code>```
+pacman -Sy archlinux-keyring
+```
+</code></pre>
+<h2 id="system-configurations"><a class="header" href="#system-configurations">System Configurations</a></h2>
+<ul>
+<li>
+<p>fstab</p>
+<pre><code class="language-sh">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre>
+</li>
+<li>
+<p>Change root into the installed system</p>
+<pre><code>arch-chroot /mnt
+</code></pre>
+</li>
+<li>
+<p>Timezone</p>
+<pre><code class="language-sh">ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+</code></pre>
+</li>
+<li>
+<p>Locale</p>
+</li>
+</ul>
+<blockquote>
+<p>This <code>sed</code> script needs to be verified!!</p>
+</blockquote>
+<pre><code>```sh
+sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+sed -i 's/#en_US ISO-8859-1/en_US ISO-8859-1/' /etc/locale.gen
+```
+</code></pre>
+<p>Or manually:</p>
+<pre><code>```
+vim /etc/locale.gen
+```
+</code></pre>
+<ul>
+<li>
+<p>Locale (cont.)</p>
+<pre><code class="language-sh">locale-gen
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+export LANG=en_US.UTF-8
+</code></pre>
+</li>
+<li>
+<p>Hostname</p>
+<pre><code class="language-sh">echo "your-pc-name-of-choice" &gt; /etc/hostname
+</code></pre>
+<pre><code class="language-sh">echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\tyour_pc_name" &gt; /etc/hosts
+</code></pre>
+</li>
+</ul>
+<p>Should look something like this</p>
+<pre><code># /etc/hosts
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   your-pc-name
+</code></pre>
+<ul>
+<li>
+<p>Set root password</p>
+<pre><code>passwd
+</code></pre>
+</li>
+</ul>
+<h2 id="install-grub-bootloader"><a class="header" href="#install-grub-bootloader">Install grub bootloader</a></h2>
+<pre><code class="language-sh">pacman -S grub efibootmgr os-prober mtools
+</code></pre>
+<pre><code class="language-sh">mkdir /boot/efi
+mount /dev/sda1/ /boot/efi
+grub-install --target=x86_64-efi --bootloader-id=grub_uefi
+grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+<h2 id="install-desktop-environment-of-choice"><a class="header" href="#install-desktop-environment-of-choice">Install Desktop Environment of choice</a></h2>
+<h3 id="prerequisites-1"><a class="header" href="#prerequisites-1">Prerequisites</a></h3>
+<ul>
+<li>
+<p>Install Xorg</p>
+<pre><code class="language-sh">pacman -S xorg-server xorg-apps
+</code></pre>
+</li>
+<li>
+<p>Install GPU drivers</p>
+<pre><code class="language-sh"># NVIDIA
+pacman -S nvidia-utils
+
+# AMD
+pacman -S xf86-video-ati
+
+# Intel
+pacman -S xf86-video-intel
+</code></pre>
+</li>
+</ul>
+<h3 id="desktop-environments"><a class="header" href="#desktop-environments">Desktop Environments</a></h3>
+<p>Not all DE’s are covered here. Only the 2 most used: gnome and kde. For other DE’s, the Arch wiki covers them all.</p>
+<ul>
+<li>
+<p>GNOME</p>
+<pre><code class="language-sh">pacman -S gnome gnome-extra networkmanager
+systemctl enable gdm
+systemctl enable NetworkManager # THIS SHIT IS CASE-SENSITIVE
+</code></pre>
+</li>
+<li>
+<p>KDE</p>
+<pre><code class="language-sh">pacman -S xorg plasma plasma-wayland-session kde-applications networkmanager
+systemctl enable sddm.service
+systemctl enable NetworkManager # THIS SHIT IS CASE-SENSITIVE
+</code></pre>
+</li>
+</ul>
+<h2 id="create-a-user-account"><a class="header" href="#create-a-user-account">Create a user account</a></h2>
+<pre><code class="language-sh">useradd -m -G wheel account_name
+passwd account_name
+EDITOR=vim visudo
+</code></pre>
+<ul>
+<li>Find and uncomment the line <code># %wheel ALL=(ALL) ALL</code></li>
+</ul>
+<blockquote>
+<p>In <code>vim</code> Normal Mode, type <code>/%wheel ALL=(ALL)</code> to search for that line. If you feel lazy, in Normal Mode, type <code>:set ignorecase</code> to ignore case for search query.</p>
+</blockquote>
+<h2 id="finalization"><a class="header" href="#finalization">Finalization</a></h2>
+<pre><code class="language-sh">exit
+umount -R /mnt
+reboot
+</code></pre>
+<p>After the reboot, it should boot straight into the Arch installation on your system (assuming you have only 1 disk, 1 OS installed, lol).</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="manjaro-oobe"><a class="header" href="#manjaro-oobe">Manjaro OOBE</a></h1>
+<h2 id="convenience-script-2"><a class="header" href="#convenience-script-2">Convenience Script</a></h2>
+<pre><code class="language-sh">sudo pacman -Sy curl &amp;&amp; curl -O https://script.aaanh.app/static/scripts/manjaro-oobe.sh &amp;&amp; bash ./manjaro-oobe.sh
+</code></pre>
+<h2 id="manual-1"><a class="header" href="#manual-1">Manual</a></h2>
+<h2 id="manual-steps"><a class="header" href="#manual-steps">Manual steps</a></h2>
+<ol>
+<li>
+<p>Update and choose optimal mirror for pac(kage)man(ager)</p>
+<pre><code class="language-zsh">sudo pacman -Syyu
+</code></pre>
+</li>
+<li>
+<p>Install build tools for AUR</p>
+<pre><code class="language-zsh">sudo pacman -Sy base-devel git
+</code></pre>
+</li>
+<li>
+<p>Install commonly-used packages</p>
+<pre><code>sudo pacman -Sy ttf-fira-code ibus-unikey zsh discord
+</code></pre>
+</li>
+<li>
+<p>Install packages from AUR</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Browse AUR here <a href="https://aur.archlinux.org/">https://aur.archlinux.org/</a></p>
+</li>
+<li>
+<p>Clone repository</p>
+<pre><code class="language-zsh">git clone &lt;repository&gt;
+</code></pre>
+<pre><code class="language-zsh">cd &lt;repository&gt;
+</code></pre>
+</li>
+<li>
+<p>Compile, install with dev dependencies, remove or clean up build and dev dependencies.</p>
+<pre><code class="language-zsh">makepkg -sri
+</code></pre>
+</li>
+</ul>
+<ol start="5">
+<li>
+<p>Clone AUR repos and Install Script</p>
+<pre><code class="language-sh">cd ~/Downloads\
+(git clone https://aur.archlinux.org/google-chrome.git &amp;&amp; cd google-chrome &amp;&amp; makepkg -sri ./google-chrome/)\
+(git clone https://aur.archlinux.org/visual-studio-code-bin.git &amp;&amp; cd visual-studio-code-bin &amp;&amp; makepkg -sri ./visual-studio-code-bin/)
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="system-operations"><a class="header" href="#system-operations">System Operations</a></h1>
+<h2 id="disable-app-armor"><a class="header" href="#disable-app-armor">Disable app armor</a></h2>
+<blockquote>
+<p>Note: Applications like Docker Desktop would not start if app armor is enabled</p>
+</blockquote>
+<pre><code class="language-sh">echo 'kernel.apparmor_restrict_unprivileged_userns = 0' |
+  sudo tee /etc/sysctl.d/20-apparmor-donotrestrict.conf
+kernel.apparmor_restrict_unprivileged_userns = 0
+</code></pre>
+<h2 id="font-installation"><a class="header" href="#font-installation">Font installation</a></h2>
+<p>Convenient script. I know I wrote Fedora but actually works for Debian-based as well, lol. Source: Trust me bro.</p>
+<pre><code class="language-sh">curl -O https://gist.githubusercontent.com/aaanh/2477c68314a144ee76de6858a57bed36/raw/fcd6a2dbbdc034f5f22c99c8085a1d6e575d293d/install-fonts-fedora.sh
+</code></pre>
+<h2 id="system-information"><a class="header" href="#system-information">System Information</a></h2>
+<h3 id="ls"><a class="header" href="#ls">ls*</a></h3>
+<ul>
+<li><code>lspci</code></li>
+<li><code>lscpu</code></li>
+<li><code>lsblk</code></li>
+</ul>
+<h3 id="neofetch"><a class="header" href="#neofetch">neofetch</a></h3>
+<h2 id="resource-monitoring"><a class="header" href="#resource-monitoring">Resource Monitoring</a></h2>
+<h3 id="top-or-htop"><a class="header" href="#top-or-htop">top or htop</a></h3>
+<p>For continuously querying resource usage. Simply open a terminal and run <code>top</code>.</p>
+<p><code>htop</code> has pretty formatting, not installed by default. Can be installed through common package managers.</p>
+<h2 id="logs"><a class="header" href="#logs">Logs</a></h2>
+<h3 id="journalctl"><a class="header" href="#journalctl">journalctl</a></h3>
+<p>For <code>systemd</code>-based Linux operating system and/or distributions.</p>
+<h3 id="dmesg"><a class="header" href="#dmesg">dmesg</a></h3>
+<p>Kernel-level logs.</p>
+<h3 id="varlogmessages"><a class="header" href="#varlogmessages">/var/log/messages</a></h3>
+<p>This is where system log messages are stored in plain text.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="file-operations"><a class="header" href="#file-operations">File Operations</a></h1>
+<h2 id="file-transfer"><a class="header" href="#file-transfer">File Transfer</a></h2>
+<h3 id="curl"><a class="header" href="#curl">curl</a></h3>
+<ul>
+<li>
+<p>Download and Save file with name extracted from the URL</p>
+<pre><code class="language-sh">curl https://example.com/my-file.sh -O
+</code></pre>
+</li>
+<li>
+<p>Download and Save file with specified name</p>
+<pre><code class="language-sh">curl https://example.com/my-file.sh -O my-downloaded-file.sh
+</code></pre>
+</li>
+</ul>
+<h3 id="rsync"><a class="header" href="#rsync">rsync</a></h3>
+<ul>
+<li>
+<p>Commonly used command</p>
+<pre><code class="language-sh">rsync -avzP /PATH/TO/LOCAL/MY_FILE_FOLDER/ user@destination_machine:~/SOME_PARENT_FOLDER/
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>Explanation: (a)rchive, (v)erbose, (z)ip, (P)artial/(P)rogress. <code>SOURCE</code> is the first argument, <code>DESTINATION</code> comes second. So, to copy from a remote machine, simply swap the arguments above.</p>
+</blockquote>
+<ul>
+<li>Example
+<pre><code class="language-sh">rsync -avzP ~/Documents/assination_orders/ account_payables@high_table.xyz@10.0.0.69:~/Documents/orders_to_execute/
+</code></pre>
+</li>
+</ul>
+<h2 id="archival-compression-extraction"><a class="header" href="#archival-compression-extraction">Archival, compression, extraction</a></h2>
+<h3 id="tar"><a class="header" href="#tar">tar</a></h3>
+<ul>
+<li>
+<p>Create</p>
+<pre><code>tar zcvf target.tar.gz sourcefile
+</code></pre>
+</li>
+<li>
+<p>Unpack</p>
+<pre><code>tar zxvf sourcefile
+</code></pre>
+</li>
+<li>
+<p>List</p>
+<pre><code>tar ztvf sourcefile
+</code></pre>
+</li>
+</ul>
+<h3 id="unzip"><a class="header" href="#unzip">(un)zip</a></h3>
+<ul>
+<li>
+<p>Create zip archive from files</p>
+<pre><code class="language-sh">zip -r &lt;target&gt; &lt;source_folder&gt;
+</code></pre>
+</li>
+<li>
+<p>Extract/expand zip archive</p>
+<pre><code class="language-sh">unzip &lt;source_archive&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="finding-and-searching"><a class="header" href="#finding-and-searching">Finding and Searching</a></h2>
+<h3 id="grep"><a class="header" href="#grep">grep</a></h3>
+<h3 id="find"><a class="header" href="#find">find</a></h3>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="network-operations"><a class="header" href="#network-operations">Network Operations</a></h1>
+<h2 id="ssh"><a class="header" href="#ssh">SSH</a></h2>
+<ul>
+<li>
+<p>Simple <code>ssh</code> connection</p>
+<pre><code class="language-sh">ssh username@hostname
+</code></pre>
+</li>
+<li>
+<p>Tunneling</p>
+<pre><code class="language-sh">ssh username@server_1 -N -f -L local_port:server_2:remote_port
+</code></pre>
+</li>
+<li>
+<p>Relay with port-forwarding</p>
+<p>Synopsis:</p>
+<pre><code class="language-sh">ssh -L port_a:localhost:port_b username@server_1 sshpass -p password_for_server_2 ssh -L port_b:localhost:port_c -N username@server_2
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-sh">ssh -L 3333:localhost:4444 foo@server-1.example.com sshpass -p s0mePa$$w0rd ssh -L 4444:localhost:3389 -N email@example.com@server-2.example.com
+</code></pre>
+<blockquote>
+<p>Note: This scenario was tested with a 3 machines. The physical Windows machine with ssh (client), a Debian server (<code>server_1</code>) on Linode VPS, and a Windows RDP host (<code>server_2</code>). <code>server_1</code> and <code>server_2</code> have VPN tunneling with Tailscale.</p>
+<p>In order for this to work, <code>server_2</code> must have OpenSSH Server service enabled and <strong>running</strong>. <code>server_1</code> must have <code>sshpass</code> installed, the in and out ports whitelisted with <code>ufw</code>.</p>
+<p>This is just a makeshift method in desperate times. Looking for better ways in the future.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="firewall"><a class="header" href="#firewall">Firewall</a></h2>
+<h3 id="ufw"><a class="header" href="#ufw">ufw</a></h3>
+<p>Might need to install first on some distributions or barebone server images.</p>
+<p>It is basically a convenient wrapper for <code>iptables</code> and <code>netfilter</code>. Hence, (U)ncomplicated(F)ire(w)all.</p>
+<blockquote>
+<p>⚠️ Proceed with caution. Incorrectly configuring your system firewall might result in massive failures on dependent systems and network nodes.</p>
+</blockquote>
+<ul>
+<li>
+<p>Show status</p>
+<pre><code class="language-sh">sudo ufw status
+</code></pre>
+</li>
+<li>
+<p>Enable/Disable</p>
+<pre><code class="language-sh">sudo ufw enable # or disable
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>Swap <code>allow</code> with <code>deny</code> for the opposite effect.</p>
+</blockquote>
+<ul>
+<li>
+<p>Allow port for both tcp and udp.</p>
+<pre><code class="language-sh">ufw allow 6969
+</code></pre>
+</li>
+<li>
+<p>Allow common protocol by name for only tcp.</p>
+<pre><code class="language-sh">sudo ufw allow http/tcp
+</code></pre>
+</li>
+<li>
+<p>Allow source and destination IP subnet range with specified protocol and port range.</p>
+<pre><code class="language-sh">sudo ufw allow proto tcp from 10.0.0.1/24 to 192.0.0.2/28 port 69:420
+</code></pre>
+</li>
+</ul>
+<h2 id="information-query"><a class="header" href="#information-query">Information Query</a></h2>
+<h3 id="traceroutetracert-trace-packets-route"><a class="header" href="#traceroutetracert-trace-packets-route">traceroute/tracert (Trace packets route)</a></h3>
+<ul>
+<li>
+<p>Default and simple</p>
+<pre><code class="language-sh">traceroute &lt;IP | FQDN&gt;
+</code></pre>
+</li>
+<li>
+<p>Specify max number of hops</p>
+<pre><code class="language-sh">traceroute -m &lt;int&gt; &lt;IP | FQDN&gt;
+</code></pre>
+</li>
+<li>
+<p>Example</p>
+<pre><code class="language-sh">traceroute -m 42069 google.com
+</code></pre>
+</li>
+</ul>
+<h3 id="dig-dns-lookup"><a class="header" href="#dig-dns-lookup">dig (DNS lookup)</a></h3>
+<pre><code class="language-sh">dig &lt;IP | FQDN&gt;
+</code></pre>
+<h3 id="nslookup-nameserver-lookup"><a class="header" href="#nslookup-nameserver-lookup">nslookup (Nameserver lookup)</a></h3>
+<p>Most effective when used to look into a certain web address, e.g. google.com, rather than an IP address.</p>
+<pre><code class="language-sh">nslookup &lt;FQDN | IP&gt;
+</code></pre>
+<h3 id="ipipconfigifconfig"><a class="header" href="#ipipconfigifconfig">ip/ipconfig/ifconfig</a></h3>
+<ul>
+<li>
+<p>List network interfaces with status, Physical MAC address, IP address, and subnet.</p>
+<pre><code>ip address
+</code></pre>
+</li>
+</ul>
+<h2 id="virtual-private-network-vpn"><a class="header" href="#virtual-private-network-vpn">Virtual Private Network (VPN)</a></h2>
+<h3 id="tailscale"><a class="header" href="#tailscale">Tailscale</a></h3>
+<p><a href="https://tailscale.com">Tailscale</a> is a VPN service that uses <a href="https://www.wireguard.com/">WireGuard</a> protocol. If you are looking for a fully OSS alternative to Tailscale, you can check out <a href="https://github.com/juanfont/headscale">Headscale</a> instead.</p>
+<p>Tailscale can be virtually installed and used across all popular platforms. Maybe except for z/OS?</p>
+<ul>
+<li>
+<p>Create Tailscale account: <a href="https://login.tailscale.com/start">https://login.tailscale.com/start</a> (I personally use Github SSO provider)</p>
+</li>
+<li>
+<p>Installation</p>
+<p>This script is provided on Tailscale official web documentation.</p>
+<pre><code class="language-sh">curl -fsSL https://tailscale.com/install.sh | sh
+</code></pre>
+</li>
+<li>
+<p>Start the service</p>
+<pre><code class="language-sh">sudo tailscale up
+</code></pre>
+</li>
+<li>
+<p>Follow the instructions and complete the setup.</p>
+</li>
+<li>
+<p>Some use cases I have experimented with:</p>
+<ul>
+<li>Simply connect with VPN’d devices.</li>
+<li><a href="https://tailscale.com/kb/1103/exit-nodes/">Set up exit nodes</a> to bypass geo-locking.</li>
+<li><a href="/linux/net-ops.html#ssh">Set up a relay node</a> to access systems connected to the VPN service.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="macos-out-of-the-box-experience"><a class="header" href="#macos-out-of-the-box-experience">macOS Out-of-the-Box Experience</a></h1>
+<h2 id="convenience-script-3"><a class="header" href="#convenience-script-3">Convenience Script</a></h2>
+<p>Static file: <a href="/static/scripts/macbook-oobe.sh">/static/scripts/macbook-oobe.sh</a></p>
+<pre><code class="language-bash">(curl -fSsl https://script.aaanh.app/static/scripts/macbook-oobe.sh &gt;&gt; macbook-oobe.sh &amp;&amp; chmod 700 macbook-oobe.sh &amp;&amp; bash macbook-oobe.sh &amp;&amp; rm macbook-oobe.sh)
+</code></pre>
+<h2 id="manual-2"><a class="header" href="#manual-2">Manual</a></h2>
+<h3 id="set-up-homebrew"><a class="header" href="#set-up-homebrew">Set up <code>homebrew</code></a></h3>
+<blockquote>
+<p>This also installs xcode command line tools</p>
+</blockquote>
+<pre><code class="language-sh">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+</code></pre>
+<h3 id="set-up-oh-my-zsh"><a class="header" href="#set-up-oh-my-zsh">Set up <code>oh-my-zsh</code></a></h3>
+<ol>
+<li>
+<p>Install via official script</p>
+<pre><code class="language-sh">sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+</code></pre>
+</li>
+<li>
+<p>Configure theme</p>
+<pre><code class="language-sh">sed -i 's/robbyrussell/apple/g' ~/.zshrc
+</code></pre>
+</li>
+<li>
+<p>Set up <code>zsh-syntax-highlighting</code></p>
+<pre><code class="language-sh">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
+echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" &gt;&gt; "$HOME/.zshrc"
+</code></pre>
+</li>
+</ol>
+<h3 id="install-vs-code"><a class="header" href="#install-vs-code">Install VS Code</a></h3>
+<ol>
+<li>
+<p>Download via <code>curl</code></p>
+<pre><code class="language-sh">curl -L "https://code.visualstudio.com/sha/download?build=stable&amp;os=darwin-universal" -o ~/Downloads/vscode.zip
+</code></pre>
+</li>
+<li>
+<p>Extract</p>
+<pre><code class="language-sh">unzip ~/Downloads/vscode.zip
+</code></pre>
+</li>
+<li>
+<p>Install to Applications folder</p>
+<pre><code class="language-sh">mv "~/Downloads/Visual\ Studio\ Code.app" /Applications/
+</code></pre>
+</li>
+<li>
+<p>Add it to path</p>
+<pre><code class="language-sh">echo export PATH="'$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin'" &gt;&gt; ~/.zshrc
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="system-operations-1"><a class="header" href="#system-operations-1">System Operations</a></h1>
+<blockquote>
+<p>TBA</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="file-operations-1"><a class="header" href="#file-operations-1">File Operations</a></h1>
+<h2 id="file-transfer-1"><a class="header" href="#file-transfer-1">File Transfer</a></h2>
+<h3 id="curl-1"><a class="header" href="#curl-1">curl</a></h3>
+<ul>
+<li>
+<p>Download and Save file with name extracted from the URL</p>
+<pre><code class="language-sh">curl https://example.com/my-file.sh -O
+</code></pre>
+</li>
+<li>
+<p>Download and Save file with specified name</p>
+<pre><code class="language-sh">curl https://example.com/my-file.sh -O my-downloaded-file.sh
+</code></pre>
+</li>
+</ul>
+<h3 id="rsync-1"><a class="header" href="#rsync-1">rsync</a></h3>
+<ul>
+<li>
+<p>Commonly used command</p>
+<pre><code class="language-sh">rsync -avzP /PATH/TO/LOCAL/MY_FILE_FOLDER/ user@destination_machine:~/SOME_PARENT_FOLDER/
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>Explanation: (a)rchive, (v)erbose, (z)ip, (P)artial/(P)rogress. <code>SOURCE</code> is the first argument, <code>DESTINATION</code> comes second. So, to copy from a remote machine, simply swap the arguments above.</p>
+</blockquote>
+<ul>
+<li>Example
+<pre><code class="language-sh">rsync -avzP ~/Documents/assination_orders/ account_payables@high_table.xyz@10.0.0.69:~/Documents/orders_to_execute/
+</code></pre>
+</li>
+</ul>
+<h2 id="archival-compression-extraction-1"><a class="header" href="#archival-compression-extraction-1">Archival, compression, extraction</a></h2>
+<h3 id="tar-1"><a class="header" href="#tar-1">tar</a></h3>
+<ul>
+<li>
+<p>Create</p>
+<pre><code>tar zcvf target.tar.gz sourcefile
+</code></pre>
+</li>
+<li>
+<p>Unpack</p>
+<pre><code>tar zxvf sourcefile
+</code></pre>
+</li>
+<li>
+<p>List</p>
+<pre><code>tar ztvf sourcefile
+</code></pre>
+</li>
+</ul>
+<h3 id="unzip-1"><a class="header" href="#unzip-1">(un)zip</a></h3>
+<ul>
+<li>
+<p>Create zip archive from files</p>
+<pre><code class="language-sh">zip -r &lt;target&gt; &lt;source_folder&gt;
+</code></pre>
+</li>
+<li>
+<p>Extract/expand zip archive</p>
+<pre><code class="language-sh">unzip &lt;source_archive&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="finding-and-searching-1"><a class="header" href="#finding-and-searching-1">Finding and Searching</a></h2>
+<h3 id="grep-1"><a class="header" href="#grep-1">grep</a></h3>
+<h3 id="find-1"><a class="header" href="#find-1">find</a></h3>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="network-operations-1"><a class="header" href="#network-operations-1">Network Operations</a></h1>
+<h2 id="information-query-1"><a class="header" href="#information-query-1">Information Query</a></h2>
+<h3 id="traceroute-trace-packets-route"><a class="header" href="#traceroute-trace-packets-route">traceroute (Trace packets route)</a></h3>
+<ul>
+<li>
+<p>Default and simple</p>
+<pre><code class="language-sh">traceroute/tracert &lt;IP | FQDN&gt;
+</code></pre>
+</li>
+<li>
+<p>Specify max number of hops</p>
+<pre><code class="language-sh">traceroute -m &lt;int&gt; &lt;IP | FQDN&gt;
+</code></pre>
+</li>
+<li>
+<p>Example</p>
+<pre><code class="language-sh">traceroute -m 42069 google.com
+</code></pre>
+</li>
+</ul>
+<h3 id="dig-dns-lookup-1"><a class="header" href="#dig-dns-lookup-1">dig (DNS lookup)</a></h3>
+<pre><code class="language-sh">dig &lt;IP | FQDN&gt;
+</code></pre>
+<h3 id="nslookup-nameserver-lookup-1"><a class="header" href="#nslookup-nameserver-lookup-1">nslookup (Nameserver lookup)</a></h3>
+<p>Most effective when used to look into a certain web address, e.g. google.com, rather than an IP address.</p>
+<pre><code class="language-sh">nslookup &lt;FQDN | IP&gt;
+</code></pre>
+<h3 id="ipipconfigifconfig-1"><a class="header" href="#ipipconfigifconfig-1">ip/ipconfig/ifconfig</a></h3>
+<ul>
+<li>
+<p>List interfaces</p>
+<pre><code>ipconfig getiflist
+</code></pre>
+</li>
+<li>
+<p>Get IP address of the Mac machine on LAN</p>
+<pre><code>ipconfig getifaddr en0
+</code></pre>
+</li>
+<li>
+<p>Summary of the interface</p>
+<pre><code>ipconfig getsummary en0
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="windows-oobe"><a class="header" href="#windows-oobe">Windows OOBE</a></h1>
+<p>Convenience script</p>
+<pre><code class="language-ps1">iex (iwr 'https://script.aaanh.app/static/scripts/oobe.ps1' -UseBasicParsing)
+</code></pre>
+<blockquote>
+<p>⚠️ Only execute scripts from trusted source</p>
+</blockquote>
+<p>What it does:</p>
+<ul>
+<li>Dark mode (Registry)</li>
+<li>Classic right click menu (Registry)</li>
+<li>Clear taskbar (ps1)</li>
+<li>Pin Settings, File Explorer, and Windows Terminal to taskbar (ps1)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="convenience-scripts-for-windows"><a class="header" href="#convenience-scripts-for-windows">Convenience Scripts for Windows</a></h1>
+<blockquote>
+<p>ℹ️ Active development of an OOBE PWSH script project over at <a href="https://github.com/aaanh/autowin">https://github.com/aaanh/autowin</a>. This project does most of the below and more.</p>
+</blockquote>
+<h2 id="classic-right-click-menu-windows-11"><a class="header" href="#classic-right-click-menu-windows-11">Classic right-click menu Windows 11</a></h2>
+<pre><code class="language-powershell">New-Item -Path "HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" -Value "" -Force
+Get-Process explorer | Stop-Process
+</code></pre>
+<h2 id="install-oh-my-posh"><a class="header" href="#install-oh-my-posh">Install oh-my-posh</a></h2>
+<pre><code class="language-powershell">winget install JanDeDobbeleer.OhMyPosh -s winget 
+</code></pre>
+<h2 id="fish-like-autosuggestion-for-powershell"><a class="header" href="#fish-like-autosuggestion-for-powershell">Fish-like autosuggestion for powershell</a></h2>
+<ul>
+<li>Install</li>
+</ul>
+<pre><code class="language-powershell">Install-Module PSReadLine -RequiredVersion 2.1.0
+</code></pre>
+<ul>
+<li>Init</li>
+</ul>
+<pre><code class="language-powershell">Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+</code></pre>
+<h2 id="shut-down-a-remote-pc"><a class="header" href="#shut-down-a-remote-pc">Shut down a remote PC</a></h2>
+<pre><code class="language-powershell">shutdown -r -m \\MACHINE-NAME.&lt;domain&gt;.&lt;tld&gt;
+</code></pre>
+<h2 id="execution-policy-"><a class="header" href="#execution-policy-">Execution Policy ⚠️</a></h2>
+<pre><code class="language-powershell">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+</code></pre>
+<details><summary>Explanation</summary>By default, the policy is set to <code>Restricted</code>: commands can be typed and run in the shell, but cannot run a script file. <code>RemoteSigned</code> is the minimal policy that allows it.</details>
+<h2 id="virtualization-features-"><a class="header" href="#virtualization-features-">Virtualization Features ⚠️</a></h2>
+<p>Required for: Windows Subsytems for Linux, Hyper-V, Docker</p>
+<pre><code class="language-powershell">$win_features = "HypervisorPlatform", "VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux", "Microsoft-Hyper-V-All", "Microsoft-Hyper-V", "Microsoft-Hyper-V-Tools-All", "Microsoft-Hyper-V-Management-Powershell", "Microsoft-Hyper-V-Hypervisor", "Microsoft-Hyper-V-Services", "Microsoft-Hyper-V-Management-Clients"
+
+ForEach ($0 in $win_features) {
+  Write-Host "Now installing $0..."
+  dism /online /enable-feature /featurename:$0 /All /NoRestart
+}
+</code></pre>
+<h2 id="disable-256-character-path-limit-"><a class="header" href="#disable-256-character-path-limit-">Disable 256-character path limit ⚠️</a></h2>
+<p>a.k.a. Enable long path</p>
+<pre><code class="language-powershell">New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
+-Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+</code></pre>
+<details><summary>Explanation</summary>The command is taken from Microsoft's Docs. It adds an entry to the registry (GUI accessible through regedit) which allows the long path.</details>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="system-operations-2"><a class="header" href="#system-operations-2">System Operations</a></h1>
+<blockquote>
+<p>TBA</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="file-operations-2"><a class="header" href="#file-operations-2">File Operations</a></h1>
+<h2 id="create"><a class="header" href="#create">Create</a></h2>
+<ul>
+<li>
+<p>Single file</p>
+<pre><code class="language-powershell">New-Item -Path . -Name "my_file.txt" -ItemType "file" -Value "lorem ipsum"
+</code></pre>
+</li>
+<li>
+<p>Directory</p>
+<pre><code class="language-powershell">New-Item -Path ../ -Name "my_directory" -ItemType "directory"
+</code></pre>
+<blockquote>
+<p>Omit <code>-Name</code> and use a relative path, e.g. <code>path/to/my_new_dir</code> instead for a quicker operation, result in a directory named <code>my_new_dir</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="delete"><a class="header" href="#delete">Delete</a></h2>
+<blockquote>
+<p>TBA</p>
+</blockquote>
+<h2 id="copy"><a class="header" href="#copy">Copy</a></h2>
+<h3 id="robocopy"><a class="header" href="#robocopy">Robocopy</a></h3>
+<blockquote>
+<p>TBA</p>
+</blockquote>
+<h2 id="file-info"><a class="header" href="#file-info">File Info</a></h2>
+<blockquote>
+<p>No native equivalent to Linux <code>file</code>.</p>
+</blockquote>
+<h2 id="file-content"><a class="header" href="#file-content">File Content</a></h2>
+<ul>
+<li>With Powershell</li>
+</ul>
+<pre><code class="language-powershell">Get-Content file.txt
+</code></pre>
+<ul>
+<li>With Command Prompt (pipe into <code>MORE</code> for scrolling)</li>
+</ul>
+<pre><code class="language-cmd">TYPE file.txt | MORE
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="network-operations-2"><a class="header" href="#network-operations-2">Network Operations</a></h1>
+<h2 id="information-query-2"><a class="header" href="#information-query-2">Information Query</a></h2>
+<h3 id="ipconfig"><a class="header" href="#ipconfig">ipconfig</a></h3>
+<ul>
+<li>
+<p>Detailed list of network interfaces, much like Linux <code>ip address</code></p>
+<pre><code class="language-powershell">ipconfig /all
+</code></pre>
+</li>
+</ul>
+<h3 id="tracert-trace-route"><a class="header" href="#tracert-trace-route">tracert (Trace route)</a></h3>
+<pre><code class="language-powershell">tracert &lt;IP | FQDN&gt;
+</code></pre>
+<h3 id="dig-dns-lookup-2"><a class="header" href="#dig-dns-lookup-2">dig (DNS lookup)</a></h3>
+<pre><code class="language-powershell">dig &lt;IP | FQDN&gt;
+</code></pre>
+<h3 id="nslookup-nameserver-lookup-2"><a class="header" href="#nslookup-nameserver-lookup-2">nslookup (Nameserver lookup)</a></h3>
+<p>Most effective when used to look into a certain web address, e.g. google.com, rather than an IP address.</p>
+<pre><code class="language-powershell">nslookup &lt;FQDN | IP&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="docker-"><a class="header" href="#docker-">Docker 🐋</a></h1>
+<ul>
+<li><a href="https://www.docker.com/resources/what-container/">What the f### is a container?</a></li>
+<li>Read about <a href="https://docs.docker.com/get-started/overview">Docker</a></li>
+<li>Read about the container runtimes:
+<ul>
+<li><a href="https://www.docker.com/blog/what-is-containerd-runtime/">containerd</a></li>
+<li><a href="https://www.docker.com/blog/runc/">runc</a></li>
+</ul>
+</li>
+<li>Alternatives
+<ul>
+<li><a href="https://podman.io/">podman</a> + <a href="https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial.md#installing-podman">setup</a></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="docker-installation"><a class="header" href="#docker-installation">Docker Installation</a></h1>
+<h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
+<pre><code class="language-sh">curl -fsSL https://get.docker.com -o get.docker.sh &amp;&amp; chmod +x get.docker.sh &amp;&amp; sh ./get.docker.sh &amp;&amp; rm ./get.docker.sh
+</code></pre>
+<h2 id="macos"><a class="header" href="#macos">macOS</a></h2>
+<ul>
+<li>
+<p>Apple Silicon</p>
+<pre><code class="language-sh">curl -fsSL https://desktop.docker.com/mac/main/arm64/Docker.dmg -o ~/Docker.dmg &amp;&amp; \
+  sudo hdiutil attach Docker.dmg &amp;&amp; \
+  sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --accept-license --user=$(whoami) &amp;&amp; \
+  sudo /hdiutil detach /Volumes/Docker
+</code></pre>
+</li>
+<li>
+<p>AMDx64</p>
+<pre><code class="language-sh">curl -fsSL https://desktop.docker.com/mac/main/amd64/Docker.dmg -o ~/Docker.dmg &amp;&amp; \
+  sudo hdiutil attach Docker.dmg &amp;&amp; \
+  sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --accept-license --user=$(whoami) &amp;&amp; \
+  sudo /hdiutil detach /Volumes/Docker
+</code></pre>
+</li>
+</ul>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<h3 id="enable-virtualization-features"><a class="header" href="#enable-virtualization-features">Enable virtualization features</a></h3>
+<ol>
+<li>
+<p>In your BIOS/UEFI firmware settings.</p>
+</li>
+<li>
+<p>Windows additional DISM features (src: <a href="https://github.com/aaanh/autowin">github repo</a>)</p>
+<pre><code class="language-powershell"># 4. Enable optional features
+$win_features = "HypervisorPlatform","VirtualMachinePlatform","Microsoft-Windows-Subsystem-Linux","Microsoft-Hyper-V-All","Microsoft-Hyper-V","Microsoft-Hyper-V-Tools-All","Microsoft-Hyper-V-Management-Powershell","Microsoft-Hyper-V-Hypervisor","Microsoft-Hyper-V-Services","Microsoft-Hyper-V-Management-Clients"
+
+ForEach ($0 in $win_features) {
+  Write-Host "Now installing $0..."
+  dism /online /enable-feature /featurename:$0 /All /NoRestart
+}
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ Restart your PC to apply the changes!</p>
+</blockquote>
+<h3 id="install-with-powershell"><a class="header" href="#install-with-powershell">Install (with PowerShell)</a></h3>
+<pre><code class="language-powershell">Invoke-WebRequest -Uri "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe" -OutFile DockerDesktopInstaller.exe
+
+Start-Process DockerDesktopInstaller.exe -Wait install --quiet --accept-license --backend="wsl-2"
+</code></pre>
+<blockquote>
+<p>⚠️ Make sure to re-login for Docker Desktop to work!</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="docker-operations"><a class="header" href="#docker-operations">Docker Operations</a></h1>
+<blockquote>
+<p>The commands written below are examples, all options, <code>--&lt;option&gt;</code> or <code>-&lt;o&gt;</code>, are optional.</p>
+</blockquote>
+<ul>
+<li>
+<p>Build</p>
+<pre><code>docker build &lt;/path/to/context/folder&gt; -t &lt;my-docker-image&gt;:&lt;tag-version&gt;
+</code></pre>
+</li>
+<li>
+<p>Start a container from an image</p>
+<pre><code>docker run -dp &lt;host_port&gt;:&lt;container_port&gt; &lt;my-docker-image&gt;:&lt;tag-version&gt; -n &lt;container-name&gt;
+</code></pre>
+<p>Note:</p>
+<ul>
+<li><code>-d</code>: Run in detached mode. You won’t be presented with the container stdout in the terminal.</li>
+<li><code>-n</code>: If not specified, Docker will randomly generate one.</li>
+</ul>
+</li>
+<li>
+<p>Remote into a running container</p>
+<pre><code>docker exec -it &lt;host_port&gt;:&lt;container_port&gt; &lt;my-docker-image&gt;:&lt;tag-version&gt; --tty --stdin -- /bin/bash
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>For some minimal containers, the entrypoint should be <code>/bin/sh</code></li>
+<li><code>--it</code>: Run in interactive mode</li>
+</ul>
+</li>
+<li>
+<p>List</p>
+<ul>
+<li>Images
+<pre><code>docker image ls
+</code></pre>
+</li>
+<li>Containers
+<pre><code>docker container ls
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Stop</p>
+<pre><code>docker stop &lt;container-name&gt;
+</code></pre>
+</li>
+<li>
+<p>Delete</p>
+<ul>
+<li>Images
+<pre><code>docker rm image-tag:tag-version # e.g. nginx:latest
+</code></pre>
+</li>
+<li>Containers
+<pre><code>docker rm container-name
+</code></pre>
+</li>
+<li>Prune
+<pre><code>docker prune -a
+</code></pre>
+Note: <code>-a</code> option will prune images not being used by a container (stopped also qualifies). By default, it deletes images that are not tagged.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="dockerfile"><a class="header" href="#dockerfile">Dockerfile</a></h1>
+<p>… is a declarative file for building a container from a base image. Simply put, analogous to the commands you’d run when setting up a virtual machine.</p>
+<p>Example Dockerfile to build an image that can run Nodejs applications using Microsoft’s base Linux image.</p>
+<pre><code class="language-Dockerfile"># base image
+FROM mcr.microsoft.com/cbl-mariner/base/core:2.0
+
+# Copy from the working directory where `docker build . -f Dockerfile` is executed
+COPY . .
+
+# Specify workdir in the container, abitrary dir name
+WORKDIR /app
+
+# Install dependencies
+RUN yum install -y nodejs npm ca-certificates
+
+# Export some environment variables to the container environment
+ENV NODE_EXTRA_CA_CRT="/path/to/those/ca/cert.crt"
+
+# ---- Creating an example nodejs application ----
+RUN npm init -y
+RUN echo "console.log(\"Hello world!\"); console.log(process.env)" &gt;&gt; index.js
+
+# Set the entrypoint: executed when the container is started.
+ENTRYPOINT ["node", "index.js"]
+</code></pre>
+<ul>
+<li>
+<p>Try it out</p>
+</li>
+<li>
+<p>Create the Dockerfile locally, copy and paste the content above</p>
+</li>
+<li>
+<p>Build and run</p>
+<pre><code>docker build . -t test &amp;&amp; docker run test
+</code></pre>
+</li>
+<li>
+<p>Expect</p>
+<pre><code class="language-yaml">Hello world!
+{
+  PATH: '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+  HOSTNAME: '5b1d8f97d2ce', # yours could be anything else
+  NODE_EXTRA_CA_CRT: '/path/to/those/ca/cert.crt',
+  HOME: '/root'
+}
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="portainer"><a class="header" href="#portainer">Portainer</a></h1>
+<p>… is a web-based graphical interface to manage your containers. In all honesty, better than Docker Desktop. Should be ideal for managing in a headless server environment. However, Docker Desktop on Linux does come with that handy kubernetes switch which auto-deploys a cluster with all the necessary components for dev purposes.</p>
+<blockquote>
+<p>Adapted from Portainer’s <a href="https://docs.portainer.io/start/install/server/docker/linux">official documentation</a></p>
+</blockquote>
+<ul>
+<li>
+<p>Convenience one-liner</p>
+<pre><code>docker volume create portainer_data &amp;&amp; docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
+</code></pre>
+</li>
+<li>
+<p>Create volume</p>
+<pre><code>docker volume create portainer_data
+</code></pre>
+</li>
+<li>
+<p>Start the Portainer Server container</p>
+<pre><code>docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
+</code></pre>
+<p>Note: If you are deploying the Community Edition instead, change portainer/portainer-ee to portainer/portainer-<strong>c</strong>e</p>
+</li>
+<li>
+<p>Server is live at: <a href="https://localhost:9443">https://localhost:9443</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="kubernetes-"><a class="header" href="#kubernetes-">Kubernetes ☸️</a></h1>
+<p>Explaining kubernetes is a pain, so I’d encourage you to seek out better and more structured crash course on YouTube or something.</p>
+<ul>
+<li>Read this <a href="https://kubernetes.io/docs/concepts/">Kubernetes official documentation</a> for a brief overview.</li>
+<li>Find a diagram about the Kubernetes cluster architecture and components and memorize that.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<h2 id="pre-requisites"><a class="header" href="#pre-requisites">Pre-requisites</a></h2>
+<ul>
+<li>Container runtime:
+<ul>
+<li>CRI-O (recommended)</li>
+<li>Docker Engine (for beginners)
+<ul>
+<li>Docker Desktop (for a <strong>right-click deploy</strong> simplicity)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="self-hosted-cluster"><a class="header" href="#self-hosted-cluster">Self-hosted cluster</a></h2>
+<h3 id="step-by-step"><a class="header" href="#step-by-step">Step-by-step</a></h3>
+<ul>
+<li>Install a container runtime</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="make-life-easier"><a class="header" href="#make-life-easier">Make Life Easier</a></h1>
+<h2 id="tools"><a class="header" href="#tools">Tools</a></h2>
+<ul>
+<li>
+<p><code>kubectx</code>: Quickly switch kubernetes context defined in <code>~/.kube/config</code></p>
+<ul>
+<li>
+<p>Debian/Ubuntu</p>
+<pre><code class="language-sh">sudo apt install kubectx
+</code></pre>
+</li>
+<li>
+<p>RHEL/Fedora</p>
+<p>Download the appropriate precompiled <code>kubectx</code> library at https://github.com/ahmetb/kubectx/releases/latest</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Merge kubeconfig files</p>
+<blockquote>
+<p>⚠️ This is a destructive command that might nuke your <code>~/.kube/config</code> file.</p>
+</blockquote>
+<pre><code class="language-sh">export KUBECONFIG=~/.kube/config:/path/to/config/1:/path/to/config/2 &amp;&amp; \
+kubectl config view --flatten &gt; ~/.kube/config
+</code></pre>
+</li>
+</ul>
+<h2 id="aliases"><a class="header" href="#aliases">Aliases</a></h2>
+<pre><code class="language-sh">echo "alias k=kubectl" &gt;&gt; ~/.$(echo $0 | tr -d '-')rc
+echo "alias ktx=kubectx" &gt;&gt; ~/.$(echo $0 | tr -d '-')rc
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="operations"><a class="header" href="#operations">Operations</a></h1>
+<h2 id="namespace"><a class="header" href="#namespace">Namespace</a></h2>
+<ul>
+<li>
+<p>GET: All resources in the default namespace</p>
+<blockquote>
+<p>Note: Use the <code>-n</code> option followed by the specific namespace to scope to it</p>
+</blockquote>
+<pre><code>kubectl get all -n default
+</code></pre>
+<p>Example output:</p>
+<pre><code>NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    &lt;none&gt;        443/TCP   3m34s
+</code></pre>
+</li>
+<li>
+<p>GET: Existing namespaces</p>
+<pre><code>kubectl get ns
+</code></pre>
+<p>Example output:</p>
+<pre><code>NAME              STATUS   AGE
+default           Active   4m16s
+kube-node-lease   Active   4m17s
+kube-public       Active   4m17s
+kube-system       Active   4m18s
+</code></pre>
+</li>
+<li>
+<p>CREATE: A new namespace</p>
+<pre><code>kubectl create ns &lt;namespace&gt;
+</code></pre>
+<p>Example output:</p>
+<pre><code>namespace/&lt;namespace&gt; created
+</code></pre>
+</li>
+<li>
+<p>DELETE: A namespace</p>
+<pre><code>kubectl d ns/&lt;namespace&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="custom-resource-definitions-crds"><a class="header" href="#custom-resource-definitions-crds">Custom Resource Definitions (CRDs)</a></h2>
+<blockquote>
+<p>For brevity, the following examples will use a <code>secretproviderclass</code> CRD called <code>azure-secrets</code>.</p>
+</blockquote>
+<ul>
+<li>
+<p>GET: All resources of a CRD</p>
+<pre><code class="language-sh">kubectl get secretproviderclass # optionally, use -o wide or -o yaml
+</code></pre>
+<p>Example output:</p>
+<pre><code>NAME           AGE
+azure-secrets  3m
+azure-certs    3m
+</code></pre>
+</li>
+<li>
+<p>GET: Manifest of the CRD</p>
+<pre><code>kubectl get secretproviderclass/azure-secrets
+</code></pre>
+<p>Example output:</p>
+<pre><code class="language-yaml">apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
+kind: SecretProviderClass
+metadata:
+  name: azure-secrets
+spec:
+  provider: azure
+  parameters:
+    usePodIdentity: "false"
+    keyvaultName: &lt;keyvault-name&gt;
+    cloudName: "" # [OPTIONAL for Azure] if not provided, azure environment will default to AzurePublicCloud
+    objects:  |
+      array:
+        - |
+          objectName: &lt;secret-name&gt;
+          objectType: secret
+          objectVersion: "" # [OPTIONAL] object versions can be specified here, current version will be used if empty
+        - |
+          objectName: &lt;cert-name&gt;
+          objectType: cert
+          objectVersion: "" # [OPTIONAL] object versions can be specified here, current version will be used if empty
+    tenantId: &lt;tenant-id&gt;
+    subscriptionId: &lt;subscription-id&gt;
+    resourceGroup: &lt;resource-group&gt;
+    vmType: vmss # [OPTIONAL] vmss or standard. If not provided, it will default to standard
+    useVMManagedIdentity: "false" # [OPTIONAL for Azure] if not provided, it will default to "false"
+    userAssignedIdentityID: "" # [OPTIONAL for Azure] if provided, use this Virtual Machine's Managed Identity to access keyvault
+    keyvaultSecretName: &lt;keyvault-secret-name&gt; # [OPTIONAL for Azure] if provided, will store the keyvault secret name in the pod annotation "secrets-store.csi.k8s.io/azure-secrets/&lt;secret-name&gt;=&lt;keyvault-secret-name&gt;"
+    keyvaultSecretVersion: "" # [OPTIONAL for Azure] if provided, will store the keyvault secret version in the pod annotation "secrets-store.csi.k8s.io/azure-secrets/&lt;secret-name&gt;-ver=&lt;keyvault-secret-version&gt;"
+    objects:  |
+      array:
+        - |
+          objectName: &lt;secret-name&gt;
+          objectType: secret
+          objectVersion: "" # [OPTIONAL] object versions can be specified here, current version will be used if empty
+        - |
+          objectName: &lt;cert-name&gt;
+          objectType: cert
+          objectVersion: "" # [OPTIONAL] object versions can be specified here, current version will be used if empty
+    tenantId: &lt;tenant-id&gt;
+    subscriptionId: &lt;subscription-id&gt;
+    resourceGroup: &lt;resource-group&gt;
+    vmType: vmss # [OPTIONAL] vmss or standard. If not provided, it will default to standard
+
+...
+</code></pre>
+</li>
+<li>
+<p>CREATE: A new CRD</p>
+<ul>
+<li>
+<p>For a non-existing resource, will error if CRD already exists</p>
+<pre><code>kubectl create -f &lt;crd-manifest&gt;.yaml
+</code></pre>
+</li>
+<li>
+<p>For both existing and non-existing, this will also update the resource</p>
+<pre><code>kubectl apply -f &lt;crd-manifest&gt;.yaml
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>DELETE: A CRD</p>
+<pre><code>kubectl delete secretproviderclass/azure-secrets
+</code></pre>
+</li>
+<li>
+<p>DESCRIBE: A CRD</p>
+<pre><code>kubectl describe secretproviderclass/azure-secrets
+</code></pre>
+<p>Example output:</p>
+<pre><code>Name:         azure-secrets
+Namespace:    default
+Labels:       &lt;none&gt;
+Annotations:  &lt;none&gt;
+API Version:  secrets-store.csi.x-k8s.io/v1alpha1
+Kind:         SecretProviderClass
+Metadata:
+  Creation Timestamp:  2020-10-14T18:50:00Z
+  Generation:          1
+  Resource Version:    123456
+  Self Link:           /apis/secrets-store.csi.x-k8s.io/v1alpha1/namespaces/default/secretproviderclasses/azure-secrets
+  UID:                 123456
+Spec:
+  Objects:
+    Array:
+      Object Name:      &lt;secret-name&gt;
+      Object Type:      secret
+      Object Version:
+      Object Name:      &lt;cert-name&gt;
+      Object Type:      cert
+      Object Version:
+  Provider:            azure
+  Parameters:
+    Cloud Name:
+    Keyvault Name:     &lt;keyvault-name&gt;
+    Resource Group:    &lt;resource-group&gt;
+    Subscription Id:   &lt;subscription-id&gt;
+    Tenant Id:         &lt;tenant-id&gt;
+    Use Pod Identity:  false
+    Use VM Managed Identity:  false
+    User Assigned Identity ID:
+    VM Type:           vmss
+Events:                &lt;none&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="pods"><a class="header" href="#pods">Pods</a></h2>
+<ul>
+<li>
+<p>GET: All pods</p>
+<pre><code>kubectl get pods
+</code></pre>
+<p>Example output:</p>
+<pre><code>NAME                                READY   STATUS    RESTARTS   AGE
+nginx-deployment-5f6f6d65c7-4j4q4   1/1     Running   0          3m
+nginx-deployment-5f6f6d65c7-5q2q2   1/1     Running   0          3m
+nginx-deployment-5f6f6d65c7-6q2q2   1/1     Running   0          3m
+</code></pre>
+</li>
+<li>
+<p>EXEC: Run a command in a pod</p>
+<p>Only really works if the pod is <em><strong>not</strong></em> built from a scratch image with no shell.</p>
+<p>In other words, you could basically <em>“ssh”</em> into the pod.</p>
+<pre><code>kubectl exec -it &lt;pod-name&gt; -- &lt;command&gt;
+</code></pre>
+<p>Example output:</p>
+<pre><code>root@nginx-deployment-5f6f6d65c7-4j4q4:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="microsoft-sql-server--studio-on-macos-arm64"><a class="header" href="#microsoft-sql-server--studio-on-macos-arm64">Microsoft SQL Server + Studio on macOS ARM64</a></h1>
+<h2 id="introduction-2"><a class="header" href="#introduction-2">Introduction</a></h2>
+<blockquote class="warning">This is a EXTREMELY LONG procedure from start to finish, so make sure you are able to dedicate 3-4 hours, depending on how familiar you are with stuff and how fast your Mac is, to go through them.
+<p>You may use your Mac during the process.</p>
+</blockquote>
+
+<p>These are the step-by-step instructions for getting the Microsoft SQL Server and Studio on an ARM64 (aarch64) macOS device.</p>
+<p>Supported versions:</p>
+<ul>
+<li>SQL Server &lt;= 22</li>
+<li>SQL Management Studio:
+<ul>
+<li>19 (tested - ✅)</li>
+<li>22 (tested - ❌)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>It is highly recommended that you use a Windows x86 64-bit machine to natively run the MSSQL stack if possible to save time and effort. This solution should be a last resort.</p>
+</blockquote>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<ol>
+<li>Install UTM</li>
+<li>Create Windows ARM64 virtual machine
+<ol>
+<li>Install CrystalFetch</li>
+<li>Download Windows ARM64 iso image</li>
+</ol>
+</li>
+<li>Install Windows</li>
+<li>Use install script from <a href="https://github.com/jimm98y/MSSQLEXPRESS-M1-Install">https://github.com/jimm98y/MSSQLEXPRESS-M1-Install</a> to install SQL Server</li>
+<li>Configure SQL Server</li>
+<li>Install SQL Management Studio from <a href="https://download.microsoft.com/download/7/7/3/7738e337-ed99-40ea-b8ae-f639162c83c3/SSMS-Setup-ENU.exe">https://download.microsoft.com/download/7/7/3/7738e337-ed99-40ea-b8ae-f639162c83c3/SSMS-Setup-ENU.exe</a></li>
+<li>Start SQL Management Studio</li>
+</ol>
+<h2 id="install-utm"><a class="header" href="#install-utm">Install UTM</a></h2>
+<h3 id="installation-1"><a class="header" href="#installation-1">Installation</a></h3>
+<ul>
+<li><a href="https://mac.getutm.app/">https://mac.getutm.app/</a></li>
+<li>Click on Download button</li>
+<li>Save the <code>.dmg</code> to a location on your Mac device. E.g. Downloads</li>
+<li>After downloading, double click on <code>UTM.dmg</code> to mount the disk image</li>
+<li>Drag and drop the <code>UTM.app</code> to <code>Applications</code> folder</li>
+<li>Installation complete</li>
+</ul>
+<summary>
+  
+<h3>What is UTM?</h3>
+
+  <details>
+  UTM is an emulator and virtual machine host/manager. The underlying technology is called QEMU, which is open-source and widely used in the industry as the emulation and virtualization backend.
+  </details>
+</summary>
+<h2 id="create-a-windows-arm64-virtual-machine-in-utm-part-1"><a class="header" href="#create-a-windows-arm64-virtual-machine-in-utm-part-1">Create a Windows ARM64 virtual machine in UTM (Part 1)</a></h2>
+<blockquote>
+<p>DO NOT START FROM THE MOUNTED DISK IMAGE.</p>
+</blockquote>
+<ol>
+<li>Start UTM by either from Spotlight search or from Applications folder</li>
+<li>Click Yes/Continue/Ok when the macOS security prompt appears</li>
+<li>You will be presented with the UTM window (screenshot, but empty)
+<img src="misc/mssql-mac-assets/utm-window.png" alt="alt text"></li>
+<li>Click on the plus icon at the top of the window</li>
+<li>Creation dialog appears</li>
+<li>Select Virtualize option</li>
+<li>Select Windows</li>
+<li>Click on <code>Fetch latest Windows installer</code> link</li>
+</ol>
+<h3 id="using-the-crystalfetch-app"><a class="header" href="#using-the-crystalfetch-app">Using the CrystalFetch app</a></h3>
+<ol start="6">
+<li>Download, install and open the CrystalFetch app</li>
+<li>Keep default options as-is</li>
+<li>Select your preferred Language. E.g. <code>English (United Kingdom)</code> to avoid logging in with Microsoft account</li>
+<li>Select <code>Windows 11</code> as the Edition</li>
+<li>Click on <code>Download...</code> button
+<img src="misc/mssql-mac-assets/crystalfetch.png" alt="alt text"></li>
+</ol>
+<h2 id="create-a-windows-arm64-virtual-machine-in-utm-part-2"><a class="header" href="#create-a-windows-arm64-virtual-machine-in-utm-part-2">Create a Windows ARM64 virtual machine in UTM (Part 2)</a></h2>
+<ol start="11">
+<li>After CrystalFetch finishes downloading, go back to the UTM dialog</li>
+<li>Under Boot ISO Image, click on <code>Browse...</code> to select the downloaded ISO image
+<img src="misc/mssql-mac-assets/windows-iso.png" alt="alt text">
+<img src="misc/mssql-mac-assets/vm-config-dialog.png" alt="alt text"></li>
+<li>Make sure <code>Install drivers and SPICE tools</code> is checked</li>
+<li>Click <code>Continue</code></li>
+<li>Allocate memory to the VM, select at least 50% of Mac device memory. E.g. 8192 MiB on a 16 GB Mac</li>
+<li>Allocate CPU cores to the VM, select at least 50% of performance cores on Mac device. E.g. 4 Cores on a 10-core Mac (8 performance cores, 2 efficiency cores)</li>
+<li>Click <code>Continue</code></li>
+<li>Storage size should be at least 80 GB</li>
+<li>Click <code>Continue</code></li>
+<li>No need to configure Shared Directory</li>
+<li>Click <code>Continue</code></li>
+<li>On Summary page, click <code>Save</code>
+<img src="misc/mssql-mac-assets/vm-summary.png" alt="alt text"></li>
+</ol>
+<h2 id="install-windows"><a class="header" href="#install-windows">Install Windows</a></h2>
+<ol>
+<li>Boot up the created Windows virtual machine by clicking on the play button next to the entry in the list</li>
+<li>PAY ATTENTION, when you see the <code>Press any key to boot from CD/DVD</code>, press <code>Enter</code> or any key. This is only necessary for this step, ignore on future restarts.
+<img src="misc/mssql-mac-assets/boot-from-cd.png" alt="alt text"></li>
+<li>Windows installer will now start booting. You should see the Windows loading animation.</li>
+<li>Once the installer is loaded, leave language settings as-is, click <code>Next</code></li>
+<li>Select <code>US</code> as input method, or Canadian French or Canadian Multilingual Standard where applicable, click <code>Next</code></li>
+<li>Select <code>I don't have a product key</code> link at the bottom</li>
+<li>Select <code>Windows 11 Pro</code>, click <code>Next</code></li>
+<li>On EULA screen, Click <code>Accept</code></li>
+<li>On Select Location to install screen, leave as-is, click <code>Next</code></li>
+<li>Wait for the installation to be done.</li>
+<li>The virtual machine will automatically restart <strong>several times</strong></li>
+</ol>
+<h2 id="windows-setup-after-installation"><a class="header" href="#windows-setup-after-installation">Windows setup after installation</a></h2>
+<ol>
+<li>You should now be looking at the (white) Windows setup screen</li>
+<li>Select region: Canada in this case, click <code>Yes</code></li>
+<li>Select keyboard layout: US or Canadian, click <code>Yes</code></li>
+<li>Select second keyboard layout: click <code>Skip</code></li>
+<li>Windows setup should now start installing additional updates if applicable</li>
+<li>Create a local user account with name, username and password</li>
+<li>Setup should now start installing updates (again 🤡 because MSFT devs and product managers are <em>mostly</em> dumb-dumb, but not me). Will take a while depending on your internet connection.</li>
+<li>After which, it will restart several times again, as if it doesn’t want you to use the crappy software, then log in and you should be at the Desktop</li>
+</ol>
+<h3 id="install-drivers-and-tools"><a class="header" href="#install-drivers-and-tools">Install drivers and tools</a></h3>
+<ol>
+<li>Open Explorer (yellow folder icon on the Taskbar)</li>
+<li>On sidebar, select <code>UTM Guest Tools</code> drive
+<img src="misc/mssql-mac-assets/utm-guest-tools.png" alt="alt text"></li>
+<li>Double-click on the <code>utm-guest-tools-&lt;version-number&gt;</code> installation application</li>
+<li>On the installer window, click <code>Next</code>, <code>I agree</code></li>
+<li>Wait for the installation to complete</li>
+</ol>
+<h2 id="install-mssql-server--studio"><a class="header" href="#install-mssql-server--studio">Install MSSQL Server + Studio</a></h2>
+<h3 id="mssql-server"><a class="header" href="#mssql-server">MSSQL Server</a></h3>
+<blockquote>
+<p>For convenience, reopen this instruction website on the virtual machine browser (MS Edge)</p>
+</blockquote>
+<ol>
+<li>In the virtual machine, open a browser and open this link <a href="https://github.com/jimm98y/MSSQLEXPRESS-M1-Install/archive/refs/heads/main.zip">https://github.com/jimm98y/MSSQLEXPRESS-M1-Install/archive/refs/heads/main.zip</a></li>
+<li>After the zip file is downloaded, extract it</li>
+<li>Navigate into the extracted folder: e.g. <code>MSSQLEXPRESS-M1-Install-main\MSSQLEXPRESS-M1-Install-main\src\Scripts</code></li>
+<li>Double-click on <code>Sql2022Developer.bat</code> script file</li>
+<li>On the Windows protected your PC popup, click <code>More info</code> link</li>
+<li>Click <code>Run anyway</code></li>
+<li>Wait for the installation to complete (around 30 minutes)
+<img src="misc/mssql-mac-assets/installing-sqlserver.png" alt="alt text"></li>
+<li>After it finishes, start the Sql Server Configuration Manager to verify the SQL Server Services is running (screenshot below)
+<img src="misc/mssql-mac-assets/sql-server-config-mgr.png" alt="alt text"></li>
+<li>You can close the app, the services are running in the background.</li>
+</ol>
+<h3 id="mssql-studio"><a class="header" href="#mssql-studio">MSSQL Studio</a></h3>
+<ol>
+<li>Download MSSQL Studio 19 installer from here: <a href="https://download.microsoft.com/download/7/7/3/7738e337-ed99-40ea-b8ae-f639162c83c3/SSMS-Setup-ENU.exe">https://download.microsoft.com/download/7/7/3/7738e337-ed99-40ea-b8ae-f639162c83c3/SSMS-Setup-ENU.exe</a></li>
+<li>Double-click to start the installer, will take longer than expected to start. This is because it is running through the architecture translation layer.</li>
+<li>You’re now seeing the setup window.</li>
+<li>Leave the default location and click on <code>Install</code></li>
+<li>Wait for the installation to complete.</li>
+<li>Close the setup to finish.</li>
+</ol>
+<h2 id="start-mssql-studio-19"><a class="header" href="#start-mssql-studio-19">Start MSSQL Studio 19</a></h2>
+<p>In the Windows start menu, there should ne MSSQL Management Studio 19 shortcut. Click on that to start. Will take a moment to start.</p>
+<p>Leave the Connect to Server dialog fields as-is and click on Connect.</p>
+<p>Done.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ffmpeg"><a class="header" href="#ffmpeg">ffmpeg</a></h1>
+<blockquote>
+<p>I know… There are a bunch of GUI wrapper FOSS’s out there. But I want to look cool converting my anime OST UwU.</p>
+</blockquote>
+<p>Head over to <a href="#installation-2">installation.md</a> if you’ve not installed <code>ffmpeg</code>.</p>
+<ul>
+<li><code>flac</code> to <code>alac</code></li>
+</ul>
+<pre><code>ffmpeg -i /path/to/input.flac -vcodec copy -acodec alac /path/to/output.m4a
+</code></pre>
+<h2 id="installation-2"><a class="header" href="#installation-2">Installation</a></h2>
+<ul>
+<li>Mac: brew install ffmpeg</li>
+<li>Windows: Download the .exe binary from https://ffmpeg.org/download.html and add it to your PATH</li>
+<li>Linux:
+<ul>
+<li>Ubuntu/Debian: <code>sudo apt install ffmpeg</code> or <code>snap install ffmpeg</code></li>
+<li>Arch: <code>sudo pacman -S ffmpeg</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="solved-could-not-load-some-mysterious-libraries"><a class="header" href="#solved-could-not-load-some-mysterious-libraries">[Solved] Could not load some mysterious libraries</a></h3>
+<p>Sometimes <code>brew</code> messes up somehow. In my case, <code>ffmpeg</code> suddenly was not able to load <code>libtesseract</code> and traced the stack to <code>liblepto*</code>. I was able to fix the error by reinstalling both.</p>
+<pre><code class="language-sh">brew reinstall tesseract &amp;&amp; brew reinstall leptonica
+</code></pre>
+<p>Bottom line is, if it misses some <code>lib$1</code>, just try to reinstall the <code>$1</code>. If the name is incomplete and <code>brew</code> cannot find the name, just Bing or Google it.</p>
+<h3 id="unsolved-transcoding-rebooted-my-pc"><a class="header" href="#unsolved-transcoding-rebooted-my-pc">[Unsolved] Transcoding rebooted my PC</a></h3>
+<p>Happens on Windows. This is on the weirder side, I did not find any logs from Windows Events. It might have to do with the hardware encoders like NVENC or RAM timing. I did some A/B testings which narrowed down to those 2 factors with 70-80% confidence <code>:)</code>.</p>
+<p>This bug completely shuts down my PC. No BSOD, no nothing.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ytb-dl"><a class="header" href="#ytb-dl">ytb-dl</a></h1>
+<blockquote>
+<p>I recommend <code>ytp-dl</code> instead, which is a wrapper that provides better download performance.</p>
+</blockquote>
+<p>Note: You will need to install missing codecs or ffmpeg to perform certain operations, for example, Audio Only mode.</p>
+<ul>
+<li>Download with the highest quality possible for both video and audio</li>
+</ul>
+<pre><code class="language-sh">yt-dlp $uri -f bestvideo*+bestaudio/best
+</code></pre>
+<ul>
+<li>Download with only audio (requires <code>ffmpeg</code> on PATH)</li>
+</ul>
+<pre><code class="language-sh">yt-dlp -x $uri
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-50b4eeec.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
